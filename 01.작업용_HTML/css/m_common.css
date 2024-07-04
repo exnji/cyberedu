@@ -1,0 +1,446 @@
+@charset "utf-8";
+/* Reset */
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /* M */
+}
+html,
+body {
+  font-family: "PRET", Sans-Serif;
+  font-size: 10px;
+  color: #5a6265;
+  font-weight: 400;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+q:before,
+q:after {
+  content: "";
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5rem;
+}
+sub {
+  bottom: -0.25rem;
+}
+a:hover {
+  text-decoration: none;
+}
+ins,
+a {
+  text-decoration: none;
+}
+legend,
+caption,
+.blind {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+button {
+  border: 0;
+}
+
+.hidden {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden !important;
+  touch-action: none;
+}
+/**************************************** 
+    etc
+****************************************/
+.pd0 {padding:0 !important}
+.align_center {
+  text-align: center !important;
+}
+.align_left {
+  text-align: left !important;
+}
+.align_right {
+  text-align: right !important;
+}
+.valign_top {
+  vertical-align: top !important;
+}
+.color_accent {
+  color: #37c375 !important;
+}
+.color_w_blue {
+  color:#348CAD !important
+}
+.color_orange {
+  color:#FF6100 !important
+}
+
+.color_neoblue, a.color_neoblue:hover {
+  color: #4eb1d6;
+}
+
+.ellipsis li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.color_active,
+a.color_active:hover {
+  color: #37c375;
+}
+
+.cnt_line {
+  width: 100%;
+  height: 0.8rem;
+  background: #f4f4f5;
+  margin-top: 2.4rem;
+}
+
+table.board.list.left * {
+  text-align: left;
+}
+
+.require {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: #ff6100;
+  margin: 0 6px;
+  position: relative;
+  top: -7px;
+  font-size: 0;
+}
+
+
+/**************************************** 
+    component : select
+****************************************/
+select {
+  width: auto;
+  padding: 0 3rem 0 1rem;
+  border: 0;
+  background: #fff url("../images/mobile/common/ico_selcct_down.svg") no-repeat 95%
+    50%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.select {
+  background: #fff url("../images/mobile/common/ico_selcct_down.svg") no-repeat 95%
+    50%;
+}
+
+ .select.form_select {
+  height: 4.4rem;
+  border-radius: 0.4rem;
+  color: #5A6265;
+  font-size: 1.5rem;
+  border: 1px solid #dee1e5;
+  width: 100%;
+  background-position: 98% 50%;
+  padding: 0 0 0 1.6rem;
+  box-sizing: border-box;
+}
+
+
+/**************************************** 
+    form : button
+****************************************/
+
+.btn.sch_b_btn {
+  width: 1.8rem;
+  height: 1.7rem;
+  background: transparent url("../images/mobile/common/btn_b_sch.svg") no-repeat 50%
+    50%;
+  background-size: 1.8rem 1.7rem;
+  font-size: 0;
+}
+.btn.sch_btn {
+  width: 4.8rem;
+  height: 4.6rem;
+  background: #fff url("../images/mobile/common/btn_b_sch.svg") no-repeat 50% 50%;
+  background-size: 1.9rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 0;
+}
+.btn.line {
+  border: 1px solid #e4e8ec;
+  height: 4rem;
+  background: #fff;
+  padding: 0 0.2rem;
+}
+.btn.line.default {
+  border-radius: 0.4rem;
+  height: 4rem;
+  background: #fff;
+  padding: 0 2rem;
+}
+.btn.line.gray {
+  border: 1px solid #dee1e5;
+  height: 4rem;
+  color: #5a6265;
+  background: #f4f4f5;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  padding: 0 1.2rem;
+}
+
+.btn.line.gray.white {
+  border: 1px solid #DEE1E5;
+  height: 4rem;
+  color: #5A6265;
+  background: #fff;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  padding: 0 1.2rem;
+  font-family: "PRET",Sans-Serif;
+}
+
+.btn.line.light {
+  border: 1px solid #fff;
+  height: 4.8rem;
+  padding: 0 2rem;
+  color: #fff;
+  background: transparent;
+  line-height: 4.8rem;
+  display: block;
+}
+
+/**************************************** 
+    form : input
+****************************************/
+input[type="text"],
+input[type="password"] {
+  background: #fff;
+  height: 48px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0 20px;
+  width: auto;
+}
+
+/**************************************** 
+    component : icon
+****************************************/
+
+.ico_calendar {
+  display: inline-block;
+  width: 27px;
+  height: 24px;
+  background: transparent url("../images/mobile/common/ico_calendar.svg") no-repeat 0
+    0;
+  background-size: 27px 24px;
+  margin-right: 6px;
+}
+.ico_view {
+  display: inline-block;
+  width: 27px;
+  height: 24px;
+  background: transparent url("../images/mobile/common/ico_view.svg") no-repeat 0 50%;
+  background-size: 23px 19px;
+  margin-right: 6px;
+}
+
+.ico_user_list {
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  background: transparent url("../images/mobile/common/ico_user_list.svg") no-repeat
+    0 50%;
+  background-size: 16px 18px;
+  margin-right: 6px;
+}
+.ico_users {
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  background: transparent url("../images/mobile/common/ico_users.svg") no-repeat 0
+    50%;
+  background-size: 23px 19px;
+  margin-right: 6px;
+}
+.ico_reset {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: transparent url("../images/common/ico-reset-gray.png") no-repeat;
+  margin-left: 4px;
+}
+
+.file_txt_area {
+  line-height: 3.2rem;
+}
+.file_txt_area a {
+  color: #25282B;
+}
+.file_txt_area a:hover {
+  color: #37C375;
+}
+.list_gdot li {
+  list-style: disc;
+  margin-left: 1.2rem;
+  word-break:keep-all;
+}
+
+/**************************************** 
+    component : radio
+****************************************/
+.radios {
+  position: relative;
+}
+.radios input[type="radio"] {
+  /* 실제 체크박스는 화면에서 숨김 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.radios input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin-right: 13px;
+}
+.radios input[type="radio"] + label:before {
+  /* 가짜 체크박스 */
+  content: "";
+  display: inline-block;
+  width: 24px; /* 체크박스의 너비를 지정 */
+  height: 24px; /* 체크박스의 높이를 지정 */
+  line-height: 24px; /* 세로정렬을 위해 높이값과 일치 */
+  margin: -2px 8px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  background: #fff url('../images/common/btn_chkbox_off.svg') no-repeat 50% 50%;
+  border: 1px solid #dee1e5;
+  border-radius: 50px;
+}
+.radios input[type="radio"] + label:active:before,
+.radios input[type="radio"]:checked + label:active:before {
+  background: #37c375;
+  border: 1px solid #37c375;
+}
+.radios input[type="radio"]:checked + label:before {
+  /* 체크박스를 체크했을때 */
+  content: ""; 
+  font-family: "PRETSB";
+  background: #37c375;
+  background: #37c375 url('../images/common/btn_chkbox_on.svg') no-repeat 50% 50%;
+}

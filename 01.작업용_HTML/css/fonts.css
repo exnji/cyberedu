@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'PRET';
+    font-style: normal;
+    font-size: 400;
+    src: url('../fonts/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'PRETSB';
+    font-style: normal;
+    font-size: 500;
+    src: url('../fonts/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'PRETB';
+    font-style: normal;
+    font-size: 600;
+    src: url('../fonts/Pretendard-Bold.woff') format('woff');
+}

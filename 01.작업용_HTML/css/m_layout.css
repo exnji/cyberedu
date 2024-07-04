@@ -1,0 +1,903 @@
+@charset "utf-8";
+
+/**************************************** 
+    공통 : layout
+****************************************/
+html,
+body {
+  background: #25282b;
+  height:100%;
+}
+body {
+  -webkit-text-size-adjust:auto; 
+}
+.page-wrap {
+  font-size: 1.5rem;
+  position: relative;
+  background:#fff;
+}
+
+/**************************************** 
+    공통 : 하단 nav   
+****************************************/
+.bottom_nav .nav_area {
+  background: #25282b;
+  position: fixed;
+  bottom:0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  -webkit-transform: translateZ(0)
+}
+.bottom_nav .nav_area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 8rem;
+  z-index: 2;
+}
+.bottom_nav nav.btn_menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.4rem;
+}
+.bottom_nav nav.btn_menu button {
+  background: none;
+  border: none;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  line-height: 3rem;
+}
+.bottom_nav button span {
+  display: block;
+  width: 5rem;
+  height: 2rem;
+  color: #8e8e8e;
+  font-size: 1.1rem;
+}
+.bottom_nav .ico_home {
+  background: transparent url("../images/mobile/common/ico_home.svg") no-repeat 50%
+    50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav .k-nav .ico_cate {
+  background: transparent url("../images/mobile/common/ico_cate.svg") no-repeat 50% 50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav .k-nav .ico_sch {
+  background: transparent url("../images/mobile/common/ico_sch.svg") no-repeat 50% 50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav .ico_my {
+  background: transparent url("../images/mobile/common/ico_my.svg") no-repeat 50% 50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav nav.btn_menu .btn_home.active .ico_home {
+  background: transparent url("../images/mobile/common/ico_home_on.svg") no-repeat 50% 50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav nav.btn_menu .k-nav.btn_cate.active .ico_cate {
+  background: transparent url("../images/mobile/common/ico_cate_on.svg") no-repeat 50% 50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav nav.btn_menu .k-nav.btn_sch.active .ico_sch {
+  background: transparent url("../images/mobile/common/ico_sch_on.svg") no-repeat 50% 50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav nav.btn_menu .btn_my.active .ico_my {
+  background: transparent url("../images/mobile/common/ico_my_on.svg") no-repeat 50% 50%;
+  background-size: 2rem 2rem;
+}
+.bottom_nav nav.btn_menu button.active span {
+  color: #6dde84;
+}
+.nav_cnt {
+  position: fixed;
+  bottom: 0;
+  top:0;
+  left:0;
+  right:0;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  -webkit-transform: translateZ(0);
+  display: none;
+}
+.nav_cnt.active {
+  display: block;
+}
+
+.nav_cnt .nav_close_area {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 3rem;
+}
+
+.nav_cnt .nav_close {
+  font-size: 0;
+  width: 17px;
+  height: 17px;
+  margin-top: 1rem;
+  display: inline-block;
+  background: #fff url("../images/mobile/common/btn_close.svg") no-repeat 90% 50%;
+  background-size: 100%;
+  margin-right: -0.6rem;
+}
+/**************************************** 
+    공통 : 하단 nav in scroll
+****************************************/
+.mo_scroll {
+  height: calc(100% - 140px);
+  height: calc(100% - 10%);
+  overflow-y: scroll;
+  position: relative;
+}
+/**************************************** 
+    공통 : 하단 nav 검색메뉴 : 컨텐츠 
+****************************************/
+.cate_sch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+.cate_sch h3 {
+  font-size: 2.3rem;
+  font-family: "PRETSB", Sans-Serif;
+  line-height: 1.2;
+  margin-top: 4.3rem;
+  color:#25282B
+}
+.cate_sch .default_btn_area,
+.cate_sch .sch_area.row_col1 {
+  display: flex;
+}
+
+.default_btn_area {
+  margin-top: 2.5rem;
+}
+.default_btn_area .btn {
+  margin-right: .8rem;
+}
+.default_btn_area .btn:last-child {
+  margin-right: 0;
+}
+
+.cate_sch .sch_area.row_col1 {
+  margin-top: 2rem;
+  border: 1px solid #dee1e5;
+  border-radius: 0.4rem;
+  line-height: 4.8rem;
+  box-sizing: border-box;
+}
+
+.cate_sch .sch_area.row_col1.focusIn{
+  border-color: #37c375;
+}
+
+.cate_sch .sch_area.row_col1 .input.txt {
+  height: 4.8rem;
+  line-height: 4.8rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1.5rem;
+  padding:0 1.6rem;
+  width: 100%;
+}
+.cate_sch .sch_area.row_col1 .input.txt:focus {
+  border:0 none
+}
+.cate_sch .sch_area.row_col1 .input.txt::placeholder {
+  color: #999;
+}
+.cate_sch .sch_area .btn.sch_btn {
+  width:5rem
+}
+.cate_sch .hash_tag_area {
+  margin: 3.2rem 0 0 0;
+  position: relative;
+  padding-bottom:7.2rem
+}
+.cate_sch .hash_tag_area li {
+  float: left;
+  height: 4rem;
+  margin:0 .8rem .8rem 0;
+}
+.cate_sch .hash_tag_area .btn.line.gray.white {
+  text-align: center;
+  letter-spacing: -.1rem;
+}
+
+.cate_sch .sch_area.row_col1 .btn.sch_btn {
+  margin-left: 0;
+}
+
+.catSch_key_visual {
+  font-size: 1.4rem;
+    color: #5a6265;
+    padding: 2rem 0 18rem 0;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    height: 13.5rem;
+    bottom: 0;
+}
+.catSch_key_visual p {
+  top: 2.6rem;
+  left:3rem;
+  position: absolute;
+  z-index: 1;
+}
+.catSch_key_visual figure {
+  width: 18.9rem;
+  height: 13.5rem;
+  background: transparent url("../images/mobile/common/img_sch.svg") no-repeat 0 0;
+  position: absolute;
+  right: 0rem;
+  top: -1rem;
+  background-size: 18.9rem 16rem;
+}
+.catSch_key_visual h3 {
+  font-family: "PRETB", Sans-Serif;
+  font-size: 1.5rem;
+  color: #38404a;
+  letter-spacing: -1px;
+  top: 6.1rem;
+  left:3rem;
+  position: absolute;
+}
+
+/**************************************** 
+    공통 : 하단 nav 카테고리 메뉴 : 컨텐츠 
+****************************************/
+
+.cate_nav {
+  display: flex;
+  margin-top: 3rem;
+}
+.cate_nav dl {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cate_nav .cate_link {
+  border-bottom: 1px solid #e4e8ec;
+}
+.cateMenu ul {
+  display: none;
+}
+.cate_nav .cate_link > a {
+  font-size: 1.9rem;
+  font-family: "PRETSB", Sans-Serif;
+  color: #25282B;
+  padding: 1.9rem 0;
+  display: block;
+  background: #fff url("../images/mobile/common/ico_cate_down.svg") no-repeat 98%
+    50%;
+  background-size: 2rem auto;
+}
+.cate_nav .cate_link.on {
+  border-bottom: 0;
+}
+.cate_nav .cate_link.on> a {
+  background: #fff url("../images/mobile/common/ico_selcct_up.svg") no-repeat 98% 50%;
+  background-size: 2rem auto;
+  color: #37C375;
+}
+.cate_nav .cate_link + dd {
+  border-bottom: 0;
+}
+.cate_nav .cate_link.on + dd {
+  border-bottom: 1px solid #e4e8ec;
+}
+.cate_nav  dd > ul {
+  box-sizing: border-box;
+  width:80%;
+  margin: 0 0 0.5rem 1.2rem;
+}
+
+.cate_nav  dd >  ul li {
+  margin:0 0 1.2rem -.6rem;
+  background: url('../images/mobile/common/ico_marker.svg') no-repeat 0 .9rem;
+  text-indent: 1rem;
+}
+.cate_nav  dd >  ul li a {
+  color: #5A6265;
+  font-size: 16px;
+  display: block;
+  line-height: 1.5;
+}
+
+.cate_nav  dd >  ul li a:hover,
+.cate_nav  dd >  ul li a:focus{
+  color: #37c375;
+}
+
+.nav_cnt .login_info {
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.btn.line.green {
+  color: #5a6265;
+  font-size: 1.5rem;
+  padding: 0 1.2rem;
+  line-height: 4rem;
+  border-color: #37c375;
+  box-sizing: border-box;
+}
+
+/**************************************** 
+    공통 : 하단 nav 마이페이지메뉴 : 로그인 컨텐츠 
+****************************************/
+.cate_my {
+  display: flex;
+  flex-direction: column;
+}
+.cate_my .login_area {
+  border-bottom: 1px solid #e4e8ec;
+}
+.cate_my .login_area .title_area {
+  font-size: 1.4rem;
+  color: #5a6265;
+}
+.cate_my .login_area .title_area h3 {
+  color: #25282b;
+  font-size: 2.3rem;
+  font-family: "PRETSB", Sans-Serif;
+  margin-bottom: 1.3rem;
+}
+.cate_my .login_area .title_area p + p {
+  margin-top:8px
+}
+.cate_my .login_area .login_input_group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.cate_my .login_area .login_input_group input,
+.cate_my .login_area .login_input_group .btn {
+  height: 4.8rem;
+  line-height: 4.8rem;
+}
+.cate_my .login_area .login_input_group input {
+  border: 1px solid #dee1e5;
+  padding:0 1.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+}
+.cate_my .login_area .login_input_group input:focus{
+  border-color: #37c375;
+}
+.cate_my .login_area .login_input_group input::placeholder {
+  color: #999;
+  font-size: 1.5rem;
+}
+
+.cate_my .login_area .login_input_group .btn {
+  border-radius: 0.5rem;
+  background: #37c375;
+  color: #fff;
+  font-size: 1.7rem;
+  font-family: "PRETSB",Sans-Serif
+}
+
+.cate_my .login_area .chk_area {
+  display: flex;
+  height: 2.4rem;
+  padding: 1.6rem 0 2.0rem 0;
+  font-size: 1.5rem;
+  color: #5a6265;
+  align-items: center;
+}
+
+.cate_my .login_area .chk_area label {
+  display: inline-block;
+}
+
+.cate_my .idPw_area dl {
+  color: #5a6265;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+.cate_my .idPw_area dl dt {
+  margin-top: 1.8rem;
+  display: inline-block;
+}
+.cate_my .idPw_area dl dd {
+  line-height: 2;
+  display: inline-block;
+}
+.cate_my .idPw_area dl dd a {
+  color: #37c375;
+  font-size: 1.4rem;
+  font-family: "PRETSB", Sans-Serif;
+}
+.cate_my .idPw_area dl dd:last-of-type {
+  line-height: 2.5;
+}
+.cate_my .idPw_area dl dd a .chk {
+  width: 0.7rem;
+  height: 1rem;
+  display: inline-block;
+  background: transparent url("../images/mobile/common/ico_arrow_r_green.svg")
+    no-repeat 0 0;
+  transform: rotate(180deg);
+  margin-left: 0.4rem;
+}
+
+/**************************************** 
+    page 공통 :  page 상단 이전버튼 영역 
+****************************************/
+
+.common_prev_area {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.common_prev_area .btn {
+  font-size: 0;
+  background: transparent url("../images/mobile/common/btn_common_prev.svg")
+    no-repeat 0 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+/**************************************** 
+    page 공통 :  page 상단 title영역
+****************************************/
+ .page_title_area .title_area h2 {
+  color: #25282b;
+  font-size: 2.3rem;
+  font-family: "PRETSB", Sans-Serif;
+  display: inline-block;
+}
+.page_title_area .title_area p {
+  line-height: 1.5;
+  font-size: 1.4rem;
+  color: #5a6265;
+  margin-top: 1.3rem;
+  word-break: keep-all;
+}
+ .tb_title_area h2 {
+  color: #25282b;
+  font-size: 2.3rem;
+  font-family: "PRETSB", Sans-Serif;
+  display: block;
+}
+.education02_area .tb_title_area h2{
+  width: 28rem;
+  word-break: keep-all;
+}
+.page_title_area .title_area a.use_info {
+  float: right;
+  font-size: 1.4rem;
+  letter-spacing: -0.01rem;
+  line-height: 2.7rem;
+  color: #37c375;
+}
+
+.page_title_area .title_area a.use_info.on {
+  color:#8E8E8E
+}
+
+.page_title_area .title_area a.use_info .ico_use{
+  width:2rem;
+  height:2rem;
+  background: #fff url('../images/mobile/common/ico_use_off.svg') no-repeat 50% 50%;
+  background-size: .8rem .6rem;
+  display: inline-block;
+  position: relative;
+  top: 0.6rem;
+  transform: rotate(180deg);
+}
+.page_title_area .title_area .use_area {
+  display: none;
+  padding: 1.3rem 0 .6rem .4rem;
+  box-sizing: border-box;
+}
+.page_title_area .title_area .use_area > ul  li{
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  color: #5A6265;
+  letter-spacing: -.1rem;
+  margin-bottom: 0.4rem;
+  background: url('../images/mobile/common/ico_marker.svg') no-repeat 0 19%;
+  padding: 0 0 0 1rem;
+  word-break: keep-all;
+}
+.page_title_area .title_area .use_area > ul  li a{
+  color: #5A6265;
+}
+.page_title_area .title_area .use_area > ul.line2  li{
+  background-position: 0 20%;
+}
+.page_title_area .title_area .use_area > ul.line2  li:first-of-type{
+  background-position: 0 38%;
+}
+.page_title_area .title_area .use_area > ul  li:last-of-type{
+  margin-bottom:0
+}
+.page_title_area .title_area .use_area > ul.mypage02  li{
+  background-position: 0 37%;
+}
+.page_title_area .title_area .use_area > ul.mypage02  li:first-of-type{
+  background-position: 0 22%;
+}
+.page_title_area .title_area .use_area > ul  li > p {
+  line-height: 1.3;
+  margin-top: 0;
+}
+.page_title_area .title_area a.use_info.on .ico_use {
+  background: #fff url('../images/mobile/common/ico_use_on.svg') no-repeat 50% 50%;
+  transform: rotate(0deg);
+}
+.page_title_area .use_area.on {
+  display:block
+}
+
+.page_sch_area h3 {
+  color: #25282b;
+  font-size: 1.6rem;
+  font-family: "PRETSB", Sans-Serif;
+  height: 5.1rem;
+  line-height: 5rem;
+}
+
+/**************************************** 
+    page 공통 :  page 상단 검색영역
+****************************************/
+
+.page_sch_area .sch_area.row-col2 {
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sch_area.row-col2 .select {
+  height: 4.4rem;
+  border-radius: 0.4rem;
+  color: #999;
+  font-size: 1.5rem;
+  border: 1px solid #dee1e5;
+  width:9rem;
+  letter-spacing: -2px;
+  padding-left: .3rem;
+}
+
+.page_sch_area .sch_area.row_col1 {
+  width: calc(100% - 9rem);
+  border: 1px solid #dee1e5;
+  border-radius: 0.4rem;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  margin-left:.7rem
+}
+
+.page_sch_area .sch_area.row_col1 .input.txt {
+  height: 4rem;
+  width: 100%;
+  line-height: 4.4rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1.5rem;
+  padding: 0 1.6rem;
+}
+
+.page_sch_area .sch_area.row_col1.focusIn{
+  border-color: #37c375;
+}
+
+.page_sch_area .sch_area.row_col1 .input.txt::placeholder {
+  color: #999;
+}
+.page_sch_area .sch_area.row_col1 .btn.sch_btn {
+  width: 5.6rem;
+  height: 4.4rem;
+  background: transparent url("../images/mobile/common/btn_b_sch.svg") no-repeat 50%
+    50%;
+  background-size: 1.9rem 1.8rem;
+  font-size: 0;
+}
+.page_sch_area .sch_area.row4-col1 {
+  height: 18.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.page_sch_area .sch_area.row3-col1 {
+  height: 14.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.page_sch_area .sch_area.row2-col1 {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sch_area .select {
+  height: 4.4rem;
+  border-radius: 0.4rem;
+  color: #25282B;
+  font-size: 1.5rem;
+  border: 1px solid #dee1e5;
+  width: 100%;
+  background-position: 98% 50%;
+  padding: 0 0 0 1.6rem;
+}
+.page_sch_area .sch_area.row1_col2 {
+  width: 100%;
+  border: 1px solid #dee1e5;
+  border-radius: 0.4rem;
+  line-height: 4.4rem;
+  box-sizing: border-box;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.page_sch_area .sch_area.row1_col2 .input.txt {
+  height: 4rem;
+  width: 100%;
+  line-height: 4.4rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1.5rem;
+  padding: 0 1.6rem;
+}
+
+.page_sch_area .sch_area.row1_col2.focusIn{
+  border-color: #37c375;
+}
+
+.page_sch_area .sch_area.row1_col2 .input.txt::placeholder {
+  color: #999;
+}
+.page_sch_area .sch_area.row1_col2 .btn.sch_btn {
+  width: 5.6rem;
+  height: 4.4rem;
+  background: transparent url("../images/mobile/common/btn_b_sch.svg") no-repeat 50%
+    50%;
+  background-size: 1.9rem 1.8rem;
+  font-size: 0;
+}
+
+.page_sch_area .sch_area.row2-col1 .col2{
+  display: flex; 
+  align-items: center;
+}
+.page_sch_area .sch_area.row2-col1 .col2 .tab_nav{
+  width: calc(100% - 2rem);
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 1rem;
+}
+
+/**************************************** 
+    footer
+****************************************/
+footer {
+  position: relative;
+}
+
+.footer_area {
+  padding-top: 3.1rem;
+  background: #f7f7f7;
+  color: #8e8e8e;
+  height: 33.5rem;
+}
+
+.footer_area nav ul {
+  float: left;
+  width: 100%;
+  margin-bottom:4.1rem
+}
+
+.footer_area nav li {
+  margin-right: 2rem;
+  text-align: left;
+  float:left
+}
+
+.footer_area nav li:nth-of-type(1),
+.footer_area nav li:nth-of-type(2){
+  margin-bottom: 1.4rem;
+}
+
+
+
+.footer_area nav li:nth-child(3) {
+  clear: both;
+}
+
+.footer_area nav li a,
+.footer_area address,
+.footer_area address a,
+.footer_area .copy {
+  color: #8e8e8e;
+  font-size: 1.3rem;
+  letter-spacing: -.02rem;
+}
+
+.footer_area address {
+  float: left;
+  width: 100%;
+}
+
+.footer_area address a {
+  display: inline-block;
+}
+
+.footer_area nav li a:focus,
+.footer_area address a:focus {
+  color: #37c375;
+  text-decoration: none;
+}
+
+.footer_area nav li a.color_accent {
+  font-family: "PRETSB",Sans-Serif;
+}
+
+.footer_area address p,
+.footer_area address a{
+  margin-bottom:1rem
+}
+
+.footer_area address a.tel_link{
+  margin-left: .8rem;
+}
+
+.footer_area_logo {
+  display: flex;
+  align-content: flex-start;
+  margin-top: 2rem;
+  height:2.2rem
+}
+.footer_area_logo .ico_footLogo1 {
+  display: inline-block;
+  width: 7.4rem;
+  height: 2.2rem;
+  background: transparent url("../images/mobile/common/ico_footLogo1.svg") no-repeat
+    0 0;
+  margin-right: 1.2rem;
+  margin-top: .5rem;
+}
+.footer_area_logo .ico_footLogo2 {
+  display: inline-block;
+  width: 7.8rem;
+  height: 2.2rem;
+  background: transparent url("../images/mobile/common/ico_footLogo2.svg") no-repeat
+    0 0;
+}
+
+/* 공지사랑 리스트 하단 버튼  S*/
+.common_more_area {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.2rem;
+}
+.common_more_area .btn {
+  background: #fff;
+  border: 1px solid #dee1e5;
+  display: inline-block;
+  color: #5A6265;
+  font-size: 1.5rem;
+  height: 4rem;
+  box-sizing: border-box;
+  width: 8.2rem; 
+  cursor: pointer;
+}
+.common_more_area .btn .chk {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: #fff url("../images/mobile/common/ico_arrow_bottom.svg") no-repeat 0 0;
+  position: relative;
+  top: 0.1rem;
+}
+/* 공지사랑 리스트 하단 버튼  S*/
+
+/* 공지사항 detail 목록 버튼 S */
+.list_more_area {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+}
+.list_more_area .btn.btn_active {
+  font-size: 1.6rem;
+  font-family: "PRETSB", Sans-Serif;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  height:4.8rem;
+  cursor: pointer;
+}
+/* 공지사항 detail 목록 버튼 E */
+
+
+.topbtn {
+  border-radius: 3.6rem;
+  background: #fff url("../images/mobile/common/top_btn.svg") no-repeat 50% 10px;
+  background-size: 1.2rem 1.5rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  color: #fff;
+  font-size: 0;
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid #37c375;
+  margin: 6.2rem auto 2.2rem auto;
+}
+
+
+/* 미디어쿼리 적용 */
+@media only screen and (width: 411px){
+  .catSch_key_visual {
+    font-size: 1.2rem;
+      color: #5a6265;
+      padding: 0.4rem 0 0 0;
+      width: 100%;
+      position: absolute;
+      box-sizing: border-box;
+      height: -5.5rem;
+      bottom: 7rem;
+  }
+}
+@media only screen and (min-width: 640px){
+  .sch_area.row-col2 .select {
+    letter-spacing: 0;
+    padding-left: 1.6rem;
+    width: 13rem;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 359px){
+  .footer_area address p, .footer_area address a {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media only screen and (width: 320px){
+  .catSch_key_visual {
+    font-size: 1.2rem;
+    color: #5a6265;
+/*     padding: 2.6rem 0 18rem 0; */
+    width: 100%;
+/*     position: relative; */
+    box-sizing: border-box;
+    height: 13.5rem;
+/*     bottom: 11rem; */
+    margin-top: 1rem;
+  }
+
+  .cate_sch .hash_tag_area {
+    padding-bottom: 13.2rem;
+  }
+
+  .page_title_area .title_area .use_area > ul.line2 li:first-of-type {
+    background-position: 0 23%;
+  }
+}
