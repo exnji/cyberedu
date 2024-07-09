@@ -1,5 +1,4 @@
-@charset "utf-8";
-
+@charset "UTF-8";
 /**************************************** 
     page 공통 :  key_visual_area
 ****************************************/
@@ -14,20 +13,22 @@
   background: #37c375;
   box-sizing: border-box;
 }
+
 .key_visual_area .txt_area {
   display: flex;
   flex-direction: column;
 }
+
 .key_visual_area.visual_customer .img {
   width: 227px;
   height: 173px;
-  background: transparent url("../images/page/visual_customer.png") no-repeat 0
-    0;
+  background: transparent url("../images/page/visual_customer.png") no-repeat 0 0;
   background-size: 227px 200px;
   position: absolute;
   right: 219px;
   top: 27px;
 }
+
 .key_visual_area.visual_edu .img {
   width: 371px;
   height: 172px;
@@ -37,16 +38,17 @@
   right: 80px;
   top: 28px;
 }
+
 .key_visual_area.visual_cyberedu .img {
   width: 434px;
   height: 187px;
-  background: transparent url("../images/page/visual_cyberedu.png") no-repeat
-    90% 0px;
+  background: transparent url("../images/page/visual_cyberedu.png") no-repeat 90% 0px;
   background-size: 434px 248px;
   position: absolute;
   right: 147px;
   top: 13px;
 }
+
 .key_visual_area.visual_mypage .img {
   width: 473px;
   height: 190px;
@@ -56,6 +58,7 @@
   right: 227px;
   top: 20px;
 }
+
 .key_visual_area.visual_purpose .img {
   width: 325px;
   height: 190px;
@@ -64,6 +67,7 @@
   right: 286px;
   top: 10px;
 }
+
 .key_visual_area.visual_sitemap .img {
   width: 324px;
   height: 178px;
@@ -72,17 +76,20 @@
   right: 173px;
   top: 22px;
 }
+
 .key_visual_area h2 {
   font-size: 40px;
   font-family: "PRETSB";
   letter-spacing: 2px;
 }
+
 .key_visual_area p {
   font-size: 15px;
   margin-top: 10px;
   line-height: 1.3;
   letter-spacing: 0.5px;
 }
+
 .key_visual_area ul {
   margin: 20px 0 0 20px;
 }
@@ -95,12 +102,12 @@
 }
 
 .key_visual_area .txt_area .login_txt {
-  font-family: "PRETSB",serif;
-  margin-top:18px
+  font-family: "PRETSB", serif;
+  margin-top: 18px;
 }
 
 .key_visual_area .txt_area .btn_setup {
-  margin-top:16px
+  margin-top: 16px;
 }
 
 /**************************************** 
@@ -115,27 +122,30 @@
   display: flex;
   align-items: center;
 }
+
 .sch_area.row2, .menu_info_area.row2 {
   display: flex;
   flex-direction: column;
   width: 100%;
   background: #eff1f3;
   border-radius: 10px;
-  padding:26px 60px;
+  padding: 26px 60px;
   justify-content: center;
   margin-bottom: 60px;
 }
+
 .menu_info_area .title {
-  width:186px;
-  height:48px;
-  background:#37C375;
+  width: 186px;
+  height: 48px;
+  background: #37C375;
   border-radius: 24px;
   line-height: 48px;
-  color:#fff;
+  color: #fff;
   text-align: center;
   font-size: 19px;
   font-family: "PRETSB", serif;
 }
+
 .sch_area.row1 .select,
 .sch_area.row2 .select,
 .sch_area.row2 .input.txt {
@@ -148,9 +158,11 @@
   align-items: center;
   position: relative;
 }
+
 .sch_area.row2 .last_div {
-  margin-top:12px
+  margin-top: 12px;
 }
+
 .sch_area.row2 .select,
 .sch_area.row2 .input.txt {
   width: 600px;
@@ -160,10 +172,12 @@
   font-size: 17px;
   width: 103px;
 }
+
 .sch_area .pos_re strong:nth-of-type(2) {
   font-size: 17px;
   margin: 0 40px;
 }
+
 .list_control_box {
   display: flex;
   height: 80px;
@@ -178,18 +192,18 @@
 }
 
 .list_num.color_active {
-  color:#09AA5C
+  color: #09AA5C;
 }
 
 .list_seleted {
   display: flex;
   align-self: flex-end;
-  height:40px
+  height: 40px;
 }
 
 .sch_area .chk_area {
-	height: 34px;
-	margin-top: 14px;
+  height: 34px;
+  margin-top: 14px;
 }
 
 /**************************************** 
@@ -199,6 +213,7 @@
   width: 600px;
   margin: 60px auto auto auto;
 }
+
 .member_login_area .form_group {
   padding: 40px 60px;
   margin-bottom: 20px;
@@ -225,10 +240,12 @@
   color: #25282b;
   font-family: "PRETSB", serif;
 }
+
 .member_login_area .form_group .title_area h3 {
   font-size: 31px;
   margin-bottom: 20px;
 }
+
 .member_login_area .col2 .title_area h3 {
   font-size: 16px;
   line-height: 1.6;
@@ -237,9 +254,11 @@
 .member_login_area .join_link h3 {
   background: transparent url("../images/common/ico_my_green.svg") no-repeat;
 }
+
 .member_login_area .idPw_link h3 {
   background: transparent url("../images/common/ico_logout_blue.svg") no-repeat;
 }
+
 .member_login_area .join_link h3,
 .member_login_area .idPw_link h3 {
   background-size: 45px 45px;
@@ -251,26 +270,37 @@
   color: #5a6265;
   font-size: 15px;
 }
+
 .member_login_area .title_area p {
   margin-top: 17px;
   line-height: 1.6;
 }
+
 .member_login_area .col2 .title_area p {
   font-size: 15px;
 }
+
 .member_login_area .group {
   margin-top: 8px;
 }
+
 .member_login_area .group .input.txt {
   height: 56px;
   line-height: 56px;
   padding: 0 24px;
   width: 480px;
 }
+
+.member_login_area .group .input.txt::-moz-placeholder {
+  font-size: 16px;
+  color: #5a6265;
+}
+
 .member_login_area .group .input.txt::placeholder {
   font-size: 16px;
   color: #5a6265;
 }
+
 .member_login_area .form_group .btn.btn_active {
   width: 100%;
   font-size: 19px;
@@ -281,21 +311,23 @@
   margin-bottom: 16px;
   border-radius: 4px;
 }
+
 .util_group a.color_active {
   font-size: 16px;
   margin-top: 20px;
   display: inline-block;
 }
+
 .util_group a.color_active:hover {
   text-decoration: underline;
 }
+
 .util_group a.color_active .chk,
 .user_guide_area a.color_active .chk {
   width: 6px;
   height: 10px;
   display: inline-block;
-  background: transparent url("../images/common/ico_arrow_r_green.svg")
-    no-repeat 0 0;
+  background: transparent url("../images/common/ico_arrow_r_green.svg") no-repeat 0 0;
   transform: rotate(180deg);
   margin-left: 2px;
   background-size: 100%;
@@ -308,6 +340,7 @@
   width: 800px;
   margin: 60px auto auto auto;
 }
+
 .certi_info_area {
   width: 800px;
   margin: 40px auto 0 auto;
@@ -315,31 +348,37 @@
   color: #5a6265;
   line-height: 1.4;
 }
+
 .idpw_area .col2,
 .idpw_area .title_group {
   display: flex;
   justify-content: space-between;
 }
+
 .idpw_area .title_group,
 .idpw_area .col2 .round12 {
   color: #5a6265;
   font-size: 14px;
 }
+
 .idpw_area .col2 .round12 {
   padding: 40px 24px 47px 24px;
   width: 390px;
   height: 420px;
   box-sizing: border-box;
 }
+
 .idpw_area .title_group {
   align-items: center;
   margin-bottom: 44px;
 }
+
 .idpw_area .title_group h3 {
   font-size: 31px;
   color: #25282b;
   font-family: "PRETSB", serif;
 }
+
 .idpw_area .col2 .title_area h3 {
   font-size: 19px;
   color: #25282b;
@@ -361,6 +400,7 @@
   background: url("../images/common/ico_my_green.svg") no-repeat;
   background-size: 32px 32px;
 }
+
 .idpw_area .col2 .title_area.pw_find h3::before {
   background: url("../images/common/ico_logout_blue.svg") no-repeat;
   background-size: 32px 32px;
@@ -393,9 +433,11 @@
   display: flex;
   margin-top: 30px;
 }
+
 .idpw_area .user_certi_area.mt14 {
   margin-top: 44px;
 }
+
 .idpw_area .user_certi_area .ipin_area,
 .idpw_area .user_certi_area .certi_area {
   width: 50%;
@@ -403,13 +445,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-right:10px
+  margin-right: 10px;
 }
 
 .idpw_area .user_certi_area .ipin_area p,
 .idpw_area .user_certi_area .certi_area p {
   line-height: 1.4;
 }
+
 .idpw_area .user_certi_area .btn.default {
   padding: 0 14px;
   font-size: 15px;
@@ -430,6 +473,7 @@
 .idpw_area .user_certi_area .img_ipin {
   background: url("../images/common/ico_ipin.svg") no-repeat;
 }
+
 .idpw_area .user_certi_area .img_certi {
   background: url("../images/common/ico_certi.svg") no-repeat;
 }
@@ -437,14 +481,17 @@
 .certi_info_area .ul_dot {
   margin-left: 10px;
 }
+
 .certi_info_area .ul_dot li {
   margin-bottom: 7px;
   position: relative;
   padding-left: 12px;
 }
+
 .certi_info_area .ul_dot li:last-of-type {
   margin-bottom: 0;
 }
+
 .certi_info_area .ul_dot li::before {
   content: "";
   display: block;
@@ -456,9 +503,11 @@
   top: 20%;
   left: -1px;
 }
+
 .certi_info_area .ul_dot.nchild3 li:nth-of-type(3):before {
   top: 40%;
 }
+
 .certi_info_area .ul_dot li > div {
   display: inline-block;
   word-break: keep-all;
@@ -471,63 +520,72 @@
   width: 800px;
   margin: 60px auto 0 auto;
 }
+
 .join_area .header_group h3 {
   font-size: 31px;
   color: #25282b;
   font-family: "PRETSB", serif;
 }
+
 .join_area .header_group p.txt {
   color: #5a6265;
   font-size: 15px;
   margin-top: 18px;
 }
+
 .join_area .header_group + .col2 {
   margin-top: 60px;
 }
 
 .join_area .header_group + .col2.mb230 {
-    padding-bottom:230px
+  padding-bottom: 230px;
 }
+
 .join_area .col2 {
   display: flex;
   justify-content: space-between;
 }
+
 .join_area .col2 .round12 {
   padding: 40px 30px 40px 40px;
   width: 390px;
   height: 330px;
   box-sizing: border-box;
 }
+
 .join_area .title_area {
   color: #fff;
   font-size: 16px;
   line-height: 1.5;
 }
+
 .join_area .col2 .title_area h3 {
   font-size: 23px;
   color: #fff;
   font-family: "PRETSB", serif;
 }
+
 .join_area .col2 .title_area h3 + p {
   margin-top: 14px;
 }
+
 .join_area .link_area {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: self-start;
 }
+
 .join_area .link_area .public_user {
   width: 189px;
   height: 183px;
-  background: transparent url("../images/page/img_public_user.svg") no-repeat 0
-    0;
+  background: transparent url("../images/page/img_public_user.svg") no-repeat 0 0;
 }
+
 .join_area .link_area .childern_user {
   width: 154px;
   height: 126px;
-  background: transparent url("../images/page/img_children_user.svg") no-repeat
-    0 0;
+  background: transparent url("../images/page/img_children_user.svg") no-repeat 0 0;
 }
 
 .join_area .link_area .public_user {
@@ -535,167 +593,185 @@
   left: -9px;
   top: 10px;
 }
+
 .join_area .link_area .childern_user {
   position: absolute;
   top: 69px;
 }
+
 .join_area .link_area .btn.white {
   position: absolute;
   right: 0;
   top: 100px;
 }
+
 /**************************************** 
     공통 : 회원가입 SPEP
 ****************************************/
-
 .join_area .page_title_area h2 {
-    height: 41px;
-    display: flex;
-    align-items: center;
-    font-size: 31px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  font-size: 31px;
 }
 
 .join_area .page_title_area h2,
 .join1_area fieldset legend h3 {
-    font-family: "PRETSB", serif;
+  font-family: "PRETSB", serif;
 }
 
 .join1_area fieldset legend {
-    position: relative;
-    height: 26px;
-    margin-bottom:19px
+  position: relative;
+  height: 26px;
+  margin-bottom: 19px;
 }
-.join1_area fieldset legend h3{
-    display: block;
-    width: 800px;
-    font-size: 19px;
-    text-indent: 0;
-    height: 26px;
-    line-height: 26px;    
+
+.join1_area fieldset legend h3 {
+  display: block;
+  width: 800px;
+  font-size: 19px;
+  text-indent: 0;
+  height: 26px;
+  line-height: 26px;
 }
 
 .join1_area fieldset {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.join1_area .scroll_area{
-    border: 1px solid #DEE1E5;
-    box-sizing: border-box;
-    padding:0 0 20px 0;
-    position: relative;
-    height:140px;
+
+.join1_area .scroll_area {
+  border: 1px solid #DEE1E5;
+  box-sizing: border-box;
+  padding: 0 0 20px 0;
+  position: relative;
+  height: 140px;
 }
 
 .join1_area .scroll_area .clause_area {
-    font-size: 15px;
-    color: #5A6265;
-    line-height: 1.4;
-    margin:30px 0 0 20px
+  font-size: 15px;
+  color: #5A6265;
+  line-height: 1.4;
+  margin: 30px 0 0 20px;
 }
 
-.join1_area .chk_area{
-    margin: 17px 0 37px 0;
+.join1_area .chk_area {
+  margin: 17px 0 37px 0;
 }
 
 .join1_area .personal_link {
-    color:#348CAD;
-    font-size: 15px;
-    font-family: "PRET" serif;
-    margin-bottom:29px
+  color: #348CAD;
+  font-size: 15px;
+  font-family: "PRET" serif;
+  margin-bottom: 29px;
 }
 
 .join2_area .title_group h3 {
   font-size: 19PX;
   font-family: "PRETSB", serif;
-  margin-bottom:27px
+  margin-bottom: 27px;
 }
+
 .join2_area .certi_info_area {
-    width: 800px;
-    margin: 0;
-    font-size: 14px;
-    color: #5a6265;
-    line-height: 1.4;
-  }
-
-  .join2_area .certi_info_area .ul_dot{
-    margin-left:0
-  }
-  .join2_area .col2 {margin-top:38px}
-  .join2_area .col2 .round12 {
-    height: 240px;
-    padding:37px 40px 52px 40px;
-  }
-
-  .join2_area .col2 .round12:nth-child(1) {
-    background: url('../images/common/ico_ipin.svg') no-repeat 250px 40px;
-    background-size: 100px 100px;
-  }
-  .join2_area .col2 .round12:nth-child(2) {
-    background: url('../images/common/ico_certi.svg') no-repeat 250px 40px;
-    background-size: 100px 100px;
-  }
-  .join2_area .col2 .round12 .certi_area strong,
-  .join2_area .col2 .round12 .ipin_area strong{
-    font-size: 19px;
-    font-family: "PRETSB", serif;
-    margin-bottom:9px;
-    display: inline-block;
-  }
-  .join2_area .col2 .round12 .certi_area p,
-  .join2_area .col2 .round12 .ipin_area p{
-    font-size: 16px;
-    color:#5A6265;
-    line-height: 1.5;
-  }
-
-  .join2_area .col2 .round12 .ipin_area .btn.default,
-  .join2_area .col2 .round12 .certi_area .btn.default{
-    padding: 0 14px;
-    font-size: 15px;
-    color: #5a6265;
-    font-family: "PRETSB", serif;
-    margin-top: 30px;
+  width: 800px;
+  margin: 0;
+  font-size: 14px;
+  color: #5a6265;
+  line-height: 1.4;
 }
 
-  .join2_area .round12.default {
-    padding:38px;
-    margin-top:40px
-  }
-
-  .join2_area .col1 .certi_info_area .ul_dot li > div {
-    display: inline-block;
-    word-break: break-all;
-    width: 724px;
+.join2_area .certi_info_area .ul_dot {
+  margin-left: 0;
 }
+
+.join2_area .col2 {
+  margin-top: 38px;
+}
+
+.join2_area .col2 .round12 {
+  height: 240px;
+  padding: 37px 40px 52px 40px;
+}
+
+.join2_area .col2 .round12:nth-child(1) {
+  background: url("../images/common/ico_ipin.svg") no-repeat 250px 40px;
+  background-size: 100px 100px;
+}
+
+.join2_area .col2 .round12:nth-child(2) {
+  background: url("../images/common/ico_certi.svg") no-repeat 250px 40px;
+  background-size: 100px 100px;
+}
+
+.join2_area .col2 .round12 .certi_area strong,
+.join2_area .col2 .round12 .ipin_area strong {
+  font-size: 19px;
+  font-family: "PRETSB", serif;
+  margin-bottom: 9px;
+  display: inline-block;
+}
+
+.join2_area .col2 .round12 .certi_area p,
+.join2_area .col2 .round12 .ipin_area p {
+  font-size: 16px;
+  color: #5A6265;
+  line-height: 1.5;
+}
+
+.join2_area .col2 .round12 .ipin_area .btn.default,
+.join2_area .col2 .round12 .certi_area .btn.default {
+  padding: 0 14px;
+  font-size: 15px;
+  color: #5a6265;
+  font-family: "PRETSB", serif;
+  margin-top: 30px;
+}
+
+.join2_area .round12.default {
+  padding: 38px;
+  margin-top: 40px;
+}
+
+.join2_area .col1 .certi_info_area .ul_dot li > div {
+  display: inline-block;
+  word-break: break-all;
+  width: 724px;
+}
+
 .join3_area {
-  padding-top:21px
+  padding-top: 21px;
 }
- .join3_area .title_group {
+
+.join3_area .title_group {
   display: flex;
   justify-content: space-between;
 }
- .join3_area .title_group {
+
+.join3_area .title_group {
   align-items: center;
   margin-bottom: 21px;
 }
- .join3_area .title_group h3 {
+
+.join3_area .title_group h3 {
   font-size: 19px;
   color: #25282b;
   font-family: "PRETSB", serif;
 }
+
 .join3_area .title_group p {
-  color:#5A6265;
+  color: #5A6265;
   font-size: 15px;
 }
- .join3_area .title_group .num_filter {
+
+.join3_area .title_group .num_filter {
   font-size: 14px;
-  color:#fff;
+  color: #fff;
   font-family: "PRETSB", serif;
   display: inline-block;
-  width:18px;
+  width: 18px;
   height: 18px;
   border-radius: 18px;
-  background:#25282b;
+  background: #25282b;
   text-align: center;
   line-height: 1.3;
   position: relative;
@@ -704,55 +780,68 @@
 }
 
 .join3_area .tb_area {
-  border-top:1px solid #25282B;
-  margin-bottom:57px
+  border-top: 1px solid #25282B;
+  margin-bottom: 57px;
 }
-.join3_area .tb_area:last-of-type{
-  margin-bottom:0
+
+.join3_area .tb_area:last-of-type {
+  margin-bottom: 0;
 }
-.join3_area table.board.list.left th, table.board.list.left td{
-  padding:12px 0
+
+.join3_area table.board.list.left th, table.board.list.left td {
+  padding: 12px 0;
 }
+
 .join3_area table.board.list.left.service_form th,
-.join3_area table.board.list.left.service_form td{
-  padding:22px 0
+.join3_area table.board.list.left.service_form td {
+  padding: 22px 0;
 }
-.join3_area table.board.list.left.service_form th{
+
+.join3_area table.board.list.left.service_form th {
   vertical-align: top;
 }
+
 .join3_area table.board.list.left .tr_top_group th,
-.join3_area table.board.list.left .tr_top_group td{
-  padding:12px 0 5px 0;
-  border-bottom:0
+.join3_area table.board.list.left .tr_top_group td {
+  padding: 12px 0 5px 0;
+  border-bottom: 0;
 }
+
 .join3_area table.board.list.left .tr_bot_group th,
-.join3_area table.board.list.left .tr_bot_group td{
-  padding:5px 0 12px 0;
-  border-bottom:0
+.join3_area table.board.list.left .tr_bot_group td {
+  padding: 5px 0 12px 0;
+  border-bottom: 0;
 }
-.join3_area table.board.list.left .tr_bot_group {border-bottom:1px solid #EFF1F3}
+
+.join3_area table.board.list.left .tr_bot_group {
+  border-bottom: 1px solid #EFF1F3;
+}
+
 .join3_area .obj_area,
-.join3_area .obj_area .tel_group{
-  display:flex;
+.join3_area .obj_area .tel_group {
+  display: flex;
   align-items: center;
 }
+
 .join3_area label,
 .join3_area .obj {
-  font-size:15px;
-  color:#25282B;
-  font-family: "PRETSB",serif;
-  position: relative
+  font-size: 15px;
+  color: #25282B;
+  font-family: "PRETSB", serif;
+  position: relative;
 }
+
 .join3_area .input.txt,
 .join3_area .input.txt,
-.join3_area .select_box2{
-  height:40px;
+.join3_area .select_box2 {
+  height: 40px;
 }
-.join3_area  .obj p{
+
+.join3_area .obj p {
   font-size: 14px;
   font-family: "PRET", serif;
   line-height: 1.2;
-  color:#8E8E8E
+  color: #8E8E8E;
 }
 
 .join3_area .tel_group {
@@ -760,7 +849,7 @@
   align-items: center;
 }
 
-.join3_area .zone_group{
+.join3_area .zone_group {
   height: 40px;
 }
 
@@ -775,113 +864,124 @@
   line-height: 38px;
   font-size: 15px;
   font-family: "PRET", serif;
-  color:#5A6265
+  color: #5A6265;
 }
-.join3_area .tel_group .obj .select_box2 > a{
-  width:100%;
-  min-width:80px;
-  
+
+.join3_area .tel_group .obj .select_box2 > a {
+  width: 100%;
+  min-width: 80px;
 }
+
 .join3_area .mail_group .obj .select_box2 > a,
-.join3_area .zone_group .obj .select_box2 > a{
-  width:100%;
-  min-width:156px;
+.join3_area .zone_group .obj .select_box2 > a {
+  width: 100%;
+  min-width: 156px;
 }
 
 .join3_area .tel_group .obj .select_box2 > a::after,
 .join3_area .mail_group .obj .select_box2 > a::after,
 .join3_area .zone_group .obj .select_box2 > a::after {
-  content: '';
-  background: transparent url('../images/common/ico_selcct.svg') no-repeat 100% 50%;
+  content: "";
+  background: transparent url("../images/common/ico_selcct.svg") no-repeat 100% 50%;
   display: inline-block;
   width: 26px;
   height: 40px;
   position: absolute;
   top: 0;
-  right:2px
+  right: 2px;
 }
 
 .join3_area .tel_group .obj .select_box2 > ul,
 .join3_area .mail_group .obj .select_box2 > ul,
 .join3_area .zone_group .obj .select_box2 > ul {
-  top:-3px
+  top: -3px;
 }
+
 .join3_area .tel_group .obj .dash,
 .join3_area .mail_group .obj .mail_ent {
-  display:inline-block;
-  width:18px;
+  display: inline-block;
+  width: 18px;
   height: 40px;
   line-height: 40px;
   text-align: center;
   font-size: 15px;
-  color:#5A6265;
+  color: #5A6265;
   font-family: "PRET", serif;
 }
 
 .join3_area .mail_group .obj .mail_ent {
-  width:14px
+  width: 14px;
 }
 
 .join3_area .tel_group .obj .input.txt,
 .join3_area .mail_group .obj .input.txt,
 .join3_area .zone_group .obj .input.txt,
 .pop_tb_area .obj .input.txt {
-  padding:0 10px
+  padding: 0 10px;
 }
+
 .join3_area .tel_group .select_box2 {
-  z-index:6
+  z-index: 6;
 }
+
 .join3_area .tel_group.first .select_box2 {
-  z-index:7
+  z-index: 7;
 }
+
 .join3_area .mail_group .select_box2 {
-  top:0;
-  left:349px
+  top: 0;
+  left: 349px;
 }
 
 .join3_area .chk_btn_area {
   height: 24px;
-  margin:8px 0 11px 0
+  margin: 8px 0 11px 0;
 }
+
 .join3_area .chk_btn_area .btn {
   font-size: 15px;
-  background: transparent url("../images/common/btn_chk_g_off.svg") no-repeat 0
-    50%;
+  background: transparent url("../images/common/btn_chk_g_off.svg") no-repeat 0 50%;
   background-size: 24px 24px;
   text-indent: 30px;
   height: 24px;
   line-height: 24px;
 }
+
 .join3_area .btn + .btn {
   margin-left: 13px;
   height: 24px;
   line-height: 24px;
 }
+
 .join3_area .btn.active {
   background: transparent url("../images/common/btn_chk_g_on.svg") no-repeat 0 50%;
   background-size: 24px 24px;
 }
+
 .join3_area .join1_btn_list .btn.active {
-    background: #37c375;
-    font-family: "PRETSB", serif;
-    color: #fff;
-    margin-left: 8px;
-    height:48px;
-    line-height: 48px;
+  background: #37c375;
+  font-family: "PRETSB", serif;
+  color: #fff;
+  margin-left: 8px;
+  height: 48px;
+  line-height: 48px;
 }
+
 .join3_area .sns_service,
 .join3_area .mail_service {
   font-size: 15px;
   color: #5A6265;
 }
+
 .join3_area .sns_service strong,
-.join3_area .mail_service strong{
-  color:#25282B;
+.join3_area .mail_service strong {
+  color: #25282B;
   font-size: 15px;
 }
+
 .join3_area .sns_service p,
-.join3_area .mail_service p{
-  color:#8E8E8E;
+.join3_area .mail_service p {
+  color: #8E8E8E;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -894,54 +994,56 @@
 
 .join3_area .careerEngin_service .chk_btn_area,
 .join3_area .careerInfo_service .chk_btn_area {
-  margin:0
+  margin: 0;
 }
 
 .join3_area .careerEngin_service .txt_group,
-.join3_area .careerInfo_service .txt_group{
-  padding:15px 20px;
-  width:287px;
+.join3_area .careerInfo_service .txt_group {
+  padding: 15px 20px;
+  width: 287px;
   box-sizing: border-box;
-  color:#fff
+  color: #fff;
 }
 
-.join3_area .careerEngin_service .txt_group{
-  height:92px;
-  background:#93AA97;  
+.join3_area .careerEngin_service .txt_group {
+  height: 92px;
+  background: #93AA97;
 }
 
-.join3_area .careerInfo_service .txt_group{
-  height:84px;
-  background:#C6BAAA;  
+.join3_area .careerInfo_service .txt_group {
+  height: 84px;
+  background: #C6BAAA;
 }
 
 .join3_area .careerEngin_service .txt_group p,
-.join3_area .careerInfo_service .txt_group p{
+.join3_area .careerInfo_service .txt_group p {
   font-size: 13px;
   line-height: 1.2;
 }
 
 .join3_area .careerEngin_service .txt_group strong,
-.join3_area .careerInfo_service .txt_group strong{
+.join3_area .careerInfo_service .txt_group strong {
   font-size: 17px;
-  font-family: "PRETSB",serif;
-  margin-top:7px;
+  font-family: "PRETSB", serif;
+  margin-top: 7px;
   display: inline-block;
 }
 
-.join_area .join4_area .round0.accent{
-  display:flex;
+.join_area .join4_area .round0.accent {
+  display: flex;
   justify-content: space-between;
 }
+
 .join_area .join4_area .col1.mb200 {
-  margin-bottom:200px
+  margin-bottom: 200px;
 }
+
 .join_area .join4_area .col1 .round0 {
   padding: 58px 24px 0 80px;
   width: 800px;
   height: 400px;
   box-sizing: border-box;
-  background: #37c375 url('../images/page/visual_new_customer.png') no-repeat 73px 119%;
+  background: #37c375 url("../images/page/visual_new_customer.png") no-repeat 73px 119%;
   background-size: 325px 234px;
 }
 
@@ -959,43 +1061,44 @@
   letter-spacing: 6px;
 }
 
-.join_area .join4_area .link_area{
+.join_area .join4_area .link_area {
   justify-content: flex-start;
-  margin-top:20px
+  margin-top: 20px;
 }
 
-.join_area .join4_area .col1 .txt_group{
+.join_area .join4_area .col1 .txt_group {
   font-size: 16px;
   line-height: 1.6;
 }
 
 .join_area .join4_area .link_area .btn.white {
   position: relative;
-  top:0;
-  height:40px;
-  padding:0 13px;
+  top: 0;
+  height: 40px;
+  padding: 0 13px;
   line-height: 40px;
-  color:#5A6265;
+  color: #5A6265;
   font-size: 14px;
 }
 
 .join_area .join4_area .link_area .btn.white + .btn.white {
-  margin-left:8px
+  margin-left: 8px;
 }
-
 
 /**************************************** 
     마이페이지 : 내수강 현황, 나의 강의실
 ****************************************/
-.visual_mypage .col2{
+.visual_mypage .col2 {
   display: flex;
-    justify-content: space-between;
-    width: 100%;
+  justify-content: space-between;
+  width: 100%;
 }
+
 .mypage_area {
   display: flex;
   flex-direction: column;
 }
+
 .mypage_area .page_title_area h2 {
   height: 100px;
   display: flex;
@@ -1003,238 +1106,279 @@
   font-size: 31px;
   font-family: "PRETSB", serif;
   padding-left: 10px;
-  margin-bottom:12px
+  margin-bottom: 12px;
 }
+
 .mypage_area .page_title_area h3,
 .mypage_area .my_survey_area h3 {
   font-size: 19px;
   font-family: "PRETSB", serif;
   padding-left: 10px;
 }
-.mypage_area .page_title_area h3{
-  margin-bottom:20px
+
+.mypage_area .page_title_area h3 {
+  margin-bottom: 20px;
 }
-.mypage_area .my_survey_area h3{
-  padding:50px 0 30px 0
+
+.mypage_area .my_survey_area h3 {
+  padding: 50px 0 30px 0;
 }
+
 .mypage_area .card_col3 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+
 .mypage_area .card_col3 .card {
-  margin:0 30px 30px 0;
+  margin: 0 30px 30px 0;
 }
-.mypage_area .card_col3 .card:nth-child(3n){
-  margin-right:0
+
+.mypage_area .card_col3 .card:nth-child(3n) {
+  margin-right: 0;
 }
+
 .mypage_area .card_col3 .card.round12 {
   border: 1px solid #DEE1E5;
   width: 400px;
   height: 300px;
-  padding:30px 20px 48px 30px
+  padding: 30px 20px 48px 30px;
 }
+
 .mypage_area .card_col3 .card.round12.no_data {
   border: 0;
   width: 400px;
   height: 300px;
-  padding:0
+  padding: 0;
 }
+
 .mypage_area .card_col3 .card.round12.no_data img {
   width: 400px;
   height: 300px;
 }
-.mypage_area .card_col1 + .line_tab_area{
-    margin:20px 0 40px 0
+
+.mypage_area .card_col1 + .line_tab_area {
+  margin: 20px 0 40px 0;
 }
+
 .mypage_area .card_col3.fix_width .card {
-    margin:0 20px 0 0
+  margin: 0 20px 0 0;
 }
-.mypage_area  .card_col3.fix_width .card:last-child{
-    margin:0
+
+.mypage_area .card_col3.fix_width .card:last-child {
+  margin: 0;
 }
+
 .mypage_area .card_col3.fix_width .card:nth-child(1),
 .card_col3.fix_width .card:nth-child(2) {
-    width:240px
+  width: 240px;
 }
+
 .mypage_area .card_col3.fix_width .card:last-child {
-    width:740px
+  width: 740px;
 }
+
 .mypage_area .card_col3.fix_width .card .press_title {
   color: #25282B;
   font-size: 17px;
-  font-family: "PRETSB",serif;
-  margin-bottom:20px
+  font-family: "PRETSB", serif;
+  margin-bottom: 20px;
 }
+
 .mypage_area .card_col3 .card.default {
   border: 1px solid #f4f4f5;
   position: relative;
 }
+
 .mypage_area .card_col1 .card.default {
   border: 1px solid #f4f4f5;
-  padding:40px 80px;
-  width:100%;
+  padding: 40px 80px;
+  width: 100%;
   box-sizing: border-box;
-  margin-bottom:36px;
+  margin-bottom: 36px;
   height: 586px;
 }
+
 .mypage_area .card_col1 .card.default .list_btn_area .btn.btn_active:hover {
-  background:#28B968;
-  color:#fff
+  background: #28B968;
+  color: #fff;
 }
-.accent.progress{
-  background:#6DDE84;
-  width:240px;
+
+.accent.progress {
+  background: #6DDE84;
+  width: 240px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   position: absolute;
-  bottom:0
+  bottom: 0;
 }
+
 .mypage_area .card_col3 .card.default .accent_group,
 .mypage_area .card_col3 .card.default .learn_group {
   position: relative;
   z-index: 2;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
-.mypage_area .card_col3 .card.default .accent_group  p {
+.mypage_area .card_col3 .card.default .accent_group p {
   font-size: 17px;
   font-family: "PRETSB", serif;
   position: relative;
   top: 27px;
   left: 25px;
 }
-.mypage_area .card_col3 .card.default  .txt {
+
+.mypage_area .card_col3 .card.default .txt {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  top:110px;
+  top: 110px;
 }
-.mypage_area .card_col3 .card.default .learn_group  .txt {
-  top:117px
+
+.mypage_area .card_col3 .card.default .learn_group .txt {
+  top: 117px;
 }
-.mypage_area .card_col3 .card.default  .txt strong {
-  font-size:31px;
+
+.mypage_area .card_col3 .card.default .txt strong {
+  font-size: 31px;
   font-family: "PRETSB", serif;
 }
+
 .mypage_area .card_col3 .card.default .txt span {
   font-size: 15px;
   font-family: "PRET", serif;
   display: inline-block;
-  margin-top:10px;
+  margin-top: 10px;
   letter-spacing: -1px;
 }
+
 .mypage_area .card_col3 .card.default .learn_group .txt span {
-  margin-top:12px;
+  margin-top: 12px;
 }
+
 .mypage_area .card .card_title_area {
-    display: flex;
-    flex-direction: column;
-    margin-bottom:40px
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
+
 .mypage_area .card_col1 .card.default .card.round12.line {
-  padding:0 40px
+  padding: 0 40px;
 }
 
 .progress.learn_progress {
-  color:#191919;
+  color: #191919;
   font-size: 16px;
 }
+
 .progress_area {
   display: flex;
-  height:20px;
+  height: 20px;
   align-items: center;
 }
+
 .progress.learn_progress,
 .progress.suggest_progress {
-  background:#DEE1E5;
-  width:500px;
+  background: #DEE1E5;
+  width: 500px;
   height: 20px;
   border-radius: 0;
-  border:0;
+  border: 0;
 }
+
 .progress.learn_progress .progress {
- height: 20px;
- background: #37c375;
+  height: 20px;
+  background: #37c375;
 }
+
 .progress.learn_progress .progress.warning {
- background: #D54D50;
+  background: #D54D50;
 }
+
 .progress.suggest_progress .progress {
   height: 20px;
   background: #4EB1D6;
 }
+
 .progress_area span {
-  margin-left:20px;
+  margin-left: 20px;
 }
 
-.mypage_area .card .card_title_area .title{
-    font-size: 31px;
-    font-family: "PRETSB",sans-serif;
-    margin-top:10px
+.mypage_area .card .card_title_area .title {
+  font-size: 31px;
+  font-family: "PRETSB", sans-serif;
+  margin-top: 10px;
 }
-.mypage_area .card_group  dl dt  .inner,
-.mypage_area .card_group  dl dd{
+
+.mypage_area .card_group dl dt .inner,
+.mypage_area .card_group dl dd {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.mypage_area .card_group  dl dt  .inner .edu_key{
-  margin-bottom:12px
+
+.mypage_area .card_group dl dt .inner .edu_key {
+  margin-bottom: 12px;
 }
-.mypage_area .card_group  dl dt  .inner strong a {
+
+.mypage_area .card_group dl dt .inner strong a {
   font-size: 18px;
   font-family: "PRETSB", serif;
   line-height: 1.4;
   word-break: keep-all;
 }
-.mypage_area .card_group  dl dd {
-  margin-top:10px;
+
+.mypage_area .card_group dl dd {
+  margin-top: 10px;
   font-size: 15px;
-  color:#5A6265;
+  color: #5A6265;
   line-height: 1.4;
 }
 
-.mypage_area .card_group  dl dd p{
+.mypage_area .card_group dl dd p {
   line-height: 1.4;
 }
 
 .mypage_area .card_group .card-util-group {
   display: flex;
-  margin-top:30px;
+  margin-top: 30px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   color: #5A6265;
 }
-.mypage_area  .card_group .card-util-group  .progress-txt {
-  display:flex;
+
+.mypage_area .card_group .card-util-group .progress-txt {
+  display: flex;
   align-items: center;
 }
-.mypage_area  .card_group .card-util-group  .progress-txt strong {
+
+.mypage_area .card_group .card-util-group .progress-txt strong {
   font-size: 23px;
   color: #25282b;
   font-family: "PRETSB";
-  margin-left:8px;
-  margin-top:-1px
+  margin-left: 8px;
+  margin-top: -1px;
 }
-.mypage_area  .card_group .card_btn_area {
-  width:210px;
+
+.mypage_area .card_group .card_btn_area {
+  width: 210px;
   display: flex;
   justify-content: flex-end;
 }
-.mypage_area  .card_group .card_btn_area .btn.active_btn.active{
-  font-family: "PRET",serif;
+
+.mypage_area .card_group .card_btn_area .btn.active_btn.active {
+  font-family: "PRET", serif;
 }
 
-.mypage_area  .card_group .card_btn_area .btn.active_btn.active .chk {
+.mypage_area .card_group .card_btn_area .btn.active_btn.active .chk {
   display: inline-block;
   width: 6px;
   height: 9px;
-  background: transparent url('../images/common/ico_arrow_w_r.svg') no-repeat 0 0;
+  background: transparent url("../images/common/ico_arrow_w_r.svg") no-repeat 0 0;
   margin-left: 4px;
 }
 
@@ -1242,11 +1386,13 @@
   display: flex;
   margin-top: 10px;
 }
+
 .mypage_area .tb_area .txt_area ul li strong {
   font-family: "PRET", serif;
   font-size: 16px;
   color: #191919;
 }
+
 .mypage_area .tb_area .txt_area ul li:nth-child(2)::before {
   content: "";
   display: inline-block;
@@ -1261,24 +1407,29 @@
 .mypage_area .my_lecture_area .tb_area {
   margin: 0 40px 0 60px;
 }
+
 .mypage_area .tb_area .txt_area strong {
   font-size: 16px;
   font-family: "PRETSB", serif;
 }
+
 .mypage_area .tb_area .txt_area ul {
   display: flex;
   margin-top: 7px;
 }
+
 .mypage_area .tb_area .txt_area ul li strong {
   font-family: "PRET", serif;
   font-size: 16px;
   color: #191919;
 }
+
 .mypage_area .tb_area .txt_area .online_txt {
-  font-size:15px;
-  color:#8E8E8E;
-  margin-top:7px
+  font-size: 15px;
+  color: #8E8E8E;
+  margin-top: 7px;
 }
+
 .mypage_area .tb_area .txt_area ul li:nth-child(2)::before {
   content: "";
   display: inline-block;
@@ -1289,18 +1440,22 @@
   position: relative;
   top: 1px;
 }
+
 .mypage_area .tb_area span.color_active {
   font-size: 40px;
   font-family: "PRETSB", serif;
 }
+
 .mypage_area .tb_area .active_btn.active {
   display: inline-block;
   color: #fff;
 }
+
 .mypage_area .tb_area .active_btn.active:hover {
-  background:#28B968;
-  color:#fff
+  background: #28B968;
+  color: #fff;
 }
+
 .mypage_area .tb_area .active_btn.active + .active_btn.active {
   margin-right: 0;
 }
@@ -1308,12 +1463,14 @@
 .mypage_area .my_link_area {
   margin-top: 10px;
 }
+
 .mypage_area .my_link_area,
 .mypage_area .my_link_list {
   display: flex;
   height: 50px;
   align-items: center;
 }
+
 .mypage_area .my_survey_area {
   display: flex;
   flex-direction: column;
@@ -1327,6 +1484,7 @@
   font-family: "PRETSB", serif;
   margin-right: 36px;
 }
+
 .mypage_area .my_link_area .my_link_list li {
   margin-right: 10px;
 }
@@ -1334,41 +1492,47 @@
 /**************************************** 
     마이페이지 : 학습 중인 교육과정
 ****************************************/
-.mypage_area .my_study_text{
-  color:#5A6265;
-  font-size:15px;
-  padding-left:10px;
+.mypage_area .my_study_text {
+  color: #5A6265;
+  font-size: 15px;
+  padding-left: 10px;
   height: 140px;
   box-sizing: border-box;
-  margin-bottom:17px
+  margin-bottom: 17px;
 }
+
 .mypage_area .my_study_text h3 {
   font-size: 31px;
-  color:#25282B;
+  color: #25282B;
   font-family: "PRETSB", serif;
-  margin-top:30px
+  margin-top: 30px;
 }
-.mypage_area .my_study_text p{
-  margin-top:8px;
+
+.mypage_area .my_study_text p {
+  margin-top: 8px;
   line-height: 1.4;
 }
+
 .mypage_area .my_study_area h3 {
   font-size: 19px;
-  color:#25282B;
+  color: #25282B;
   font-family: "PRETSB", serif;
-  margin-bottom:19px;
+  margin-bottom: 19px;
   display: inline-block;
-  padding-left:10px
+  padding-left: 10px;
 }
+
 .mypage_area .my_study_area .tb_area .txt_area ul li,
 .mypage_area .my_study_area .tb_area .txt_area ul li strong {
   font-family: "PRET", serif;
   font-size: 16px;
   color: #8e8e8e;
 }
+
 .mypage_area .my_study_area .tb_area .txt_area ul li:nth-child(1)::after {
   background: #8e8e8e;
 }
+
 .mypage_area table.board.list td a.btn.line,
 .mypage_area table.board.list td span.btn.line {
   display: inline-block;
@@ -1376,10 +1540,12 @@
   margin-right: 6px;
   color: #5a6265;
 }
+
 .mypage_area table.board.list td span.btn.line,
 .mypage_area table.board.list td span.btn.d_gray {
   cursor: default;
 }
+
 .my_study_area + .my_study_area {
   margin-top: 37px;
 }
@@ -1389,66 +1555,70 @@
 ****************************************/
 .mypage_area .chk_btn_area .btn {
   font-size: 17px;
-  background: transparent url("../images/common/btn_chk_off.svg") no-repeat 0
-    50%;
+  background: transparent url("../images/common/btn_chk_off.svg") no-repeat 0 50%;
   background-size: 24px 24px;
   text-indent: 32px;
   display: inline-block;
   height: 24px;
   margin-right: 15px;
 }
+
 .mypage_area .chk_btn_area .btn:last-of-type {
   margin-right: 0;
 }
+
 .mypage_area .chk_btn_area .btn.active {
   background: transparent url("../images/common/btn_chk_on.svg") no-repeat 0 50%;
   background-size: 24px 24px;
 }
+
 .mypage_area .tb_area .flex_row.btn_area {
   display: flex;
   justify-content: center;
 }
+
 .mypage_area .tb_area .flex_row.btn_area .btn + .btn {
   margin-left: 8px;
 }
+
 .mypage_area table.board.list.center td a.btn:hover {
   text-decoration: none;
 }
 
- .sch_area.row2 .select_box1,
- .sch_area.row2 .select_box1 > a {
-  height:48px;
-  line-height: 48px
+.sch_area.row2 .select_box1,
+.sch_area.row2 .select_box1 > a {
+  height: 48px;
+  line-height: 48px;
 }
 
 .sch_area.row2 .select_box1 > a {
-  background:#fff;
+  background: #fff;
   border-radius: 4px;
   padding-left: 16px;
   max-width: 540px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .sch_area.row2 .select_box1 > ul {
-  z-index:5;
-  top:49px
+  z-index: 5;
+  top: 49px;
 }
 
- .sch_area.row2 .select_box1 > a::after {
-  height:48px
+.sch_area.row2 .select_box1 > a::after {
+  height: 48px;
 }
- .sch_area.row2 .first_div strong,
- .sch_area.row2 .last_div strong {
-  width:140px;
-  color:#5A6265;
+
+.sch_area.row2 .first_div strong,
+.sch_area.row2 .last_div strong {
+  width: 140px;
+  color: #5A6265;
   font-size: 17px;
 }
 
- .sch_area.row2 .first_div strong:nth-of-type(2){
-  width:73px;
-  padding:0 30px 0 40px
+.sch_area.row2 .first_div strong:nth-of-type(2) {
+  width: 73px;
+  padding: 0 30px 0 40px;
 }
-
 
 /**************************************** 
     온라인 교육 : 리스트
@@ -1459,38 +1629,46 @@
   border-radius: 10px;
   position: relative;
 }
+
 .edu_guide_area .txt_area {
   display: flex;
   flex-direction: column;
 }
+
 .edu_guide_area .txt_area ul {
   display: flex;
   font-size: 15px;
   color: #25282b;
 }
+
 .edu_guide_area .txt_area ul:first-of-type {
   margin-bottom: 11px;
 }
+
 .edu_guide_area .txt_area ul li {
   margin-right: 12px;
-  color:#5A6265
+  color: #5A6265;
 }
+
 .edu_guide_area .txt_area a strong {
   display: block;
   font-size: 16px;
   font-family: "PRETSB", serif;
-  margin:8px 0 18px 0;
+  margin: 8px 0 18px 0;
 }
+
 .edu_guide_area .txt_area ul li .color_active {
-  color:#09AA5C
+  color: #09AA5C;
 }
+
 .edu_guide_area table.board.list td a.btn.btn_active {
   display: inline-block !important;
   color: #fff !important;
 }
+
 .edu_guide_area table.board.list td a.btn.btn_active:hover {
-  background:#28B968;
-  color:#fff;
+  background: #28B968;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -1500,6 +1678,7 @@
 .content_area .view_data_area .round12.line {
   padding: 40px 80px;
 }
+
 .content_area .view_data_area .dtail_inner {
   display: flex;
   justify-content: space-between;
@@ -1509,54 +1688,49 @@
   width: 320px;
   margin-top: 100px;
 }
+
 .content_area .view_data_area .dtail_inner .image_area img {
   width: 320px;
   height: 213px;
 }
+
 .content_area .view_data_area .dtail_inner + .dtail_inner {
   width: 100%;
   display: block;
 }
+
 .view_data_area .dtail_inner .board + .board {
   margin: 20px 0 80px 0;
 }
 
-.content_area
-  .view_data_area
-  .dtail_inner
-  + .dtail_inner
-  table.board.view.top_line_gray
-  tbody
-  tr.tb_content:first-child {
+.content_area .view_data_area .dtail_inner + .dtail_inner table.board.view.top_line_gray tbody tr.tb_content:first-child {
   border-top: 1px solid #e4e8ec;
 }
 
-.content_area
-  .view_data_area
-  .dtail_inner:nth-of-type(1)
-  table.board.view.top_line_gray
-  tbody
-  tr.tb_content:last-child
-  th,
-.content_area
-  .view_data_area
-  .dtail_inner:nth-of-type(1)
-  table.board.view.top_line_gray
-  tbody
-  tr.tb_content:last-child
-  td {
+.content_area .view_data_area .dtail_inner:nth-of-type(1) table.board.view.top_line_gray tbody tr.tb_content:last-child th,
+.content_area .view_data_area .dtail_inner:nth-of-type(1) table.board.view.top_line_gray tbody tr.tb_content:last-child td {
   border-bottom: 0;
 }
 
+.register_area {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  background: #25282B;
+  display: flex;
+  align-items: center;
+  left: 0px;
+}
 
-.register_area {width:100%; height:80px; position:fixed; bottom:0; z-index:10; background:#25282B; display:flex; align-items: center; left: 0px;}
 .register_area .register_interest,
 .register_area .register_edu {
-    width:50%; 
-    height:80px;  
-    position: relative;
-    display: flex;
-    align-items: center;
+  width: 50%;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .register_area .register_interest {
@@ -1565,141 +1739,174 @@
 
 .register_area .register_interest div,
 .register_area .register_edu div {
-    height: 80px;
-    line-height: 80px;
+  height: 80px;
+  line-height: 80px;
 }
 
 .register_area .register_interest > div,
-.register_area .register_edu > div {width:630px; display: flex;
-  justify-content: center;}
+.register_area .register_edu > div {
+  width: 630px;
+  display: flex;
+  justify-content: center;
+}
 
 .register_area .register_edu {
-    background:#37C375;
+  background: #37C375;
 }
+
 .register_area .register_interest a,
 .register_area .register_edu a {
-    color: #37C375; 
-    padding-left:34px
+  color: #37C375;
+  padding-left: 34px;
 }
-.register_area .register_edu a {color:#fff}
+
+.register_area .register_edu a {
+  color: #fff;
+}
+
 .register_area .register_interest a,
 .register_area .register_edu a {
-    font-size: 21px;
-    font-family: 'PRETB', serif;
-    display: inline-block;
+  font-size: 21px;
+  font-family: "PRETB", serif;
+  display: inline-block;
 }
+
 .register_area a.btn.ico_hert {
-    background:transparent url('../images/common/ico_hart.svg') no-repeat 0 50%;
-    background-size: 25px 25px;
+  background: transparent url("../images/common/ico_hart.svg") no-repeat 0 50%;
+  background-size: 25px 25px;
 }
+
 .register_area a.btn.ico_w_arrow {
-    background:transparent url('../images/common/ico_arrow_w_right.svg') no-repeat 0 50%;
-    background-size: 25px 25px;
+  background: transparent url("../images/common/ico_arrow_w_right.svg") no-repeat 0 50%;
+  background-size: 25px 25px;
 }
+
 .register_area p {
-    color: #fff;
-    font-size: 21px;
-    font-family: "PRETB", serif;
+  color: #fff;
+  font-size: 21px;
+  font-family: "PRETB", serif;
 }
+
 .register_area figure {
-    width: 121px;
-    height: 109px;
-    position: absolute;
-    top: -28px;
-    left: 611px;
-    display:none
+  width: 121px;
+  height: 109px;
+  position: absolute;
+  top: -28px;
+  left: 611px;
+  display: none;
 }
 
-footer.active {margin: 0 auto; padding: 0 0 100px 0;}
+footer.active {
+  margin: 0 auto;
+  padding: 0 0 100px 0;
+}
 
-footer.fixed {position: fixed; bottom:0}
-
+footer.fixed {
+  position: fixed;
+  bottom: 0;
+}
 
 /**************************************** 
     진로지도 자료 : 리스트
 ****************************************/
 .sch_area.row2 .first_div .select_box1 + .input.txt {
-  margin-left:20px
+  margin-left: 20px;
 }
 
 /**************************************** 
     커리어Info
 ****************************************/
 .career_info {
-  padding:30px 80px
+  padding: 30px 80px;
 }
+
 .career_info .careerInfo_btnArea {
-  display: flex; 
-  justify-content: flex-end
+  display: flex;
+  justify-content: flex-end;
 }
+
 .career_info .careerInfo_btnArea .btn.line {
-  margin-bottom:26px
+  margin-bottom: 26px;
 }
+
 .career_info .careerInfo_btnArea .btn.line:hover {
-    background: #37C375;
-    color: #fff;
+  background: #37C375;
+  color: #fff;
 }
-.career_info .dtail_inner{
-  display:flex;
+
+.career_info .dtail_inner {
+  display: flex;
   justify-content: space-between;
-  padding-bottom:60px;
-  border-bottom:1px solid #DEE1E5;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #DEE1E5;
   width: 1100px;
 }
+
 .career_info .dtail_inner:last-of-type {
-  border-bottom:0 none;
-} 
-.career_info .dtail_inner + .dtail_inner {
-  margin-top:56px
+  border-bottom: 0 none;
 }
-.career_info table {padding:0}
+
+.career_info .dtail_inner + .dtail_inner {
+  margin-top: 56px;
+}
+
+.career_info table {
+  padding: 0;
+}
+
 .career_info table.board.view.career_info thead div.tb_title_area {
-  width:100%;
-  display:flex;
+  width: 100%;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding:0;
+  padding: 0;
   align-items: baseline;
   padding-bottom: 19px;
 }
-.career_info table.board.view.career_info thead div.tb_title_area strong{
+
+.career_info table.board.view.career_info thead div.tb_title_area strong {
   font-size: 29px;
 }
 
-.career_info table.board.view.career_info thead div.tb_title_area p{font-size:15px;
-  color:#8E8E8E 
+.career_info table.board.view.career_info thead div.tb_title_area p {
+  font-size: 15px;
+  color: #8E8E8E;
 }
 
 table.board.view.career_info .info_list {
   font-size: 16px;
   margin-left: -6px;
 }
+
 table.board.view.career_info .info_list dt {
   color: #191919;
   font-family: "PRETSB", serif;
   margin: 0 0 10px 24px;
   text-indent: -24px;
 }
+
 table.board.view.career_info .info_list dt span {
-  background: transparent url('../images/common/ico_selcct.svg') no-repeat 0 50%;
+  background: transparent url("../images/common/ico_selcct.svg") no-repeat 0 50%;
   background-size: 100%;
   width: 20px;
   height: 12px;
   display: inline-block;
-  transform: rotate(
--90deg);
+  transform: rotate(-90deg);
 }
+
 table.board.view.career_info .info_list dd {
-  color:#5A6265;
+  color: #5A6265;
   margin-left: 20px;
   line-height: 1.4;
 }
-table.board.view.career_info tbody tr  td {
-  border-bottom:1px solid #F4F4F5 !important
+
+table.board.view.career_info tbody tr td {
+  border-bottom: 1px solid #F4F4F5 !important;
 }
+
 table.board.view.career_info tbody tr.tb_content:last-of-type td {
-  padding:18px 0 0 0;
-  border-bottom:0 none !important
+  padding: 18px 0 0 0;
+  border-bottom: 0 none !important;
 }
 
 .career_info .dtail_inner .image_area {
@@ -1709,28 +1916,30 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 
 .career_info .dtail_inner .image_area .webzin_btn {
   display: inline-block;
-  margin-top:20px
+  margin-top: 20px;
 }
 
 /**************************************** 
     센터소개 : 사이버진로교육센터 소개
 ****************************************/
 .center_area .card_col1 {
-  margin-bottom:20px
-}
-.center_area .card_col1.etc {
-  margin-bottom:0
-}
-.center_area .card_col1.introduce .round12{
-  height:230px; 
-  padding:60px 50px;
-  box-sizing: border-box;
-  background:#f4f4f5 url('../images/page/img_introduce1.png') no-repeat 1060px 60px
+  margin-bottom: 20px;
 }
 
-.center_area .card_col1.obj .round12{
-  height:540px; 
-  padding:60px 50px;
+.center_area .card_col1.etc {
+  margin-bottom: 0;
+}
+
+.center_area .card_col1.introduce .round12 {
+  height: 230px;
+  padding: 60px 50px;
+  box-sizing: border-box;
+  background: #f4f4f5 url("../images/page/img_introduce1.png") no-repeat 1060px 60px;
+}
+
+.center_area .card_col1.obj .round12 {
+  height: 540px;
+  padding: 60px 50px;
   box-sizing: border-box;
 }
 
@@ -1741,12 +1950,12 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 }
 
 .center_area .card_col1 .round12 .txt_group .title {
-  width:96px;
-  height:48px;
-  background:#37C375;
+  width: 96px;
+  height: 48px;
+  background: #37C375;
   border-radius: 24px;
   line-height: 48px;
-  color:#fff;
+  color: #fff;
   text-align: center;
   font-size: 19px;
   font-family: "PRETSB", serif;
@@ -1757,7 +1966,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   font-size: 25px;
   font-family: "PRETSB", serif;
   line-height: 1.6;
-  margin-left:30px
+  margin-left: 30px;
 }
 
 .card_col1 .round12 .txt_group .txt_s {
@@ -1765,17 +1974,18 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   font-family: "PRET", serif;
 }
 
-.card_col1.obj .obj_list{
+.card_col1.obj .obj_list {
   display: flex;
-  margin:46px 0 0 126px
+  margin: 46px 0 0 126px;
 }
 
-.card_col1.obj .obj_list dt{
+.card_col1.obj .obj_list dt {
   font-family: "PRETSB", serif;
 }
-.card_col1.obj .obj_list dd{
-  margin-top:12px;
-  color:#5A6265;
+
+.card_col1.obj .obj_list dd {
+  margin-top: 12px;
+  color: #5A6265;
   line-height: 1.6;
 }
 
@@ -1783,54 +1993,60 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   border-right: 1px solid #DEE1E5;
   height: 320px;
 }
-.card_col1.obj .obj_list .obj_group.obj4{
-  border-right:0
+
+.card_col1.obj .obj_list .obj_group.obj4 {
+  border-right: 0;
 }
 
 .card_col1.obj .obj_list .obj_group.obj1 {
-  width:240px;
-  background:transparent url('../images/page/img_introduce2.png') no-repeat 0 100%
+  width: 240px;
+  background: transparent url("../images/page/img_introduce2.png") no-repeat 0 100%;
 }
-.card_col1.obj .obj_list .obj_group.obj2{
-  background:transparent url('../images/page/img_introduce3.png') no-repeat 59px 100%
+
+.card_col1.obj .obj_list .obj_group.obj2 {
+  background: transparent url("../images/page/img_introduce3.png") no-repeat 59px 100%;
 }
-.card_col1.obj .obj_list .obj_group.obj3{
-  background:transparent url('../images/page/img_introduce4.png') no-repeat 91px 100%
+
+.card_col1.obj .obj_list .obj_group.obj3 {
+  background: transparent url("../images/page/img_introduce4.png") no-repeat 91px 100%;
 }
-.card_col1.obj .obj_list .obj_group.obj4{
-  background:transparent url('../images/page/img_introduce5.png') no-repeat 139px 100%
+
+.card_col1.obj .obj_list .obj_group.obj4 {
+  background: transparent url("../images/page/img_introduce5.png") no-repeat 139px 100%;
 }
+
 .card_col1.obj .obj_list .obj_group.obj2,
 .card_col1.obj .obj_list .obj_group.obj3,
 .card_col1.obj .obj_list .obj_group.obj4 {
-  width:240px;
-  margin-left:20px;
-  margin-top:2px
+  width: 240px;
+  margin-left: 20px;
+  margin-top: 2px;
 }
 
-.card_col1.etc{
+.card_col1.etc {
   display: flex;
   justify-content: space-between;
 }
-.card_col1.etc .round12.col1{
-  width:620px;
-  padding:60px 50px;
+
+.card_col1.etc .round12.col1 {
+  width: 620px;
+  padding: 60px 50px;
   height: 360px;
   box-sizing: border-box;
 }
 
 .card_col1.etc .round12.col1.last {
-  padding:60px 50px 0 36px;
+  padding: 60px 50px 0 36px;
 }
 
 .card_col1.etc .txt_group .etc_list1,
 .card_col1.etc .txt_group .etc_list2 {
-  margin-left:30px
+  margin-left: 30px;
 }
 
 .card_col1.etc .txt_group .etc_list1 dt {
   font-family: "PRETSB", serif;
-  margin-bottom:12px
+  margin-bottom: 12px;
 }
 
 .card_col1.etc .txt_group .etc_list1 dd {
@@ -1839,51 +2055,57 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 
 .card_col1.etc .txt_group .etc_list1 dl + dl,
 .card_col1.etc .txt_group .etc_list2 dl + dl {
-  margin-top:20px
+  margin-top: 20px;
 }
 
 .card_col1.etc .txt_group .etc_list2 dl {
   display: flex;
 }
+
 .card_col1.etc .txt_group .etc_list2 dt {
   font-family: "PRETSB", serif;
   line-height: 1.6;
 }
+
 .card_col1.etc .txt_group .etc_list2 dd {
   line-height: 1.6;
-  margin-left:20px
+  margin-left: 20px;
 }
 
 /**************************************** 
     센터소개 : 목적 및 현황
 ****************************************/
-.purpose_text{
-  color:#5A6265;
-  padding-left:10px;
+.purpose_text {
+  color: #5A6265;
+  padding-left: 10px;
   box-sizing: border-box;
-  margin-bottom:47px;
-}
-.purpose_text h3 {
-  font-size: 31px;
-  color:#25282B;
-  font-family: "PRETSB", serif;
-  margin-top:33px;
+  margin-bottom: 47px;
 }
 
-.purpose_text ul  {
-  margin:0 0 12px 20px
+.purpose_text h3 {
+  font-size: 31px;
+  color: #25282B;
+  font-family: "PRETSB", serif;
+  margin-top: 33px;
 }
-.purpose_text ul li{
+
+.purpose_text ul {
+  margin: 0 0 12px 20px;
+}
+
+.purpose_text ul li {
   list-style-type: disc;
   list-style-position: outside;
   line-height: 1.5;
-  color:#5A6265;
+  color: #5A6265;
   text-indent: -4px;
 }
+
 .purpose_text strong {
   font-family: "PRETSB", serif;
   font-size: 18px;
 }
+
 .purpose_text table {
   margin-top: 2px;
 }
@@ -1892,17 +2114,19 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
     동영상
 ****************************************/
 .movie_main {
-  width: 100%; 
-  height: 100%; 
-  display: flex; 
-  background:#EFF1F3
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #EFF1F3;
 }
-.movie_bg.movie { 
-  width: 100%; 
-  height: 100%; 
-/*   display: flex;  */
-  background:#EFF1F3
+
+.movie_bg.movie {
+  width: 100%;
+  height: 100%;
+  /*   display: flex;  */
+  background: #EFF1F3;
 }
+
 .movie_bg.movie .layer_btn_area {
   position: absolute;
   top: 5px;
@@ -1910,10 +2134,10 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 }
 
 .movie_bg.movie .layer_btn_area .btn_movie_close {
-  width:30px;
+  width: 30px;
   height: 30px;
-  background:transparent url('../images/common/btn_movie_close.png') no-repeat 0 0;
-  background-size:30px 30px;
+  background: transparent url("../images/common/btn_movie_close.png") no-repeat 0 0;
+  background-size: 30px 30px;
   font-size: 0;
   margin-top: 5px;
 }
@@ -1922,108 +2146,122 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   width: auto;
   height: auto;
   margin: auto;
-/*   position: relative; */
+  /*   position: relative; */
 }
+
 .movie_bg.movie .movie_tilte {
-  font-size: 31px; 
-  font-family: "PRETSB", serif; 
-  display: flex; 
+  font-size: 31px;
+  font-family: "PRETSB", serif;
+  display: flex;
   align-items: center;
   margin: 10px 0 0 50px;
 }
+
 .movie_bg.movie .movie_tilte h2 {
-  margin-left:12px;
-  word-break:keep-all;
+  margin-left: 12px;
+  word-break: keep-all;
 }
+
 .movie_bg.movie .movie_group {
-  margin:10px 0 0 50px; 
-/*   width:69rem;  */
-/*   min-height:40rem; */
+  margin: 10px 0 0 50px;
+  /*   width:69rem;  */
+  /*   min-height:40rem; */
 }
+
 .movie_bg.movie .movie_group .img {
-    width: 80rem;
-    height: 40rem;
-    background: url('../images/page/img_move.png') no-repeat 0 0;
-    background-size: 80rem 40rem;
+  width: 80rem;
+  height: 40rem;
+  background: url("../images/page/img_move.png") no-repeat 0 0;
+  background-size: 80rem 40rem;
 }
+
 .movie_bg.movie .move_btn_area {
-  margin-top:10px; 
-  display: flex; 
-  justify-content: center; 
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
+
 .movie_bg.movie .move_btn_area .btn + .btn {
-  margin-left:20px
+  margin-left: 20px;
 }
+
 .menu_bg.movie .logo_area {
   height: 120px;
-  border-bottom:1px solid #EFF1F3
+  border-bottom: 1px solid #EFF1F3;
 }
+
 .movie_main .menu {
-  position:absolute;
-  top:0px; 
-  left:-100%; 
-  width:320px; 
-  height: 100%; 
-  background:#fff;  
+  position: absolute;
+  top: 0px;
+  left: -100%;
+  width: 320px;
+  height: 100%;
+  background: #fff;
   transition: all 0.3s;
 }
-.movie_main .menu > div.menu_group { 
+
+.movie_main .menu > div.menu_group {
   padding: 40px 20px 0px 20px;
   overflow-y: scroll;
   height: auto;
 }
+
 .movie_main .left_open_area {
-  width:20px;
+  width: 20px;
   height: 100%;
   position: absolute;
-  background:#fff;
+  background: #fff;
 }
 
-.movie_main .left_open_area button{
-  height:136px;
-  width:24px;
-  background:transparent url('../images/common/btn_left_open.png') no-repeat 0 0;
+.movie_main .left_open_area button {
+  height: 136px;
+  width: 24px;
+  background: transparent url("../images/common/btn_left_open.png") no-repeat 0 0;
   position: absolute;
-  left:20px;
+  left: 20px;
   cursor: pointer;
   font-size: 0;
   top: 50%;
-    margin-top: -68px;
+  margin-top: -68px;
 }
 
-.movie_main .left_close_area button{
-  height:136px;
-  width:24px;
-  background:transparent url('../images/common/btn_left_close.png') no-repeat 0 0;
+.movie_main .left_close_area button {
+  height: 136px;
+  width: 24px;
+  background: transparent url("../images/common/btn_left_close.png") no-repeat 0 0;
   position: absolute;
   right: -20px;
   display: flex;
   cursor: pointer;
   font-size: 0;
   top: 50%;
-    margin-top: -68px;
+  margin-top: -68px;
 }
+
 .movie_main .logo_area {
-  padding:40px 0 0 20px
+  padding: 40px 0 0 20px;
 }
+
 .movie_main .logo_area h1.logo {
-    width: 220px;
-    height: 51px;
-    background: transparent url('../images/common/logo.svg') no-repeat 0 0;
-    background-size: 54px 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 9px 0 0 0;
-    box-sizing: border-box;
+  width: 220px;
+  height: 51px;
+  background: transparent url("../images/common/logo.svg") no-repeat 0 0;
+  background-size: 54px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 9px 0 0 0;
+  box-sizing: border-box;
 }
+
 .movie_main .logo_area h1 img {
   display: block;
   margin-left: 70px;
   height: 11px;
   width: 68px;
 }
+
 .movie_main .logo_area h1 .logo_txt2 {
   font-family: "PRETB";
   font-size: 19px;
@@ -2033,220 +2271,243 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   height: 31px;
   line-height: 31px;
 }
+
 .movie_main .tree a,
 .movie_main .tree .color_active {
-  margin-left:10px; 
-  background:transparent; 
-  border:0;
+  margin-left: 10px;
+  background: transparent;
+  border: 0;
   font-size: 15px;
-  color:#5A6265;
+  color: #5A6265;
   position: relative;
 }
+
 .movie_main .tree .jstree-default .jstree-clicked,
 .movie_main .tree a:hover {
-  color:#37C375
+  color: #37C375;
 }
-.movie_main .tree .depth01.unfold .color_active{
+
+.movie_main .tree .depth01.unfold .color_active {
   font-family: "PRETSB", serif;
 }
+
 .movie_main .tree ul.depth2 > li {
-  margin:20px 0
+  margin: 20px 0;
 }
+
 .movie_main .tree ul.depth3 {
   padding-top: 7px;
 }
+
 .movie_main .tree ul.depth3 > li {
-  margin:7px 0
+  margin: 7px 0;
 }
-.movie_main .tree li.unfold>ul {
-  display:block;
+
+.movie_main .tree li.unfold > ul {
+  display: block;
 }
+
 .movie_main .tree li {
   position: relative;
   min-height: 20px;
   display: block;
 }
+
 .movie_main .tree li.depth01,
 .movie_main .tree ul.depth02 > li {
-  margin-bottom:20px
+  margin-bottom: 20px;
 }
+
 .movie_main .tree ul.depth02 {
-  margin-top:20px
+  margin-top: 20px;
 }
+
 .movie_main .tree ul.depth03 {
-  margin-top:15px
+  margin-top: 15px;
 }
+
 .movie_main .tree ul.depth03 > li {
-  padding-bottom:7px
+  padding-bottom: 7px;
 }
-.movie_main .tree ul.depth03 > li:last-of-type{
-  padding-bottom:0
+
+.movie_main .tree ul.depth03 > li:last-of-type {
+  padding-bottom: 0;
 }
-.movie_main .tree>li:first-child::after {
-  top:0; 
-  left:-1px; 
-  width:1px; 
-  height:10px; 
-  background:#fff
+
+.movie_main .tree > li:first-child::after {
+  top: 0;
+  left: -1px;
+  width: 1px;
+  height: 10px;
+  background: #fff;
 }
+
 .movie_main .tree li.last::after {
-  top:11px; 
-  left:-1px; 
-  width:1px; 
-  height:100%; 
-  background:#fff
+  top: 11px;
+  left: -1px;
+  width: 1px;
+  height: 100%;
+  background: #fff;
 }
 
 .movie_main .tree li span {
-  cursor:default;
-  position:absolute; 
-  top:4px; 
-  left:0; 
-  width:20px; 
-  height:20px; 
-  background:#fff; 
-  text-align:center; 
-  cursor:pointer; 
-  border:1px solid #DEE1E5
+  cursor: default;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #DEE1E5;
 }
+
 .movie_main .tree li span::before {
-  content:'+';
-  color:#37C375; 
+  content: "+";
+  color: #37C375;
 }
+
 .movie_main .tree li.unfold > span {
-  cursor:default;
-  position:absolute; 
-  top:4px; 
-  left:0; 
-  width:20px; 
-  height:20px; 
-  background:#fff; 
-  text-align:center; 
-  line-height:17px; 
-  cursor:pointer; 
-  border:1px solid #DEE1E5
+  cursor: default;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  text-align: center;
+  line-height: 17px;
+  cursor: pointer;
+  border: 1px solid #DEE1E5;
 }
+
 .movie_main .tree li.unfold > span::before {
-  content:'-';	
-  color:#37C375; 
+  content: "-";
+  color: #37C375;
 }
-.movie_main .tree li.final span{
-  cursor:default;
-  position:absolute; 
-  top:4px; 
-  left:0; 
-  width:0px; 
-  height:0px; 
-  background:transparent; 
-  text-align:center; 
-  line-height:17px; 
-  cursor:pointer; 
-  border:0
+
+.movie_main .tree li.final span {
+  cursor: default;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+  text-align: center;
+  line-height: 17px;
+  cursor: pointer;
+  border: 0;
 }
+
 .movie_main .tree li.final span::before {
-  content:'없음';	
+  content: "없음";
   font-size: 0;
 }
 
 .movie_main .tree li.final > a,
 .movie_main .tree li.nofold > a {
-  margin-left:-7px
+  margin-left: -7px;
 }
 
 .movie_main .tree > li.unfold > span {
-  position:absolute; 
-  top:4px; 
-  left:0; 
-  width:20px; 
-  height:20px; 
-  text-align:center; 
-  line-height:17px; 
-  cursor:pointer; 
-  border:0;
-  background:#37C375
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 17px;
+  cursor: pointer;
+  border: 0;
+  background: #37C375;
 }
+
 .movie_main .tree > li.unfold > span::before {
-  content:'-';
+  content: "-";
   color: #fff;
 }
 
-.movie_main .tree li.nofold > span{
-  cursor:default;
-  position:absolute; 
-  top:4px; 
-  left:0; 
-  width:0px; 
-  height:0px; 
-  background:transparent; 
-  text-align:center; 
-  line-height:17px; 
-  cursor:pointer; 
-  border:0
+.movie_main .tree li.nofold > span {
+  cursor: default;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  background: transparent;
+  text-align: center;
+  line-height: 17px;
+  cursor: pointer;
+  border: 0;
 }
 
-.movie_main .tree li.nofold > span::before{
-  content:'없음';
+.movie_main .tree li.nofold > span::before {
+  content: "없음";
 }
 
 /**************************************** 
     사이트맵
 ****************************************/
 .sitemap_area {
-  display:flex; 
+  display: flex;
   width: 1260px;
   flex-wrap: wrap;
 }
 
-.sitemap_area  .col1{
-  width:400px;
-  margin:30px 30px 0 0;
+.sitemap_area .col1 {
+  width: 400px;
+  margin: 30px 30px 0 0;
 }
-.sitemap_area  .col1 .round12.default{
-  width:400px;
-  padding:37px 40px;
+
+.sitemap_area .col1 .round12.default {
+  width: 400px;
+  padding: 37px 40px;
   box-sizing: border-box;
 }
 
 .sitemap_area > div:nth-of-type(3),
-.sitemap_area > div:nth-of-type(6){
-  margin-right:0
+.sitemap_area > div:nth-of-type(6) {
+  margin-right: 0;
 }
 
 .sitemap_area > div:nth-of-type(1),
 .sitemap_area > div:nth-of-type(2),
-.sitemap_area > div:nth-of-type(3){
-  margin-top:0
+.sitemap_area > div:nth-of-type(3) {
+  margin-top: 0;
 }
 
-.sitemap_area  .col1 .sitemap_group h3{
+.sitemap_area .col1 .sitemap_group h3 {
   font-family: "PRETSB", serif;
   font-size: 19px;
-  color:#25282B;
-  margin-bottom:19px
+  color: #25282B;
+  margin-bottom: 19px;
 }
 
-.sitemap_area  .col1 .sitemap_group ul  {
-  margin:0 0 0 20px
+.sitemap_area .col1 .sitemap_group ul {
+  margin: 0 0 0 20px;
 }
-.sitemap_area  .col1 .sitemap_group ul li{
+
+.sitemap_area .col1 .sitemap_group ul li {
   list-style-type: disc;
   list-style-position: outside;
   line-height: 1.4;
-  border-bottom:1px solid #E4E8EC
+  border-bottom: 1px solid #E4E8EC;
 }
 
-.sitemap_area  .col1 .sitemap_group ul li:last-of-type{
-  border:0
+.sitemap_area .col1 .sitemap_group ul li:last-of-type {
+  border: 0;
 }
 
-.sitemap_area  .col1 .sitemap_group ul li a {
-  display:inline-block;
-  color:#5A6265;
-  padding:18px 0 20px 0;
-  margin-left:-4px
+.sitemap_area .col1 .sitemap_group ul li a {
+  display: inline-block;
+  color: #5A6265;
+  padding: 18px 0 20px 0;
+  margin-left: -4px;
 }
 
-.sitemap_area  .col1 .sitemap_group ul li a:hover{
+.sitemap_area .col1 .sitemap_group ul li a:hover {
   color: #37c375;
 }
 
@@ -2256,6 +2517,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 .login_form_area label {
   color: #5a6265;
   font-size: 16px;
@@ -2266,4 +2528,128 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   padding-left: 6px;
   margin: 0 6px 6px 6px;
   word-break: keep-all;
+}
+
+/* 240705 사이버진로교육 new style kyolimsoft */
+.key_visual_area.visual_result {
+  position: relative;
+}
+
+.key_visual_area.visual_result .img {
+  display: inline-block;
+  width: 340px;
+  height: 166px;
+  background: transparent url("../images/page/visual_result.png") no-repeat 0 0;
+  position: absolute;
+  right: 90px;
+  bottom: 0;
+}
+
+.result-tit {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 36px;
+}
+
+.result-box {
+  display: inline-block;
+}
+.pie-graph-wrap {
+  position: relative;
+  width: 200px;
+  height: 100px;
+}
+.pie-graph-wrap::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #666;
+  border-radius: 100px;
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+}
+.pie-graph-wrap::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 100px;
+  position: absolute;
+  right: 0;
+  bottom: -9px;
+}
+
+.pie-graph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 120px;
+  border-bottom: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pie-graph::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  border-radius: 50%;
+  background-image: conic-gradient(#666, #666 calc(var(--percentage, 0) / 2), #ccc 0);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+  transform: rotate(270deg);
+}
+.pie-graph::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #fff;
+  z-index: 2;
+  width: calc(100% - 32px);
+  height: calc(200% - 32px);
+  border-radius: 50%;
+  top: 16px;
+  left: 16px;
+}
+
+.result-pie-box.score1 .pie-graph::before {
+  background-image: conic-gradient(#d71921, #d71921 calc(var(--percentage, 0) / 2), #ccc 0);
+}
+.result-pie-box.score1 .pie-graph-wrap::before {
+  background-color: #d71921;
+}
+.result-pie-box.score1 .txt .grade {
+  background-color: #d71921;
+}
+
+.result-pie-box.score2 .pie-graph::before {
+  background-image: conic-gradient(#f2ad18, #f2ad18 calc(var(--percentage, 0) / 2), #ccc 0);
+}
+.result-pie-box.score2 .pie-graph-wrap::before {
+  background-color: #f2ad18;
+}
+.result-pie-box.score2 .txt .grade {
+  background-color: #f2ad18;
+}
+
+.result-pie-box.score3 .pie-graph::before {
+  background-image: conic-gradient(#37c375, #37c375 calc(var(--percentage, 0) / 2), #ccc 0);
+}
+.result-pie-box.score3 .pie-graph-wrap::before {
+  background-color: #37c375;
+}
+.result-pie-box.score3 .txt .grade {
+  background-color: #37c375;
 }

@@ -1165,7 +1165,7 @@ input.txt.input:focus-visible{
   border:1px solid #37c375;
 }
 
-.input.txt {
+.input.txt, textarea {
   border: 1px solid #dee1e5;
   padding: 0 24px;
   width: auto;
