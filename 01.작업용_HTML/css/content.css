@@ -2654,23 +2654,21 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   background-color: #37c375;
 }
 
-.content_inner {
+.info_inner {
   margin: 0 auto;
   padding: 40px;
-  width: 1134px;
-  height: 1315px;
-  background-color: rgb(244, 244, 245);
+  background-color: #f4f4f5;
   border-radius: 10px;
   box-sizing: border-box;
 }
 
-.txt_box {
+.tit_box {
   margin-top: 20px;
   font-family: "PRETSB";
   font-size: 22px;
   text-align: center;
 }
-.txt_box p {
+.tit_box p {
   margin-bottom: 20px;
   font-size: 26px;
 }
@@ -2681,7 +2679,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   width: 1055px;
   height: 420px;
   background-color: #fff;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid #DEE1E5;
   border-radius: 10px;
 }
 .edu_step_container .edu_step {
@@ -2700,7 +2698,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   align-items: center;
   padding: 0 45px;
 }
-.edu_step .left_box .left_box div:last-child::before {
+.edu_step .left_box div:last-child::before {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -2710,7 +2708,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   transform: translate(-50%, -50%);
   content: "";
 }
-.edu_step .left_box .left_box div:last-child::after {
+.edu_step .left_box div:last-child::after {
   position: absolute;
   right: -15px;
   bottom: 90px;
@@ -2726,12 +2724,13 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   font-size: 18px;
   text-align: center;
 }
-.edu_step .left_box p .edu_step .left_box span {
+.edu_step .left_box p span {
   font-family: "PRET";
   font-size: 16px;
 }
 
 .edu_step .middle_box {
+  border: 1px solid red;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -2745,7 +2744,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   top: 50%;
   width: 107px;
   height: 108px;
-  background: url(../images/page/img_bg_ellipse.png) no-repeat center;
+  background: url(../images/page/img_ellipse.png) no-repeat center;
   transform: translateY(-50%);
   content: "";
 }
@@ -2758,6 +2757,25 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   background: url(../images/page/img_Triangle.png) no-repeat center;
   transform: rotate(-90deg);
   content: "";
+}
+
+.edu_step .middle_box > div {
+  position: relative;
+  border: 1px solid red;
+  background: url(../images/page/img_rect_l.png) no-repeat center;
+}
+.edu_step .middle_box > div img {
+  width: 100px;
+  height: 100px;
+}
+.edu_step .middle_box > div .txt_box {
+  position: absolute;
+  font-family: "PRET";
+  font-size: 16px;
+}
+.edu_step .middle_box > div .txt_box p {
+  font-family: "PRETSB";
+  font-size: 18px;
 }
 
 .edu_step .right_box {
@@ -2833,7 +2851,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   text-align: left;
 }
 
-.link_diagnosis {
+a.link_diagnosis {
   margin: 40px auto 0;
   padding: 15px 48px;
   background-color: #37c375;
