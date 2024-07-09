@@ -2653,3 +2653,191 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 .result-pie-box.score3 .txt .grade {
   background-color: #37c375;
 }
+
+.content_inner {
+  margin: 0 auto;
+  padding: 40px;
+  width: 1134px;
+  height: 1315px;
+  background-color: rgb(244, 244, 245);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.txt_box {
+  margin-top: 20px;
+  font-family: "PRETSB";
+  font-size: 22px;
+  text-align: center;
+}
+.txt_box p {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+/* 슬라이드커스텀 */
+.edu_step_container {
+  margin: 40px auto 0;
+  width: 1055px;
+  height: 420px;
+  background-color: #fff;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
+}
+.edu_step_container .edu_step {
+  display: flex;
+  height: 420px;
+}
+.edu_step_container .edu_step .edu_step > div {
+  height: 420px;
+}
+
+.edu_step .left_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 45px;
+}
+.edu_step .left_box .left_box div:last-child::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 37px;
+  height: 29px;
+  background: url(../images/page/img_Triangle.png) no-repeat center;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+.edu_step .left_box .left_box div:last-child::after {
+  position: absolute;
+  right: -15px;
+  bottom: 90px;
+  width: 37px;
+  height: 29px;
+  background: url(../images/page/img_Triangle.png) no-repeat center;
+  transform: rotate(-90deg);
+  content: "";
+}
+
+.edu_step .left_box p {
+  font-family: "PRETSB";
+  font-size: 18px;
+  text-align: center;
+}
+.edu_step .left_box p .edu_step .left_box span {
+  font-family: "PRET";
+  font-size: 16px;
+}
+
+.edu_step .middle_box {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 75px;
+}
+.edu_step .middle_box::before {
+  position: absolute;
+  left: 222px;
+  top: 50%;
+  width: 107px;
+  height: 108px;
+  background: url(../images/page/img_bg_ellipse.png) no-repeat center;
+  transform: translateY(-50%);
+  content: "";
+}
+.edu_step .middle_box::after {
+  position: absolute;
+  right: 15px;
+  top: 45%;
+  width: 37px;
+  height: 29px;
+  background: url(../images/page/img_Triangle.png) no-repeat center;
+  transform: rotate(-90deg);
+  content: "";
+}
+
+.edu_step .right_box {
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 0;
+  font-family: "PRETSB";
+  font-size: 18px;
+  text-align: center;
+}
+
+/* 슬라이드 커스텀 끝 */
+.diagnosis {
+  display: flex;
+  justify-content: space-between;
+  margin: 105px auto 0;
+  width: 1055px;
+}
+
+.diagnosis_list {
+  position: relative;
+  padding: 78px 20px;
+  width: 242px;
+  height: 560px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+}
+.diagnosis_list img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.diagnosis_list > p {
+  font-family: "PRETSB";
+  font-size: 18px;
+  margin-bottom: 16px;
+  word-break: keep-all;
+}
+.diagnosis_list > div {
+  margin-top: 18px;
+  border: 1px dashed #dddddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.diagnosis_list > div p {
+  padding: 5px;
+  background-color: #ffc6c5;
+  border-radius: 10px 10px 0 0;
+  font-family: "PRETSB";
+  color: #a1211e;
+}
+
+.diagnosis_list.second > div p {
+  background-color: #b8d7de;
+  color: #305f69;
+}
+.diagnosis_list.third > div p {
+  background-color: #a6d2b2;
+  color: #0e5521;
+}
+.diagnosis_list.fourth > div p {
+  background-color: #e8dfd4;
+  color: #884f09;
+}
+
+.diagnosis_list .desc_box {
+  width: 100%;
+  padding: 9px 12px;
+  text-align: left;
+}
+
+.link_diagnosis {
+  margin: 40px auto 0;
+  padding: 15px 48px;
+  background-color: #37c375;
+  border-radius: 24px;
+  font-size: 18px;
+  color: #ffffff;
+}
