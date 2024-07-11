@@ -236,16 +236,23 @@
 							<div class="right">
 								<!-- 
 
-                                    [반원 그래프 - result-pie-box]
-                                    1. 점수 입력은 pie-graph-wrap div에 --percentage: 값;과 score span 두 곳에 입력해주시면 됩니다.
-
-									2. div.pie-graph-wrap에 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
 									* 양호 class: score1
 									* 보통 class: score2
 									* 미흡 class: score3
 
+                                    
+                                    [반원 그래프 - result-pie-box]
+                                    1. 점수 입력은 div.pie-graph-wrap 에 --percentage: 값;과 span.score 두 곳에 입력해주시면 됩니다.
+
+									2. div.pie-graph-wrap에 score1, score2, score3 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
+                            
+                                    --------------------------------------------------------
 
                                     [막대 그래프 - result-bar-box]
+                                    1. 점수 입력은 div.bar-graph에 --percentage: 값;과 
+                                       div.result-bar-box - txt - span.score 두 곳에 입력해주시면 됩니다.
+
+                                    2. div.bar-graph에 score1, score2, score3 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
 								
 								-->
                                     
@@ -270,21 +277,21 @@
 									<div class="item">
 										<div class="txt">
 											<span class="tit">구직자 점수</span>
-											<span class="score">66</span>
+											<span class="score">66</span> <!-- 점수 입력 -->
 											<span class="mg">점</span>
 										</div>
-										<div class="bar-graph">
-											<span style="--percentage: 66;" class="score2">보통</span>
+										<div class="bar-graph score2" style="--percentage: 66;"> <!-- 점수 입력 --> 
+											<span class="pcnt">보통</span>
 										</div>
 									</div>
 									<div class="item">
 										<div class="txt">
 											<span class="tit">취업자 점수</span>
-											<span class="score">76</span>
+											<span class="score">76</span> <!-- 점수 입력 -->
 											<span class="mg">점</span>
 										</div>
-										<div class="bar-graph">
-											<span style="--percentage: 76;" class="score1">양호</span>
+										<div class="bar-graph score1" style="--percentage: 76;"> <!-- 점수 입력 -->
+											<span class="pcnt">양호</span>
 										</div>
 									</div>
 								</div>
@@ -292,9 +299,183 @@
 							</div>
 						</div>
 						<!-- // 종합결과 -->
+                        <!-- 정렬 -->
+                        <div class="result-sort-wrap">
+                            <span class="mg">정렬 : </span>
+                            <div class="sort-box">
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateBad" class="checkbox score3" checked>
+                                        <label for="stateBad">미흡</label>
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateNormal" class="checkbox score2" checked>
+                                        <label for="stateNormal">보통</label>
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateGood" class="checkbox score1" checked>
+                                        <label for="stateGood">양호</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 정렬 -->
                         <!-- 요인별 진단결과 -->
-                        <div class="">
-                            
+                        <div class="result-list-wrap">
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis1.png" alt="">
+                                    <span>진로·경력탐색</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score1" style="--percentage: 86;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">자기이해</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">86</span><!-- 점수 입력 -->
+                                        <span class="grade">양호</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 68;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">직업정보탐색</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">68</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis2.png" alt="">
+                                    <span>진로·경력설계</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score3" style="--percentage: 29;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">진로·경력 의사결정</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">29</span><!-- 점수 입력 -->
+                                        <span class="grade">미흡</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 67;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">진로·경력 계획수립</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">67</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis3.png" alt="">
+                                    <span>구직수행</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score1" style="--percentage: 94;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">구직의욕고취</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">94</span><!-- 점수 입력 -->
+                                        <span class="grade">양호</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                    <div class="result-item score3" style="--percentage: 22;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">구직정보탐색</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">22</span><!-- 점수 입력 -->
+                                        <span class="grade">미흡</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 57;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">구직기술활용</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">57</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis4.png" alt="">
+                                    <span>경력관리</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score2" style="--percentage: 46;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">조직적응</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">46</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                    <div class="result-item score1" style="--percentage: 76;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">경력전환</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">76</span><!-- 점수 입력 -->
+                                        <span class="grade">양호</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 54;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">변화관리</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">54</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
                         </div>
                         <!-- // 요인별 진단결과 -->
 

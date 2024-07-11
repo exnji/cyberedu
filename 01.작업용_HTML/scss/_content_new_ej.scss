@@ -8,6 +8,10 @@
     src: url('../fonts/JalnanGothic.woff') format('woff');
 }
 
+
+body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
+
+
 // 02_결과.html
 .key_visual_area.visual_result { position: relative;}
 .key_visual_area.visual_result .img { display: inline-block; width: 340px; height: 166px; background: transparent url("../images/page/visual_result.png") no-repeat 0 0; position: absolute; right: 90px; bottom: 0;}
@@ -34,7 +38,7 @@
 .result-pie-box {text-align: center; width: 212px;height: 212px; box-sizing: border-box; border-radius: 190px;background-color: #f5f5f5; padding: 6px; position: relative; vertical-align: middle; display: inline-block;
 
     .txt { color: #333; position: absolute; z-index: 1; left: 0; top: 57px;width: 100%;}
-    .txt .tit { display: block; font-size: 20px;}
+    .txt .tit { display: block; font-size: 20px; font-weight: 600; color: #333;}
     .score { margin-top: 9px; display: block; font-size: 40px; font-family: 'jalnan';}
     .grade { margin-top: 2px; font-size: 18px; color: #fff; padding: 6px 8px; min-width: 80px; text-align: center; display: inline-block; border-radius: 100px;}
 }
@@ -63,7 +67,7 @@
     
         .txt { margin-right: 27px; white-space: nowrap; min-width: 150px;}
         .txt .tit { font-weight: 600; font-size: 18px; margin-right: 10px;}
-        .txt .score { font-size: 24px; font-weight: 600; font-family: 'jalnan';}
+        .txt .score { font-size: 24px; font-weight: 600; font-family: 'jalnan';  min-width: 43px; text-align: right; display: inline-block;} 
         .txt .mg { font-weight: 600; font-size: 18px;}
     } 
     .item:first-child { margin-top:0; }
@@ -77,6 +81,79 @@
 }
 
 
+.ico-score {display: inline-block; width: 19px; height: 19px; background: url("../images/page/ico_grade1.png") no-repeat center; vertical-align: middle; transform: translateY(-1px);}
+
+
+// 정렬
+.custom-chk, .custom-rdo { display: inline-block; position: relative; overflow: hidden; margin: 0 8px;
+    input[type="checkbox"],
+    input[type="radio"] {position: absolute; top: -1px; left: -1px; width: 1px; height: 1px; display: inline-block;
+    
+        & + label { display: inline-block; cursor: pointer; transition: .3s ease;}
+        &:focus-visible {outline: none;}
+        &:focus-visible + label { outline: 2px dotted #000; outline-offset: -2px;}
+    }
+
+    // 체크박스
+    input[type="checkbox"] {
+
+        & + label {}
+        & + label::before { content: ''; width: 14px; height: 14px; margin-right: 10px;  box-sizing: border-box; display: inline-block; border: 1px solid #666; background-color: #fff; border-radius: 3px; position: relative; top: 1px; }
+        &:checked + label::before { background: #fff url("../images/page/ico_check.png") no-repeat center;}
+    }
+    
+}
+.result-sort-wrap { text-align: right; margin-top: 40px;
+    .mg { display: inline-block; vertical-align: middle; font-weight: 600;}
+    .sort-box { font-size: 0; display: inline-block; vertical-align: middle; font-size: 16px;}
+    .sort-box .item { display: inline-block; vertical-align: middle; font-size: 16px;}
+}
+.sort-box {
+    .custom-chk, .custom-rdo {
+        label { padding: 6px 15px 4px; box-sizing: border-box; background-color: #8a8a8a; color: #fff ; border-radius: 100px; height: 28px;}
+        label::after { content: ''; display: inline-block; width: 19px; height: 19px; background: url("../images/page/ico_grade1.png") no-repeat center; vertical-align: middle; transform: translateY(-1px);}
+    }
+}
+
+
+
+// [요일별 진단결과]
+.result-percent-box { display: inline-block; vertical-align: middle; width: 520px; height: 24px;  position: relative; background-color: #eee; margin-right: 15px;
+
+    &::before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url("../images/page/bg_result_per.png") repeat-x;}
+    .pcnt { width: calc(var(--percentage, 0) * 1%); height: 100%; background-color: #37c375; display: inline-block;}
+}
+.result-list-wrap { margin-top: 20px;
+
+    .item { margin-top: 80px; font-size: 0;}
+    .item > * { font-size: 16px;}
+    .item:first-child { margin-top: 0;}
+    .left-tit {font-size: 18px; color: #333; text-align: center; padding-right: 38px; display: inline-block; vertical-align: middle; width: 200px; box-sizing: border-box; }
+    .left-tit img { display: block; margin:0 auto;}
+    .left-tit span { display: block; margin-top: 14px; font-weight: 600;}
+    .right-percent { display: inline-block; width: calc(100% - 200px); vertical-align: middle;}
+    .right-percent .result-item { border: 1px dashed #ddd; box-sizing: border-box; border-radius: 15px; display: inline-flex; align-items: center; width: 100%; height: 64px; margin-top: 20px; position: relative; overflow: hidden;}
+    .right-percent .result-item:first-child { margin-top: 0;}
+
+    .result-pop-btn { position: absolute; right: 0; top: 0; width: 120px; box-sizing: border-box; height: 100%; background-color: #8a8a8a; display: inline-block; color: #fff; text-align: left; padding-left: 15px; font-size: 16px; line-height: 120%;}
+    
+    .right-percent .item-tit { width: 160px; text-align: center; box-sizing: border-box; font-size: 18px; font-weight: 600; margin-right: 36px; box-sizing: border-box; position: relative;
+    
+        &::before { content: ''; display: inline-block; width: 1px; height: 44px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background-color: #ddd;}
+    }
+    .right-percent .result-item .score { padding-left: 34px; position: relative; font-size: 24px; color: #666; font-weight: 600; min-width: 90px; margin-right: 20px; text-align: right;
+        
+        &::before { content: ''; display: inline-block; width: 28px; height: 2px; background-color: #aaa; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+        &::after { content: ''; display: inline-block; width: 6px; height: 6px; background-color: #aaa; position: absolute; left: 28px; border-radius: 10px; top: 50%; transform: translateY(-50%);}
+    }
+}
+.result-list-wrap .result-item .grade { background-color: #999; width: 65px; height: 28px; box-sizing: border-box; color: #fff; display: inline-block; text-align: center; padding: 6px 5px; border-radius: 100px;
+    
+    &::after {content:''; display: inline-block; width: 19px; height: 19px; background: url("../images/page/ico_grade1.png") no-repeat center; vertical-align: middle; transform: translateY(-1px);} 
+}
+
+
+
 
 $score-colors: (
   1: #37c375, // 양호
@@ -85,6 +162,7 @@ $score-colors: (
 );
 
 @for $i from 1 through 3 {
+    // 반원그래프
     .result-pie-box .score#{$i} {
         .pie-graph::before {background-image: conic-gradient(map-get($score-colors, $i), map-get($score-colors, $i) calc(var(--percentage, 0) * 1% / 2), #ccc 0);}
         &::before {background-color: map-get($score-colors, $i);}
@@ -94,10 +172,19 @@ $score-colors: (
         + .txt .grade::after {  background: url("../images/page/ico_grade#{$i}.png") no-repeat center; }
     }
 
-
-    .result-bar-box .bar-graph .score#{$i} { background-color: map-get($score-colors, $i);
+    // 막대그래프
+    .result-bar-box .bar-graph.score#{$i} span { background-color: map-get($score-colors, $i);
         &::before { background-color: map-get($score-colors, $i);}
         &::after { background: url("../images/page/ico_grade#{$i}.png") no-repeat center; }
-
     }
+
+    // 정렬
+    .ico-score.score#{$i} { background: url("../images/page/ico_grade#{$i}.png") no-repeat center;}
+    input.score#{$i}:checked + label { background-color: map-get($score-colors, $i);} 
+    .sort-box input.score#{$i} + label::after {background: url("../images/page/ico_grade#{$i}.png") no-repeat center;} 
+
+    // 요일별 진단결과
+    .result-list-wrap .result-item.score#{$i} .pcnt { background-color: map-get($score-colors, $i);}
+    .result-list-wrap .result-item.score#{$i} .grade {background-color: map-get($score-colors, $i);}
+    .result-list-wrap .result-item.score#{$i} .grade::after { background: url("../images/page/ico_grade#{$i}.png") no-repeat center; }
 }

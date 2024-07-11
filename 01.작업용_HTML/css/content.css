@@ -2537,6 +2537,11 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   font-weight: 600;
   src: url("../fonts/JalnanGothic.woff") format("woff");
 }
+body {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
 .key_visual_area.visual_result {
   position: relative;
 }
@@ -2636,6 +2641,8 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 .result-pie-box .txt .tit {
   display: block;
   font-size: 20px;
+  font-weight: 600;
+  color: #333;
 }
 .result-pie-box .score {
   margin-top: 9px;
@@ -2793,6 +2800,9 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   font-size: 24px;
   font-weight: 600;
   font-family: "jalnan";
+  min-width: 43px;
+  text-align: right;
+  display: inline-block;
 }
 .result-bar-box .item .txt .mg {
   font-weight: 600;
@@ -2842,6 +2852,273 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   margin-left: 2px;
 }
 
+.ico-score {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+
+.custom-chk, .custom-rdo {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 8px;
+}
+.custom-chk input[type=checkbox],
+.custom-chk input[type=radio], .custom-rdo input[type=checkbox],
+.custom-rdo input[type=radio] {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+}
+.custom-chk input[type=checkbox] + label,
+.custom-chk input[type=radio] + label, .custom-rdo input[type=checkbox] + label,
+.custom-rdo input[type=radio] + label {
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.custom-chk input[type=checkbox]:focus-visible,
+.custom-chk input[type=radio]:focus-visible, .custom-rdo input[type=checkbox]:focus-visible,
+.custom-rdo input[type=radio]:focus-visible {
+  outline: none;
+}
+.custom-chk input[type=checkbox]:focus-visible + label,
+.custom-chk input[type=radio]:focus-visible + label, .custom-rdo input[type=checkbox]:focus-visible + label,
+.custom-rdo input[type=radio]:focus-visible + label {
+  outline: 2px dotted #000;
+  outline-offset: -2px;
+}
+.custom-chk input[type=checkbox] + label::before, .custom-rdo input[type=checkbox] + label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #666;
+  background-color: #fff;
+  border-radius: 3px;
+  position: relative;
+  top: 1px;
+}
+.custom-chk input[type=checkbox]:checked + label::before, .custom-rdo input[type=checkbox]:checked + label::before {
+  background: #fff url("../images/page/ico_check.png") no-repeat center;
+}
+
+.result-sort-wrap {
+  text-align: right;
+  margin-top: 40px;
+}
+.result-sort-wrap .mg {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+}
+.result-sort-wrap .sort-box {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+}
+.result-sort-wrap .sort-box .item {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+.sort-box .custom-chk label, .sort-box .custom-rdo label {
+  padding: 6px 15px 4px;
+  box-sizing: border-box;
+  background-color: #8a8a8a;
+  color: #fff;
+  border-radius: 100px;
+  height: 28px;
+}
+.sort-box .custom-chk label::after, .sort-box .custom-rdo label::after {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+
+.result-percent-box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 520px;
+  height: 24px;
+  position: relative;
+  background-color: #eee;
+  margin-right: 15px;
+}
+.result-percent-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/page/bg_result_per.png") repeat-x;
+}
+.result-percent-box .pcnt {
+  width: calc(var(--percentage, 0) * 1%);
+  height: 100%;
+  background-color: #37c375;
+  display: inline-block;
+}
+
+.result-list-wrap {
+  margin-top: 20px;
+}
+.result-list-wrap .item {
+  margin-top: 80px;
+  font-size: 0;
+}
+.result-list-wrap .item > * {
+  font-size: 16px;
+}
+.result-list-wrap .item:first-child {
+  margin-top: 0;
+}
+.result-list-wrap .left-tit {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  padding-right: 38px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  box-sizing: border-box;
+}
+.result-list-wrap .left-tit img {
+  display: block;
+  margin: 0 auto;
+}
+.result-list-wrap .left-tit span {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+}
+.result-list-wrap .right-percent {
+  display: inline-block;
+  width: calc(100% - 200px);
+  vertical-align: middle;
+}
+.result-list-wrap .right-percent .result-item {
+  border: 1px dashed #ddd;
+  box-sizing: border-box;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.result-list-wrap .right-percent .result-item:first-child {
+  margin-top: 0;
+}
+.result-list-wrap .result-pop-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 120px;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #8a8a8a;
+  display: inline-block;
+  color: #fff;
+  text-align: left;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 120%;
+}
+.result-list-wrap .right-percent .item-tit {
+  width: 160px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 36px;
+  box-sizing: border-box;
+  position: relative;
+}
+.result-list-wrap .right-percent .item-tit::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 44px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: #ddd;
+}
+.result-list-wrap .right-percent .result-item .score {
+  padding-left: 34px;
+  position: relative;
+  font-size: 24px;
+  color: #666;
+  font-weight: 600;
+  min-width: 90px;
+  margin-right: 20px;
+  text-align: right;
+}
+.result-list-wrap .right-percent .result-item .score::before {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background-color: #aaa;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.result-list-wrap .right-percent .result-item .score::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #aaa;
+  position: absolute;
+  left: 28px;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.result-list-wrap .result-item .grade {
+  background-color: #999;
+  width: 65px;
+  height: 28px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding: 6px 5px;
+  border-radius: 100px;
+}
+.result-list-wrap .result-item .grade::after {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+
 .result-pie-box .score1 .pie-graph::before {
   background-image: conic-gradient(#37c375, #37c375 calc(var(--percentage, 0) * 1% / 2), #ccc 0);
 }
@@ -2858,13 +3135,37 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   background: url("../images/page/ico_grade1.png") no-repeat center;
 }
 
-.result-bar-box .bar-graph .score1 {
+.result-bar-box .bar-graph.score1 span {
   background-color: #37c375;
 }
-.result-bar-box .bar-graph .score1::before {
+.result-bar-box .bar-graph.score1 span::before {
   background-color: #37c375;
 }
-.result-bar-box .bar-graph .score1::after {
+.result-bar-box .bar-graph.score1 span::after {
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+}
+
+.ico-score.score1 {
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+}
+
+input.score1:checked + label {
+  background-color: #37c375;
+}
+
+.sort-box input.score1 + label::after {
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+}
+
+.result-list-wrap .result-item.score1 .pcnt {
+  background-color: #37c375;
+}
+
+.result-list-wrap .result-item.score1 .grade {
+  background-color: #37c375;
+}
+
+.result-list-wrap .result-item.score1 .grade::after {
   background: url("../images/page/ico_grade1.png") no-repeat center;
 }
 
@@ -2884,13 +3185,37 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   background: url("../images/page/ico_grade2.png") no-repeat center;
 }
 
-.result-bar-box .bar-graph .score2 {
+.result-bar-box .bar-graph.score2 span {
   background-color: #f2ad18;
 }
-.result-bar-box .bar-graph .score2::before {
+.result-bar-box .bar-graph.score2 span::before {
   background-color: #f2ad18;
 }
-.result-bar-box .bar-graph .score2::after {
+.result-bar-box .bar-graph.score2 span::after {
+  background: url("../images/page/ico_grade2.png") no-repeat center;
+}
+
+.ico-score.score2 {
+  background: url("../images/page/ico_grade2.png") no-repeat center;
+}
+
+input.score2:checked + label {
+  background-color: #f2ad18;
+}
+
+.sort-box input.score2 + label::after {
+  background: url("../images/page/ico_grade2.png") no-repeat center;
+}
+
+.result-list-wrap .result-item.score2 .pcnt {
+  background-color: #f2ad18;
+}
+
+.result-list-wrap .result-item.score2 .grade {
+  background-color: #f2ad18;
+}
+
+.result-list-wrap .result-item.score2 .grade::after {
   background: url("../images/page/ico_grade2.png") no-repeat center;
 }
 
@@ -2910,13 +3235,37 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   background: url("../images/page/ico_grade3.png") no-repeat center;
 }
 
-.result-bar-box .bar-graph .score3 {
+.result-bar-box .bar-graph.score3 span {
   background-color: #d71921;
 }
-.result-bar-box .bar-graph .score3::before {
+.result-bar-box .bar-graph.score3 span::before {
   background-color: #d71921;
 }
-.result-bar-box .bar-graph .score3::after {
+.result-bar-box .bar-graph.score3 span::after {
+  background: url("../images/page/ico_grade3.png") no-repeat center;
+}
+
+.ico-score.score3 {
+  background: url("../images/page/ico_grade3.png") no-repeat center;
+}
+
+input.score3:checked + label {
+  background-color: #d71921;
+}
+
+.sort-box input.score3 + label::after {
+  background: url("../images/page/ico_grade3.png") no-repeat center;
+}
+
+.result-list-wrap .result-item.score3 .pcnt {
+  background-color: #d71921;
+}
+
+.result-list-wrap .result-item.score3 .grade {
+  background-color: #d71921;
+}
+
+.result-list-wrap .result-item.score3 .grade::after {
   background: url("../images/page/ico_grade3.png") no-repeat center;
 }
 
