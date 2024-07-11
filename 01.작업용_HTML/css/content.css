@@ -2656,9 +2656,11 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 
 .info_inner {
   margin: 0 auto;
-  padding: 40px;
+  padding: 40px 41px;
+  width: 100%;
   background-color: #f4f4f5;
   border-radius: 10px;
+  color: #333333;
   box-sizing: border-box;
 }
 
@@ -2674,20 +2676,79 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 }
 
 /* 슬라이드커스텀 */
+.swiper-container {
+  position: relative;
+  overflow: visible;
+}
+.swiper-container .swiper-pagination {
+  bottom: 0;
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #999999;
+}
+.swiper-container .swiper-pagination .swiper-pagination-bullet-active {
+  width: 60px;
+  background-color: #37c375;
+  border-radius: 5px;
+}
+
+.btn_slide_prev, .btn_slide_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  background: #fff url(../images/page/btn_slide_prev.png) no-repeat center;
+  border: 1px solid #aaaaaa;
+  border-radius: 50%;
+  text-indent: -9999px;
+  z-index: 1;
+}
+
+.btn_slide_prev {
+  left: -23px;
+}
+
+.btn_slide_next {
+  right: -23px;
+  background: #fff url(../images/page/btn_slide_next.png) no-repeat center;
+}
+
 .edu_step_container {
   margin: 40px auto 0;
-  width: 1055px;
-  height: 420px;
-  background-color: #fff;
-  border: 1px solid #DEE1E5;
-  border-radius: 10px;
+  height: 450px;
 }
 .edu_step_container .edu_step {
   display: flex;
   height: 420px;
 }
-.edu_step_container .edu_step .edu_step > div {
+
+.edu_step {
+  position: relative;
   height: 420px;
+  background-color: #fff;
+  border: 1px solid #DEE1E5;
+  border-radius: 10px;
+}
+.edu_step .slide_contents {
+  display: flex;
+  gap: 31px;
+  margin: 0 auto;
+}
+.edu_step .slide_contents img { /*position: absolute; left: 72px; bottom: 0;*/ }
+.edu_step .slide_contents .slide_txt { /*position: absolute; left: 616px; top: 52px;*/
+  margin-top: 124px;
+  font-family: "PRETSB";
+  font-size: 14px;
+  line-height: 1.286;
+  color: #333;
+}
+.edu_step .slide_contents .slide_txt p {
+  margin-bottom: 41px;
+  font-size: 24px;
 }
 
 .edu_step .left_box {
@@ -2696,9 +2757,8 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 0 45px;
 }
-.edu_step .left_box div:last-child::before {
+.edu_step .left_box::before {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -2708,9 +2768,9 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   transform: translate(-50%, -50%);
   content: "";
 }
-.edu_step .left_box div:last-child::after {
+.edu_step .left_box::after {
   position: absolute;
-  right: -15px;
+  left: 110%;
   bottom: 90px;
   width: 37px;
   height: 29px;
@@ -2730,27 +2790,25 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 }
 
 .edu_step .middle_box {
-  border: 1px solid red;
+  width: 572px;
+  text-align: center;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  gap: 75px;
+  font-size: 0;
 }
 .edu_step .middle_box::before {
   position: absolute;
-  left: 222px;
+  left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
   width: 107px;
   height: 108px;
-  background: url(../images/page/img_ellipse.png) no-repeat center;
-  transform: translateY(-50%);
+  background: url(../images/page/img_ellipse.png) no-repeat center; /*font-family: 'PRETSB'; font-size: 16px; color: #333333; line-height: 1.2; word-break: keep-all; box-sizing: border-box; content: '맞춤형 교육과정 추천';*/
   content: "";
 }
 .edu_step .middle_box::after {
   position: absolute;
-  right: 15px;
+  right: -15px;
   top: 45%;
   width: 37px;
   height: 29px;
@@ -2759,29 +2817,187 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   content: "";
 }
 
-.edu_step .middle_box > div {
+.step-wrap {
   position: relative;
-  border: 1px solid red;
-  background: url(../images/page/img_rect_l.png) no-repeat center;
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-.edu_step .middle_box > div img {
-  width: 100px;
-  height: 100px;
-}
-.edu_step .middle_box > div .txt_box {
+.step-wrap h3 {
   position: absolute;
-  font-family: "PRET";
-  font-size: 16px;
-}
-.edu_step .middle_box > div .txt_box p {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
   font-family: "PRETSB";
-  font-size: 18px;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  z-index: 1;
 }
 
+.edu_step .middle_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.edu_step .middle_box div {
+  position: relative; /*display: inline-block;*/
+  width: 50%;
+  height: 50%;
+  font-size: 16px;
+}
+.edu_step .middle_box div::before {
+  position: absolute;
+  width: 57px;
+  height: 41px;
+  background: url(../images/page/img_arrow.png) no-repeat center;
+  content: "";
+}
+.edu_step .middle_box div img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+}
+.edu_step .middle_box div .desc_box {
+  display: inline-block;
+  position: relative;
+  font-family: "PRET";
+  font-size: 14px;
+  background: linear-gradient(-30deg, rgb(220, 219, 216) 0%, rgb(248, 248, 246) 50%, rgb(236, 237, 234) 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.15);
+  padding: 8px 70px 8px 14px;
+  position: absolute;
+  min-width: 156px;
+  box-sizing: border-box;
+  border: 1px solid #dfdfdf;
+}
+.edu_step .middle_box div .desc_box p {
+  font-family: "PRETSB";
+  font-size: 16px;
+}
+.edu_step .middle_box div .desc_box li {
+  margin: 2px 0;
+}
+.edu_step .middle_box div:nth-child(odd) {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 38px;
+}
+.edu_step .middle_box div:nth-child(odd) img {
+  order: 2;
+  box-sizing: border-box;
+}
+.edu_step .middle_box div:nth-child(odd) .desc_box {
+  order: 1;
+  margin-right: 41px;
+}
+.edu_step .middle_box div:nth-child(even) {
+  text-align: left;
+  padding-left: 38px;
+}
+.edu_step .middle_box div:nth-child(even) .desc_box {
+  padding: 8px 32px 8px 74px;
+  min-width: 192px;
+  left: 68px;
+}
+.edu_step .middle_box div:first-child, .edu_step .middle_box div:nth-child(2) {
+  padding-top: 83px;
+}
+.edu_step .middle_box div:first-child .desc_box, .edu_step .middle_box div:nth-child(2) .desc_box {
+  margin-top: -12px;
+  vertical-align: top;
+}
+.edu_step .middle_box div:first-child .desc_box::before, .edu_step .middle_box div:nth-child(2) .desc_box::before {
+  top: -8px;
+}
+.edu_step .middle_box div:nth-child(3), .edu_step .middle_box div:last-child {
+  padding-top: 24px;
+}
+.edu_step .middle_box div:nth-child(3) .desc_box, .edu_step .middle_box div:last-child .desc_box {
+  vertical-align: bottom;
+}
+.edu_step .middle_box div:nth-child(3) .desc_box::before, .edu_step .middle_box div:last-child .desc_box::before {
+  top: -8px;
+}
+.edu_step .middle_box div:nth-child(3) .desc_box, .edu_step .middle_box div:last-child .desc_box {
+  margin-top: 35px;
+}
+.edu_step .middle_box div:first-child::before {
+  left: 100%;
+  top: 25%;
+  transform: translateX(-50%);
+}
+.edu_step .middle_box div:nth-child(2)::before {
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.edu_step .middle_box div:nth-child(3)::before {
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.edu_step .middle_box div:last-child::before {
+  left: 0;
+  bottom: 25%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+/*
+
+.edu_step .left_box{position: relative; display: flex; flex-direction: column; justify-content: space-around; align-items: center; padding: 0 45px;
+    &::before{position: absolute; left: 50%; top: 50%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: translate(-50%, -50%); content: '';}
+    &::after{position: absolute; right: -15px; bottom: 90px; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg); content: '';}   
+}
+.edu_step .left_box p{font-family: "PRETSB"; font-size: 18px; text-align: center;
+    span{font-family: "PRET"; font-size: 16px;}
+}
+
+.edu_step .middle_box{border: 1px solid red; position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 75px;  
+    &::before{position: absolute; left: 50%; top: 50%;  transform: translate(-65%, -50%); width: 107px; height: 108px; background: url(../images/page/img_ellipse.png)no-repeat center; content: '';}
+    &::after{position: absolute; right: 15px; top: 45%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg);  content: '';}
+}
+.step-wrap { width: 960px; margin: 0 auto; display: flex;justify-content: center;}
+.edu_step .middle_box div{ display: flex; gap: 8px; 
+    //수정해야함
+    &:nth-child(odd){
+        .desc_box{text-align: right;
+            &::before{position: absolute; left: -30px; top: -5px; width: 162px; height: 85px; background: url(../images/page/img_rect_l.png)no-repeat center; content: ''; z-index: -1;}
+        }
+    }
+    &:nth-child(even){
+        .desc_box{
+            &::before{position: absolute; left: 50%; top: -5px; transform: translateX(-50%); width: 198px; height: 74px; background: url(../images/page/img_rect_s.png)no-repeat center; content: ''; z-index: -1;}
+        }
+    }
+    &:nth-child(3),&:last-child{
+        img{margin-top: 0;}
+        .desc_box{margin-top: 50px;}
+    }
+
+    img{margin-top: 15px; width: 100px; height: 100px;
+
+    }
+    .desc_box{position: relative; font-family: 'PRET'; font-size: 16px;
+
+        p{font-family: 'PRETSB'; font-size: 18px;}
+        li{margin: 2px 0;}
+    }
+}
+
+
+*/
 .edu_step .right_box {
   display: flex;
   align-items: center;
-  padding: 0 30px 0 0;
   font-family: "PRETSB";
   font-size: 18px;
   text-align: center;
@@ -2792,14 +3008,12 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   display: flex;
   justify-content: space-between;
   margin: 105px auto 0;
-  width: 1055px;
 }
 
 .diagnosis_list {
   position: relative;
   padding: 78px 20px;
   width: 242px;
-  height: 560px;
   background-color: #ffffff;
   border-radius: 10px;
   font-size: 16px;
