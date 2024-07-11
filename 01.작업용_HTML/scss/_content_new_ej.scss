@@ -13,77 +13,91 @@
 .key_visual_area.visual_result .img { display: inline-block; width: 340px; height: 166px; background: transparent url("../images/page/visual_result.png") no-repeat 0 0; position: absolute; right: 90px; bottom: 0;}
 
 .result-tit { font-size: 28px; font-weight: 600; margin-top: 36px;}
-.result-box { font-size: 0; display: inline-block; width: 100%; box-sizing: border-box; padding: 0 50px;
+.result-box { font-size: 0; display: inline-block; width: 100%; box-sizing: border-box; padding: 0 50px; margin-top: 42px;
 
     > * { font-size: 16px;}
     
-    .bubble { width: 90px; height: 80px; background-color: #eee; border-radius: 10px; text-align: center; font-size: 26px; font-weight:500; display: inline-block; vertical-align: middle; display: inline-flex; align-items: center; justify-content: center   ;}
-    .right { display: inline-block; vertical-align: middle; }
+    .bubble { width: 80px; height: 80px; background-color: #eee; border-radius: 10px; text-align: center; font-size: 26px; font-weight:500; display: inline-block; vertical-align: middle; display: inline-flex; align-items: center; justify-content: center;  position: relative; margin-right: 20px; vertical-align: middle;
+    
+        &::before { content: ''; display: inline-block; position: absolute; right: 0; top: 50%; transform: translateY(-50%) translateX(50%) rotate(45deg);  width: 15px; height: 15px; background-color: #eee;}
+    }
+    .right { display: inline-flex; width: calc(100% - 100px); align-items: center; vertical-align: middle;}
     
     // 나의 점수
     .grade {}
     .grade.grade3 {}
-}
-.result-pie-box {text-align: center; width: 212px;height: 212px; box-sizing: border-box; border-radius: 190px;background-color: #f5f5f5; padding: 6px; position: relative;
+    .grade::after {  content: ''; display: inline-block; width: 19px; height: 19px; background: url("../images/page/ico_grade1.png") no-repeat center; vertical-align: middle; transform: translateY(-1px); margin-left: 2px;}
 
-    .txt { color: #333; position: absolute; left: 0; top: 42px;width: 100%;}
+}
+
+// [반원그래프]
+.result-pie-box {text-align: center; width: 212px;height: 212px; box-sizing: border-box; border-radius: 190px;background-color: #f5f5f5; padding: 6px; position: relative; vertical-align: middle; display: inline-block;
+
+    .txt { color: #333; position: absolute; z-index: 1; left: 0; top: 57px;width: 100%;}
     .txt .tit { display: block; font-size: 20px;}
     .score { margin-top: 9px; display: block; font-size: 40px; font-family: 'jalnan';}
     .grade { margin-top: 2px; font-size: 18px; color: #fff; padding: 6px 8px; min-width: 80px; text-align: center; display: inline-block; border-radius: 100px;}
 }
-.pie-graph-wrap {position: relative; width: 200px; height: 100px;
+.pie-graph-wrap {position: relative; width: 200px; height: 100px; 
+    --percentage: 0; /* 초기에는 0으로 설정 */
 
     &::before { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background-color: #666; border-radius: 100px; position: absolute; left: 0;  bottom: -10px;}
     &::after { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background-color: #ccc; border-radius: 100px; position: absolute; right: 0;  bottom: -10px;}
 
 }
-.pie-graph {  position: relative; width: 100%; height: 100%; border-top-left-radius: 120px; border-top-right-radius: 120px; border-bottom: 0; box-sizing: border-box; overflow: hidden; display: flex; align-items: center; justify-content: center; z-index: 0;
-
-    &::before { content: ''; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 200%; border-radius: 50%; background-image: conic-gradient(#666, #666 calc(var(--percentage, 0) / 2), #ccc 0); transition: transform .5s ease-in-out; z-index: -1; transform: rotate(270deg);}
+.pie-graph {  position: relative; width: 100%; height: 100%; border-top-left-radius: 120px; border-top-right-radius: 120px; border-bottom: 0; box-sizing: border-box; overflow: hidden; display: flex; align-items: center; justify-content: center; z-index: 1;
+    &::before { content: ''; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 200%; border-radius: 50%; background-image: conic-gradient(#666, #666 calc(var(--percentage, 0) / 2), #ccc 0); transition: transform .5s ease-in-out; z-index: -1; transform: rotate(270deg); }
     &::after { content: ''; position: absolute; display: block; background: #f5f5f5; z-index: 0; width: calc(100% - 36px); height: calc(200% - 36px); border-radius: 50%; top: 18px; left: 18px;}
+}
 
+// 그래프 끝 원 생성
+.pcnt-wrap { position: absolute; top: 0; left: 0; transform: rotate(-90deg); width: 100%; height: 200%; z-index: 1;}
+.pcnt-wrap .pcnt { position: absolute; top: 0; left: 0; transform: translateX(-50%) rotate(calc(var(--percentage, 0) * 1.8deg)); transform-origin: center center; width: 100%; height: 200%; z-index: 100; bottom: 0; left: 50%; transform-origin: center; width: 18px; height: 100%; }
+
+.pcnt-wrap .pcnt::before { content: ''; position: absolute; width: 18px; height: 18px; background-color: #666; border-radius: 50%; top: 0; left: 0;  left: calc(50% - 9px);}
+
+// [막대그래프]
+.result-bar-box { display: inline-block; vertical-align: middle; background-color: #f5f5f5; width: 100%; height: 100%; padding: 15px 20px 15px 76px; box-sizing: border-box; margin-left: -50px; border-radius: 0 10px 10px 0;
+
+    .item { margin-top:15px; display: flex;
     
+        .txt { margin-right: 27px; white-space: nowrap; min-width: 150px;}
+        .txt .tit { font-weight: 600; font-size: 18px; margin-right: 10px;}
+        .txt .score { font-size: 24px; font-weight: 600; font-family: 'jalnan';}
+        .txt .mg { font-weight: 600; font-size: 18px;}
+    } 
+    .item:first-child { margin-top:0; }
+
+    .bar-graph { overflow: hidden; background-color: #ccc; height: 28px; display: inline-block; width: 100%;
+    
+        span { font-size: 16px; color: #fff; box-sizing: border-box; padding-left: 11px; padding-top: 5px; display: inline-block; height: 100%; background-color: #666; width: calc(var(--percentage, 0) * 1%); position: relative;}
+        span::before { content: ''; display: inline-block; width: 20px; height: 20px; background-color: #666; position: absolute; right: 0; top: 50%; transform: translate3d(50%, -50%, 0) rotate(45deg); }
+        span::after { content: ''; display: inline-block;width: 19px; height: 19px; background: url("../images/page/ico_grade1.png") no-repeat center; vertical-align: middle; transform: translateY(-1px); margin-left: 2px;}
+    } 
 }
 
-// 그래프 끝 원형 생성
-.pcnt { position: absolute; top: 0; left: 0; transform: rotate(calc(var(--percentage, 0) * 3.6deg)); transform-origin: center center; width: 100%; height: 200%; z-index: 100;}
 
-.pcnt::before { content: ''; position: absolute; width: 18px; height: 18px; background-color: #666; border-radius: 50%; top: 0; left: 0; //transform: rotate(calc(var(--percentage, 0) * 3.6deg)); 
-}
+
 $score-colors: (
-  1: #d71921, // 양호
+  1: #37c375, // 양호
   2: #f2ad18, // 보통
-  3: #37c375  // 미흡
+  3: #d71921  // 미흡
 );
 
 @for $i from 1 through 3 {
-  .result-pie-box.score#{$i} {
-    .pie-graph::before {background-image: conic-gradient(map-get($score-colors, $i), map-get($score-colors, $i) calc(var(--percentage, 0) * 1% / 2), #ccc 0);}
-    .pie-graph-wrap::before {background-color: map-get($score-colors, $i);}
-    .txt .grade { background-color: map-get($score-colors, $i);}
-  }
-}
+    .result-pie-box .score#{$i} {
+        .pie-graph::before {background-image: conic-gradient(map-get($score-colors, $i), map-get($score-colors, $i) calc(var(--percentage, 0) * 1% / 2), #ccc 0);}
+        &::before {background-color: map-get($score-colors, $i);}
+        + .txt .grade { background-color: map-get($score-colors, $i);}
+        .pcnt-wrap .pcnt::before {background-color: map-get($score-colors, $i);}
+
+        + .txt .grade::after {  background: url("../images/page/ico_grade#{$i}.png") no-repeat center; }
+    }
 
 
-.pie-graph-wrap {
-    position: relative;
-    width: 200px;
-    height: 100px;
-    --percentage: 0; /* 초기에는 0으로 설정 */
-}
+    .result-bar-box .bar-graph .score#{$i} { background-color: map-get($score-colors, $i);
+        &::before { background-color: map-get($score-colors, $i);}
+        &::after { background: url("../images/page/ico_grade#{$i}.png") no-repeat center; }
 
-.pcnt { bottom: 0; left: 50%; transform: translateX(-50%); transform-origin: bottom center; width: 18px; height: 100%;}
-.pcnt::before {
-    position: absolute;
-    width: 18px; /* 동그라미 너비 */
-    height: 18px; /* 동그라미 높이 */
-    background-color: #666; /* 배경색 */
-    border-radius: 50%; /* 원형 모양 */
-    top: 0;
-    left: calc(50% - 9px); /* 가운데 정렬 */
-    
-}
-
-.result-pie-box.score1 .pcnt {
-    transform: translateX(-50%) rotate(calc(var(--percentage) * 3.6deg));
+    }
 }

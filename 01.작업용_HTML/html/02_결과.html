@@ -236,24 +236,36 @@
 							<div class="right">
 								<!-- 
 
-									div.result-pie-box에 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
+                                    [반원 그래프 - result-pie-box]
+                                    1. 점수 입력은 pie-graph-wrap div에 --percentage: 값;과 score span 두 곳에 입력해주시면 됩니다.
+
+									2. div.pie-graph-wrap에 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
 									* 양호 class: score1
 									* 보통 class: score2
 									* 미흡 class: score3
+
+
+                                    [막대 그래프 - result-bar-box]
 								
 								-->
-								<div class="result-pie-box score1">
-									<div class="pie-graph-wrap" style="--percentage: 29;">
-										<div class="pie-graph">
+                                    
+                                <!-- 반원그래프 -->
+								<div class="result-pie-box">
+									<div class="pie-graph-wrap score3" style="--percentage: 29;"><!-- 점수 입력 -->
+										<div class="pie-graph"></div>
+                                        <div class="pcnt-wrap">
+                                            <span class="pcnt"></span>
                                         </div>
-                                        <span class="pcnt"></span>
 									</div>
 									<div class="txt">
 										<span class="tit">나의 점수</span>
-										<span class="score">29</span>
+										<span class="score">29</span> <!-- 점수 입력 -->
 										<span class="grade">미흡</span>
 									</div>
 								</div>
+                                <!-- // 반원그래프 -->
+
+                                <!-- 막대그래프 -->
 								<div class="result-bar-box">
 									<div class="item">
 										<div class="txt">
@@ -262,98 +274,31 @@
 											<span class="mg">점</span>
 										</div>
 										<div class="bar-graph">
-											<span></span>
+											<span style="--percentage: 66;" class="score2">보통</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="txt">
+											<span class="tit">취업자 점수</span>
+											<span class="score">76</span>
+											<span class="mg">점</span>
+										</div>
+										<div class="bar-graph">
+											<span style="--percentage: 76;" class="score1">양호</span>
 										</div>
 									</div>
 								</div>
+                                <!-- // 막대그래프 -->
 							</div>
 						</div>
 						<!-- // 종합결과 -->
+                        <!-- 요인별 진단결과 -->
+                        <div class="">
+                            
+                        </div>
+                        <!-- // 요인별 진단결과 -->
 
-                        <div class="card_col1 introduce">
-                            <div class="card round12 default">
-                                <div class="txt_group">
-                                    <h3 class="title">센터소개</h3>
-                                    <p class="txt"> 사이버진로교육센터는 생애 전반에 걸친 진로개발을 위해 <br /> 다양한 계층(청소년, 취업지원담당자,상담원 등)의 맞춤형 고용서비스를 <br /> 지원하는 플랫폼입니다. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_col1 obj">
-                            <div class="card round12 default">
-                                <div class="txt_group">
-                                    <h3 class="title">주요내용</h3>
-                                    <p class="txt_s"> 진로탐색과 선택, 취업 및 입직, 경력형성과 유지, 경력전환 및 퇴직 등 다양한 생애 전반에 걸친 진로 및 취업 관련 지원을 위해, <br /> 다양한 집합 및 온라인교육과 더불어, 직업심리검사, 직업진로 탐색자료,취업지원프로그램, 직업 및 취업 관련 동영상 등을 개발하여 보급 </p>
-                                </div>
-                                <div class="obj_list">
-                                    <div class="obj_group obj1">
-                                        <dl>
-                                            <dt>집합교육</dt>
-                                            <dd> 고용센터 및 민간위탁기관 대상 <br /> 고용서비스 종사자 대상 고용서비스 <br /> 역량강화를 위한 진로지도 전문 <br /> 연수를 실시함으로써 국가 진로지도 <br /> 및 고용서비스 질 제고를 선도 </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="obj_group obj2">
-                                        <dl>
-                                            <dt>온라인교육</dt>
-                                            <dd> 청소년, 대학생, 청년, 중장년, <br /> 기타(상담사 등) 등 대상별 맞춤형 <br /> 직업진로지도 관련 온라인 <br /> 진로콘텐츠 개발 및 보급 </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="obj_group obj3">
-                                        <dl>
-                                            <dt>자료마당</dt>
-                                            <dd> 구직자 및 고용서비스 종사자 대상 <br /> 다양한 직업진로지도 자료, <br /> 직업심리검사 자료, 진로지도 <br /> 동영상 등을 개발하여 보급 </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="obj_group obj4">
-                                        <dl>
-                                            <dt>커리어인포</dt>
-                                            <dd> 전 생애에 걸친 경력개발과 관리의 <br /> 중요성을 안내하고 이를 위해 도움이 <br /> 되는 직업심리검사, 교육 및 취업지원 <br /> 프로그램, 훈련정보, 직업 및 창업정보, <br /> 고용정책, 관련 주요 현황 및 이슈 등에 <br /> 대한 정보를 제공하는 <br /> 정보지 개발·보급 </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_col1 etc">
-                            <div class="col1 round12 default">
-                                <div class="txt_group">
-                                    <h3 class="title">운영효과</h3>
-                                    <div class="etc_list1">
-                                        <dl>
-                                            <dt>효과1</dt>
-                                            <dd> (방문자 및 수강생 급증) 2020년 기준, <br /> 사이버진로교육센터 1일 방문자 수 2019년 대비 <span class="color_active bold">1,083% 급증</span>
-                                                <br /> 및 온라인교육 1일 평균 수강생 <span class="color_active bold">581% 증가</span>
-                                            </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>효과2</dt>
-                                            <dd> (활용 대상 확대) 청년 구직자 중심에서 청소년, 대학 재학생 및 <br /> 고용복지+센터 및 민간위탁기관 상담사 등으로의 대상 확대 및 <br /> 관련 온라인 콘텐츠 </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col1 round12 default last">
-                                <div class="txt_group">
-                                    <h3 class="title">주요연혁</h3>
-                                    <div class="etc_list2">
-                                        <dl>
-                                            <dt>2020</dt>
-                                            <dd> 사이버진로교육센터 온라인교육의 안정적인 서비스 <br /> 제공을 위한 CDN서비스 도입 </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>2011</dt>
-                                            <dd> 직업심리검사, 취업지원프로그램, 취업지원동영상 등 <br /> 컨텐츠 개발 운영 </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>2010</dt>
-                                            <dd> 대학생과 취업‧진로지도담당자들을 위한 온라인교육과정 <br /> 운영 </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>2009</dt>
-                                            <dd>사이버진로교육센터 오픈</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
 						<!-- // 240705 신규 페이지 작업 (ej) -->
                     </div>
                 </article>

@@ -2563,12 +2563,13 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   width: 100%;
   box-sizing: border-box;
   padding: 0 50px;
+  margin-top: 42px;
 }
 .result-box > * {
   font-size: 16px;
 }
 .result-box .bubble {
-  width: 90px;
+  width: 80px;
   height: 80px;
   background-color: #eee;
   border-radius: 10px;
@@ -2580,11 +2581,38 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-.result-box .right {
-  display: inline-block;
+  position: relative;
+  margin-right: 20px;
   vertical-align: middle;
 }
+.result-box .bubble::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%) rotate(45deg);
+  width: 15px;
+  height: 15px;
+  background-color: #eee;
+}
+.result-box .right {
+  display: inline-flex;
+  width: calc(100% - 100px);
+  align-items: center;
+  vertical-align: middle;
+}
+.result-box .grade::after {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  margin-left: 2px;
+}
+
 .result-pie-box {
   text-align: center;
   width: 212px;
@@ -2594,12 +2622,15 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   background-color: #f5f5f5;
   padding: 6px;
   position: relative;
+  vertical-align: middle;
+  display: inline-block;
 }
 .result-pie-box .txt {
   color: #333;
   position: absolute;
+  z-index: 1;
   left: 0;
-  top: 42px;
+  top: 57px;
   width: 100%;
 }
 .result-pie-box .txt .tit {
@@ -2627,6 +2658,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   position: relative;
   width: 200px;
   height: 100px;
+  --percentage: 0; /* 초기에는 0으로 설정 */
 }
 .pie-graph-wrap::before {
   content: "";
@@ -2665,7 +2697,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 0;
+  z-index: 1;
 }
 .pie-graph::before {
   content: "";
@@ -2694,18 +2726,33 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   left: 18px;
 }
 
-.pcnt {
+.pcnt-wrap {
   position: absolute;
   top: 0;
   left: 0;
-  transform: rotate(calc(var(--percentage, 0) * 3.6deg));
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 200%;
+  z-index: 1;
+}
+
+.pcnt-wrap .pcnt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) rotate(calc(var(--percentage, 0) * 1.8deg));
   transform-origin: center center;
   width: 100%;
   height: 200%;
   z-index: 100;
+  bottom: 0;
+  left: 50%;
+  transform-origin: center;
+  width: 18px;
+  height: 100%;
 }
 
-.pcnt::before {
+.pcnt-wrap .pcnt::before {
   content: "";
   position: absolute;
   width: 18px;
@@ -2714,66 +2761,163 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   border-radius: 50%;
   top: 0;
   left: 0;
+  left: calc(50% - 9px);
 }
 
-.result-pie-box.score1 .pie-graph::before {
-  background-image: conic-gradient(#d71921, #d71921 calc(var(--percentage, 0) * 1% / 2), #ccc 0);
+.result-bar-box {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px 15px 76px;
+  box-sizing: border-box;
+  margin-left: -50px;
+  border-radius: 0 10px 10px 0;
 }
-.result-pie-box.score1 .pie-graph-wrap::before {
-  background-color: #d71921;
+.result-bar-box .item {
+  margin-top: 15px;
+  display: flex;
 }
-.result-pie-box.score1 .txt .grade {
-  background-color: #d71921;
+.result-bar-box .item .txt {
+  margin-right: 27px;
+  white-space: nowrap;
+  min-width: 150px;
+}
+.result-bar-box .item .txt .tit {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.result-bar-box .item .txt .score {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "jalnan";
+}
+.result-bar-box .item .txt .mg {
+  font-weight: 600;
+  font-size: 18px;
+}
+.result-bar-box .item:first-child {
+  margin-top: 0;
+}
+.result-bar-box .bar-graph {
+  overflow: hidden;
+  background-color: #ccc;
+  height: 28px;
+  display: inline-block;
+  width: 100%;
+}
+.result-bar-box .bar-graph span {
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 11px;
+  padding-top: 5px;
+  display: inline-block;
+  height: 100%;
+  background-color: #666;
+  width: calc(var(--percentage, 0) * 1%);
+  position: relative;
+}
+.result-bar-box .bar-graph span::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #666;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate3d(50%, -50%, 0) rotate(45deg);
+}
+.result-bar-box .bar-graph span::after {
+  content: "";
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/page/ico_grade1.png") no-repeat center;
+  vertical-align: middle;
+  transform: translateY(-1px);
+  margin-left: 2px;
 }
 
-.result-pie-box.score2 .pie-graph::before {
-  background-image: conic-gradient(#f2ad18, #f2ad18 calc(var(--percentage, 0) * 1% / 2), #ccc 0);
-}
-.result-pie-box.score2 .pie-graph-wrap::before {
-  background-color: #f2ad18;
-}
-.result-pie-box.score2 .txt .grade {
-  background-color: #f2ad18;
-}
-
-.result-pie-box.score3 .pie-graph::before {
+.result-pie-box .score1 .pie-graph::before {
   background-image: conic-gradient(#37c375, #37c375 calc(var(--percentage, 0) * 1% / 2), #ccc 0);
 }
-.result-pie-box.score3 .pie-graph-wrap::before {
+.result-pie-box .score1::before {
   background-color: #37c375;
 }
-.result-pie-box.score3 .txt .grade {
+.result-pie-box .score1 + .txt .grade {
   background-color: #37c375;
 }
-
-.pie-graph-wrap {
-  position: relative;
-  width: 200px;
-  height: 100px;
-  --percentage: 0; /* 초기에는 0으로 설정 */
+.result-pie-box .score1 .pcnt-wrap .pcnt::before {
+  background-color: #37c375;
+}
+.result-pie-box .score1 + .txt .grade::after {
+  background: url("../images/page/ico_grade1.png") no-repeat center;
 }
 
-.pcnt {
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  transform-origin: bottom center;
-  width: 18px;
-  height: 100%;
+.result-bar-box .bar-graph .score1 {
+  background-color: #37c375;
+}
+.result-bar-box .bar-graph .score1::before {
+  background-color: #37c375;
+}
+.result-bar-box .bar-graph .score1::after {
+  background: url("../images/page/ico_grade1.png") no-repeat center;
 }
 
-.pcnt::before {
-  position: absolute;
-  width: 18px; /* 동그라미 너비 */
-  height: 18px; /* 동그라미 높이 */
-  background-color: #666; /* 배경색 */
-  border-radius: 50%; /* 원형 모양 */
-  top: 0;
-  left: calc(50% - 9px); /* 가운데 정렬 */
+.result-pie-box .score2 .pie-graph::before {
+  background-image: conic-gradient(#f2ad18, #f2ad18 calc(var(--percentage, 0) * 1% / 2), #ccc 0);
+}
+.result-pie-box .score2::before {
+  background-color: #f2ad18;
+}
+.result-pie-box .score2 + .txt .grade {
+  background-color: #f2ad18;
+}
+.result-pie-box .score2 .pcnt-wrap .pcnt::before {
+  background-color: #f2ad18;
+}
+.result-pie-box .score2 + .txt .grade::after {
+  background: url("../images/page/ico_grade2.png") no-repeat center;
 }
 
-.result-pie-box.score1 .pcnt {
-  transform: translateX(-50%) rotate(calc(var(--percentage) * 3.6deg));
+.result-bar-box .bar-graph .score2 {
+  background-color: #f2ad18;
+}
+.result-bar-box .bar-graph .score2::before {
+  background-color: #f2ad18;
+}
+.result-bar-box .bar-graph .score2::after {
+  background: url("../images/page/ico_grade2.png") no-repeat center;
+}
+
+.result-pie-box .score3 .pie-graph::before {
+  background-image: conic-gradient(#d71921, #d71921 calc(var(--percentage, 0) * 1% / 2), #ccc 0);
+}
+.result-pie-box .score3::before {
+  background-color: #d71921;
+}
+.result-pie-box .score3 + .txt .grade {
+  background-color: #d71921;
+}
+.result-pie-box .score3 .pcnt-wrap .pcnt::before {
+  background-color: #d71921;
+}
+.result-pie-box .score3 + .txt .grade::after {
+  background: url("../images/page/ico_grade3.png") no-repeat center;
+}
+
+.result-bar-box .bar-graph .score3 {
+  background-color: #d71921;
+}
+.result-bar-box .bar-graph .score3::before {
+  background-color: #d71921;
+}
+.result-bar-box .bar-graph .score3::after {
+  background: url("../images/page/ico_grade3.png") no-repeat center;
 }
 
 .info_inner {
