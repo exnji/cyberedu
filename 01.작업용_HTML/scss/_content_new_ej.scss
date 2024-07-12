@@ -118,10 +118,17 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 
 
 // [요일별 진단결과]
+@keyframes pcntage {
+    0% { width: 0;}
+    100% { width: calc(var(--percentage, 0) * 1%);}
+}
+
+
+
 .result-percent-box { display: inline-block; vertical-align: middle; width: 520px; height: 24px;  position: relative; background-color: #eee; margin-right: 15px;
 
     &::before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url("../images/page/bg_result_per.png") repeat-x;}
-    .pcnt { width: calc(var(--percentage, 0) * 1%); height: 100%; background-color: #37c375; display: inline-block;}
+    .pcnt { width: calc(var(--percentage, 0) * 1%); height: 100%; background-color: #ccc; display: inline-block; transition: .3s ease;}
 }
 .result-list-wrap { margin-top: 20px;
 
@@ -153,6 +160,49 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 }
 
 
+// 결과 이해 TIP
+.bottom-tip-box { border-radius: 10px; margin-top: 84px; padding: 40px; box-sizing: border-box; background-color: #f4f4f5;
+
+    .tit { font-size: 26px; font-weight: 600; color: #333;}
+    .txt-wrap { margin-top: 10px;
+
+        .left-txt { display: inline-block; max-width: 35%; word-break: keep-all; vertical-align: middle; box-sizing: border-box; padding-right: 45px; position: relative; z-index: 1;}
+        .left-txt-tit { margin-top: 32px; font-size: 22px; font-weight: 600;}
+        .basic { font-size: 16px; margin-top: 10px; line-height: 120%;}
+    }
+
+    
+    .right-grade-graph{ display: inline-block; vertical-align: middle;
+    
+        .grade-graph { display: inline-block; width: 230px; height: 190px; display: inline-flex; align-items: center; justify-content: center; flex-direction: column; position: relative; vertical-align: bottom; 
+        
+            .item { font-size: 24px; height: 25%; display: inline-flex; align-items: center; color: #fff; width: 100%; justify-content: center; box-sizing: border-box; letter-spacing: -1px;}
+            .item.score1 { height: 50%; padding-top: 45px; }
+            .bg-left, .bg-right { box-sizing: border-box; content: ''; display: inline-block; width: 50%; height: 100%; position: absolute; top: 0; background-color: #f4f4f5;}
+            .bg-left { left: 0; transform: translateX(-50%) skew(-31deg);box-sizing: border-box;}
+            .bg-right { right: 0; transform: translateX(50%) skew(31deg); border-left: 20px solid #f4f4f5; box-sizing: border-box; overflow: hidden;}
+
+            .line { position: absolute; right: 20px; top: 30px; transform: skew(-31deg); width: 97px; display: inline-block; display: flex; align-items: center; flex-direction: column; }
+            .line i { width: 100%; height: 25%; position: relative;}
+            .line i:first-child { height: 50%;}
+            .line i::before { content: ''; display: inline-block; position: relative; margin-top: 40px; height: 2px;  background-color: #aaa; width: 100%;}
+            .line i::after { content: ''; display: inline-block; position: absolute;right: 0; bottom: 1px; width: 6px; height: 6px; border-radius: 10px;  background-color: #aaa; }
+        }
+
+        .tip-txt-wrap { display: inline-block; vertical-align: bottom; position: relative; margin-left: 60px; margin-bottom: 17px;
+        
+            .tip-tit { font-size: 18px; font-weight: 600; box-sizing: border-box; padding-left: 60px;}
+
+            .txt-box { margin-top: 22px;}
+            .item { margin-top: 15px;}
+            .item:first-child { margin-top: 0;}
+            .score-tit { display: inline-block; padding: 6px 10px; color: #fff; border-radius:20px; font-size: 16px; margin-right: 10px;}
+
+        }
+        .bottom-tip { font-size: 14px; margin-top: 22px; text-align: center;}
+    }
+}
+
 
 
 $score-colors: (
@@ -162,6 +212,10 @@ $score-colors: (
 );
 
 @for $i from 1 through 3 {
+    //결과 이해 tip
+    span.score#{$i} { background-color: map-get($score-colors, $i);}
+
+
     // 반원그래프
     .result-pie-box .score#{$i} {
         .pie-graph::before {background-image: conic-gradient(map-get($score-colors, $i), map-get($score-colors, $i) calc(var(--percentage, 0) * 1% / 2), #ccc 0);}
@@ -184,7 +238,12 @@ $score-colors: (
     .sort-box input.score#{$i} + label::after {background: url("../images/page/ico_grade#{$i}.png") no-repeat center;} 
 
     // 요일별 진단결과
-    .result-list-wrap .result-item.score#{$i} .pcnt { background-color: map-get($score-colors, $i);}
-    .result-list-wrap .result-item.score#{$i} .grade {background-color: map-get($score-colors, $i);}
+    .result-list-wrap .result-item.active.score#{$i} .pcnt { background-color: map-get($score-colors, $i);}
+    .result-list-wrap .result-item.active.score#{$i} .grade {background-color: map-get($score-colors, $i);}
     .result-list-wrap .result-item.score#{$i} .grade::after { background: url("../images/page/ico_grade#{$i}.png") no-repeat center; }
+
+
+
+    // 결과 이해 tip
+    .right-grade-graph .grade-graph .item.score#{$i} { background-color: map-get($score-colors, $i);}
 }

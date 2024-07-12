@@ -2951,6 +2951,14 @@ body {
   transform: translateY(-1px);
 }
 
+@keyframes pcntage {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(var(--percentage, 0) * 1%);
+  }
+}
 .result-percent-box {
   display: inline-block;
   vertical-align: middle;
@@ -2972,8 +2980,9 @@ body {
 .result-percent-box .pcnt {
   width: calc(var(--percentage, 0) * 1%);
   height: 100%;
-  background-color: #37c375;
+  background-color: #ccc;
   display: inline-block;
+  transition: 0.3s ease;
 }
 
 .result-list-wrap {
@@ -3119,6 +3128,172 @@ body {
   transform: translateY(-1px);
 }
 
+.bottom-tip-box {
+  border-radius: 10px;
+  margin-top: 84px;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #f4f4f5;
+}
+.bottom-tip-box .tit {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+.bottom-tip-box .txt-wrap {
+  margin-top: 10px;
+}
+.bottom-tip-box .txt-wrap .left-txt {
+  display: inline-block;
+  max-width: 35%;
+  word-break: keep-all;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding-right: 45px;
+  position: relative;
+  z-index: 1;
+}
+.bottom-tip-box .txt-wrap .left-txt-tit {
+  margin-top: 32px;
+  font-size: 22px;
+  font-weight: 600;
+}
+.bottom-tip-box .txt-wrap .basic {
+  font-size: 16px;
+  margin-top: 10px;
+  line-height: 120%;
+}
+.bottom-tip-box .right-grade-graph {
+  display: inline-block;
+  vertical-align: middle;
+}
+.bottom-tip-box .right-grade-graph .grade-graph {
+  display: inline-block;
+  width: 230px;
+  height: 190px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  vertical-align: bottom;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .item {
+  font-size: 24px;
+  height: 25%;
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  letter-spacing: -1px;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .item.score1 {
+  height: 50%;
+  padding-top: 45px;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .bg-left, .bottom-tip-box .right-grade-graph .grade-graph .bg-right {
+  box-sizing: border-box;
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #f4f4f5;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .bg-left {
+  left: 0;
+  transform: translateX(-50%) skew(-31deg);
+  box-sizing: border-box;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .bg-right {
+  right: 0;
+  transform: translateX(50%) skew(31deg);
+  border-left: 20px solid #f4f4f5;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .line {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  transform: skew(-31deg);
+  width: 97px;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .line i {
+  width: 100%;
+  height: 25%;
+  position: relative;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .line i:first-child {
+  height: 50%;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .line i::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  margin-top: 40px;
+  height: 2px;
+  background-color: #aaa;
+  width: 100%;
+}
+.bottom-tip-box .right-grade-graph .grade-graph .line i::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: #aaa;
+}
+.bottom-tip-box .right-grade-graph .tip-txt-wrap {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  margin-left: 60px;
+  margin-bottom: 17px;
+}
+.bottom-tip-box .right-grade-graph .tip-txt-wrap .tip-tit {
+  font-size: 18px;
+  font-weight: 600;
+  box-sizing: border-box;
+  padding-left: 60px;
+}
+.bottom-tip-box .right-grade-graph .tip-txt-wrap .txt-box {
+  margin-top: 22px;
+}
+.bottom-tip-box .right-grade-graph .tip-txt-wrap .item {
+  margin-top: 15px;
+}
+.bottom-tip-box .right-grade-graph .tip-txt-wrap .item:first-child {
+  margin-top: 0;
+}
+.bottom-tip-box .right-grade-graph .tip-txt-wrap .score-tit {
+  display: inline-block;
+  padding: 6px 10px;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.bottom-tip-box .right-grade-graph .bottom-tip {
+  font-size: 14px;
+  margin-top: 22px;
+  text-align: center;
+}
+
+span.score1 {
+  background-color: #37c375;
+}
+
 .result-pie-box .score1 .pie-graph::before {
   background-image: conic-gradient(#37c375, #37c375 calc(var(--percentage, 0) * 1% / 2), #ccc 0);
 }
@@ -3157,16 +3332,24 @@ input.score1:checked + label {
   background: url("../images/page/ico_grade1.png") no-repeat center;
 }
 
-.result-list-wrap .result-item.score1 .pcnt {
+.result-list-wrap .result-item.active.score1 .pcnt {
   background-color: #37c375;
 }
 
-.result-list-wrap .result-item.score1 .grade {
+.result-list-wrap .result-item.active.score1 .grade {
   background-color: #37c375;
 }
 
 .result-list-wrap .result-item.score1 .grade::after {
   background: url("../images/page/ico_grade1.png") no-repeat center;
+}
+
+.right-grade-graph .grade-graph .item.score1 {
+  background-color: #37c375;
+}
+
+span.score2 {
+  background-color: #f2ad18;
 }
 
 .result-pie-box .score2 .pie-graph::before {
@@ -3207,16 +3390,24 @@ input.score2:checked + label {
   background: url("../images/page/ico_grade2.png") no-repeat center;
 }
 
-.result-list-wrap .result-item.score2 .pcnt {
+.result-list-wrap .result-item.active.score2 .pcnt {
   background-color: #f2ad18;
 }
 
-.result-list-wrap .result-item.score2 .grade {
+.result-list-wrap .result-item.active.score2 .grade {
   background-color: #f2ad18;
 }
 
 .result-list-wrap .result-item.score2 .grade::after {
   background: url("../images/page/ico_grade2.png") no-repeat center;
+}
+
+.right-grade-graph .grade-graph .item.score2 {
+  background-color: #f2ad18;
+}
+
+span.score3 {
+  background-color: #d71921;
 }
 
 .result-pie-box .score3 .pie-graph::before {
@@ -3257,16 +3448,20 @@ input.score3:checked + label {
   background: url("../images/page/ico_grade3.png") no-repeat center;
 }
 
-.result-list-wrap .result-item.score3 .pcnt {
+.result-list-wrap .result-item.active.score3 .pcnt {
   background-color: #d71921;
 }
 
-.result-list-wrap .result-item.score3 .grade {
+.result-list-wrap .result-item.active.score3 .grade {
   background-color: #d71921;
 }
 
 .result-list-wrap .result-item.score3 .grade::after {
   background: url("../images/page/ico_grade3.png") no-repeat center;
+}
+
+.right-grade-graph .grade-graph .item.score3 {
+  background-color: #d71921;
 }
 
 .info_inner {

@@ -478,6 +478,88 @@
                             <!-- // item -->
                         </div>
                         <!-- // 요인별 진단결과 -->
+                        <!-- 결과 이해 TIP -->
+                        <div class="bottom-tip-box">
+                            <h3 class="tit">결과 이해 TIP</h3>
+                            <div class="txt-wrap">
+                                <div class="left-txt">
+                                    <h4 class="left-txt-tit">나의 수준</h4>
+                                    <p class="basic">‘나의 수준’은 다른 청년 구직자와 비교한 나의 수준을 나타냅니다. 나의 수준은 다른 구직자 점수를 가장 낮은 순서대로 나열했을 때, 귀하의 점수가 전체 구직자 중 하위 몇%에 위치하는지에 따라 양호, 보통, 미흡으로 제시됩니다. </p>
+                                    <h4 class="left-txt-tit">나의 위치</h4>
+                                    <p class="basic">‘나의 위치’는 귀하의 각 하위 요인별 평균점수가 전체 구직자 중 하위 몇%에 위치하는지 나타냅니다. </p>
+                                </div>
+                                <div class="right-grade-graph">
+                                    <div class="grade-graph">
+                                        <div class="bg-left"></div>
+                                        <div class="item score1">
+                                            <span class="txt">70%↑</span>
+                                        </div>
+                                        <div class="item score2">
+                                            <span class="txt">30%~70%</span>
+                                        </div>
+                                        <div class="item score3">
+                                            <span class="txt">30%↓</span>
+                                        </div>
+                                        <div class="bg-right">
+                                            <div class="line">
+                                                <i class="line1"></i>
+                                                <i class="line2"></i>
+                                                <i class="line3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tip-txt-wrap">
+                                        <h4 class="tip-tit">&lt;수준 설정 기본 기준&gt;</h4>
+                                        <div class="txt-box">
+                                            <div class="item">
+                                                <span class="score-tit score1">양호</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 70% 점수 이상일  때</span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="score-tit score2">보통</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 30% ~ 하위 70% 점수 사이일 때</span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="score-tit score3">미흡</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 30% 점수 이하일 때</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bottom-tip">(단, 하위요인 별 구직자 점수 중 상위 30% 및 70%에 해당하는 값이 없을 때는 근사값으로 설정함)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 결과 이해 TIP -->
+                        <script>
+                        // 정렬 체크박스
+                        document.addEventListener("DOMContentLoaded", function() {
+                            const checkbox = document.querySelectorAll(".sort-box .checkbox");
+                            const resultItem = document.querySelectorAll(".result-item");
+                
+                            function updateActiveClass() {
+                                resultItem.forEach(item => {
+                                    item.classList.remove("active");
+                                });
+                
+                                checkbox.forEach(checkbox => {
+                                    if (checkbox.checked) {
+                                        const scoreClass = checkbox.classList[1];
+                                        resultItem.forEach(item => {
+                                            if (item.classList.contains(scoreClass)) {
+                                                item.classList.add("active");
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                
+                            checkbox.forEach(checkbox => {
+                                checkbox.addEventListener("change", updateActiveClass);
+                            });
+                
+                            updateActiveClass();
+                        });
+                        </script>
 
                         
 						<!-- // 240705 신규 페이지 작업 (ej) -->
