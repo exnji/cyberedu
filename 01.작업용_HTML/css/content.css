@@ -3004,13 +3004,14 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   gap: 31px;
   margin: 0 auto;
 }
-.edu_step .slide_contents img { /*position: absolute; left: 72px; bottom: 0;*/ }
-.edu_step .slide_contents .slide_txt { /*position: absolute; left: 616px; top: 52px;*/
+.edu_step .slide_contents .slide_txt {
   margin-top: 124px;
+  width: 337px;
   font-family: "PRETSB";
   font-size: 14px;
   line-height: 1.286;
   color: #333;
+  word-break: keep-all;
 }
 .edu_step .slide_contents .slide_txt p {
   margin-bottom: 41px;
@@ -3069,7 +3070,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   padding: 25px;
   width: 107px;
   height: 108px;
-  background: url(../images/page/img_ellipse.png) no-repeat center; /*font-family: 'PRETSB'; font-size: 16px; color: #333333; line-height: 1.2; word-break: keep-all; box-sizing: border-box; content: '맞춤형 교육과정 추천';*/
+  background: url(../images/page/img_ellipse.png) no-repeat center;
   content: "";
 }
 .edu_step .middle_box::after {
@@ -3111,7 +3112,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
 }
 
 .edu_step .middle_box div {
-  position: relative; /*display: inline-block;*/
+  position: relative;
   width: 50%;
   height: 50%;
   font-size: 16px;
@@ -3144,7 +3145,7 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   box-sizing: border-box;
   border: 1px solid #dfdfdf;
 }
-.edu_step .middle_box div .desc_box p {
+.edu_step .middle_box div .desc_box .ul_tit {
   font-family: "PRETSB";
   font-size: 16px;
 }
@@ -3217,50 +3218,6 @@ table.board.view.career_info tbody tr.tb_content:last-of-type td {
   transform: translateX(-50%) rotate(180deg);
 }
 
-/*
-
-.edu_step .left_box{position: relative; display: flex; flex-direction: column; justify-content: space-around; align-items: center; padding: 0 45px;
-    &::before{position: absolute; left: 50%; top: 50%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: translate(-50%, -50%); content: '';}
-    &::after{position: absolute; right: -15px; bottom: 90px; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg); content: '';}   
-}
-.edu_step .left_box p{font-family: "PRETSB"; font-size: 18px; text-align: center;
-    span{font-family: "PRET"; font-size: 16px;}
-}
-
-.edu_step .middle_box{border: 1px solid red; position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 75px;  
-    &::before{position: absolute; left: 50%; top: 50%;  transform: translate(-65%, -50%); width: 107px; height: 108px; background: url(../images/page/img_ellipse.png)no-repeat center; content: '';}
-    &::after{position: absolute; right: 15px; top: 45%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg);  content: '';}
-}
-.step-wrap { width: 960px; margin: 0 auto; display: flex;justify-content: center;}
-.edu_step .middle_box div{ display: flex; gap: 8px; 
-    //수정해야함
-    &:nth-child(odd){
-        .desc_box{text-align: right;
-            &::before{position: absolute; left: -30px; top: -5px; width: 162px; height: 85px; background: url(../images/page/img_rect_l.png)no-repeat center; content: ''; z-index: -1;}
-        }
-    }
-    &:nth-child(even){
-        .desc_box{
-            &::before{position: absolute; left: 50%; top: -5px; transform: translateX(-50%); width: 198px; height: 74px; background: url(../images/page/img_rect_s.png)no-repeat center; content: ''; z-index: -1;}
-        }
-    }
-    &:nth-child(3),&:last-child{
-        img{margin-top: 0;}
-        .desc_box{margin-top: 50px;}
-    }
-
-    img{margin-top: 15px; width: 100px; height: 100px;
-
-    }
-    .desc_box{position: relative; font-family: 'PRET'; font-size: 16px;
-
-        p{font-family: 'PRETSB'; font-size: 18px;}
-        li{margin: 2px 0;}
-    }
-}
-
-
-*/
 .edu_step .right_box {
   display: flex;
   align-items: center;

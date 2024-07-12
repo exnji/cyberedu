@@ -26,8 +26,8 @@
 }
 .edu_step{position: relative; height: 420px; background-color: #fff; border: 1px solid #DEE1E5; border-radius: 10px;
     .slide_contents{display: flex; gap: 31px; margin: 0 auto;
-        img{/*position: absolute; left: 72px; bottom: 0;*/}
-        .slide_txt{/*position: absolute; left: 616px; top: 52px;*/ margin-top: 124px; font-family: 'PRETSB'; font-size: 14px; line-height: 1.286; color: #333;
+        img{}
+        .slide_txt{ margin-top: 124px; width: 337px; font-family: 'PRETSB'; font-size: 14px; line-height: 1.286; color: #333; word-break: keep-all;
             p{margin-bottom: 41px; font-size: 24px;}
         }
     }
@@ -45,7 +45,7 @@
 
 .edu_step .middle_box{width: 572px; text-align: center; position: relative; font-size: 0;
 
-    &::before{position: absolute; left: 50%; top: 50%;  transform: translate(-50%, -50%); padding: 25px; width: 107px; height: 108px; background: url(../images/page/img_ellipse.png)no-repeat center; /*font-family: 'PRETSB'; font-size: 16px; color: #333333; line-height: 1.2; word-break: keep-all; box-sizing: border-box; content: '맞춤형 교육과정 추천';*/ content: '';}
+    &::before{position: absolute; left: 50%; top: 50%;  transform: translate(-50%, -50%); padding: 25px; width: 107px; height: 108px; background: url(../images/page/img_ellipse.png)no-repeat center; content: '';}
     &::after{position: absolute; right: -15px; top: 45%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg);  content: '';}
 }
 
@@ -55,27 +55,22 @@
 
 .edu_step .middle_box{ display: flex; flex-wrap: wrap; }
 
-.edu_step .middle_box div{position: relative; /*display: inline-block;*/ width: 50%; height: 50%; font-size:16px; 
+.edu_step .middle_box div{position: relative; width: 50%; height: 50%; font-size:16px; 
     &::before{position: absolute; width: 57px; height: 41px; background: url(../images/page/img_arrow.png)no-repeat center; content: '';}
     
     img{display: inline-block;  width: 100px; height: 100px; position: relative; z-index: 1;}
     .desc_box{display: inline-block; position: relative;  font-family: 'PRET'; font-size: 14px;  background:  linear-gradient(-30deg, rgba(220,219,216,1) 0%, rgba(248,248,246,1) 50%, rgba(236,237,234,1) 100%); border-radius: 10px; box-shadow: 0 4px 4px 1px rgba(0,0,0,.15); padding: 8px 70px 8px 14px; position: absolute; min-width: 156px; box-sizing: border-box; border: 1px solid #dfdfdf;
-        //width: 106px; height: 67px;
 
-        p{font-family: 'PRETSB'; font-size: 16px;}
+        .ul_tit{font-family: 'PRETSB'; font-size: 16px;}
         li{margin: 2px 0;}
     }
 
     &:nth-child(odd){display: flex; justify-content: flex-end; text-align: right; padding-right: 38px;
         img{order: 2; box-sizing: border-box; }
-        .desc_box{order: 1; margin-right: 41px;
-        //    &::before{position: absolute; right: -74px; top: 0; width: 162px; height: 85px; background: url(../images/page/img_rect_l.png)no-repeat center; content: ''; z-index: -1;}
-        }
+        .desc_box{order: 1; margin-right: 41px;}
     }
     &:nth-child(even){text-align: left; padding-left: 38px; 
-        .desc_box{padding: 8px 32px 8px 74px; min-width: 192px; left: 68px;
-            // &::before{position: absolute; left: -74px; top: 0; width: 198px; height: 74px; background: url(../images/page/img_rect_s.png)no-repeat center; content: ''; z-index: -1;}
-        }
+        .desc_box{padding: 8px 32px 8px 74px; min-width: 192px; left: 68px;}
     }
 
     &:first-child,&:nth-child(2){padding-top: 83px;
@@ -107,51 +102,6 @@
     }
 }
 
-
-/*
-
-.edu_step .left_box{position: relative; display: flex; flex-direction: column; justify-content: space-around; align-items: center; padding: 0 45px;
-    &::before{position: absolute; left: 50%; top: 50%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: translate(-50%, -50%); content: '';}
-    &::after{position: absolute; right: -15px; bottom: 90px; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg); content: '';}   
-}
-.edu_step .left_box p{font-family: "PRETSB"; font-size: 18px; text-align: center;
-    span{font-family: "PRET"; font-size: 16px;}
-}
-
-.edu_step .middle_box{border: 1px solid red; position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 75px;  
-    &::before{position: absolute; left: 50%; top: 50%;  transform: translate(-65%, -50%); width: 107px; height: 108px; background: url(../images/page/img_ellipse.png)no-repeat center; content: '';}
-    &::after{position: absolute; right: 15px; top: 45%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg);  content: '';}
-}
-.step-wrap { width: 960px; margin: 0 auto; display: flex;justify-content: center;}
-.edu_step .middle_box div{ display: flex; gap: 8px; 
-    //수정해야함
-    &:nth-child(odd){
-        .desc_box{text-align: right;
-            &::before{position: absolute; left: -30px; top: -5px; width: 162px; height: 85px; background: url(../images/page/img_rect_l.png)no-repeat center; content: ''; z-index: -1;}
-        }
-    }
-    &:nth-child(even){
-        .desc_box{
-            &::before{position: absolute; left: 50%; top: -5px; transform: translateX(-50%); width: 198px; height: 74px; background: url(../images/page/img_rect_s.png)no-repeat center; content: ''; z-index: -1;}
-        }
-    }
-    &:nth-child(3),&:last-child{
-        img{margin-top: 0;}
-        .desc_box{margin-top: 50px;}
-    }
-
-    img{margin-top: 15px; width: 100px; height: 100px;
-        
-    }
-    .desc_box{position: relative; font-family: 'PRET'; font-size: 16px;
-        
-        p{font-family: 'PRETSB'; font-size: 18px;}
-        li{margin: 2px 0;}
-    }
-}
-
-
-*/
 .edu_step .right_box{ display: flex; align-items: center; font-family: "PRETSB"; font-size: 18px; text-align: center;}
 /* 슬라이드 커스텀 끝 */
 
