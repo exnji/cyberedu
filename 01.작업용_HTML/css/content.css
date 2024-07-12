@@ -2664,7 +2664,7 @@ body {
 .pie-graph-wrap {
   position: relative;
   width: 200px;
-  height: 100px;
+  height: 200px;
   --percentage: 0; /* 초기에는 0으로 설정 */
 }
 .pie-graph-wrap::before {
@@ -2677,19 +2677,8 @@ body {
   border-radius: 100px;
   position: absolute;
   left: 0;
-  bottom: -10px;
-}
-.pie-graph-wrap::after {
-  content: "";
-  width: 18px;
-  height: 18px;
-  box-sizing: border-box;
-  display: inline-block;
-  background-color: #ccc;
-  border-radius: 100px;
-  position: absolute;
-  right: 0;
-  bottom: -10px;
+  top: calc(50% - 10px);
+  z-index: 2;
 }
 
 .pie-graph {
@@ -2705,6 +2694,8 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
+  transition: 0.3s ease;
+  animation: pieGraph 0.9s ease-in-out forwards;
 }
 .pie-graph::before {
   content: "";
@@ -2713,7 +2704,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 200%;
+  height: 100%;
   border-radius: 50%;
   background-image: conic-gradient(#666, #666 calc(var(--percentage, 0) / 2), #ccc 0);
   transition: transform 0.5s ease-in-out;
@@ -2727,7 +2718,7 @@ body {
   background: #f5f5f5;
   z-index: 0;
   width: calc(100% - 36px);
-  height: calc(200% - 36px);
+  height: calc(100% - 36px);
   border-radius: 50%;
   top: 18px;
   left: 18px;
@@ -2739,8 +2730,38 @@ body {
   left: 0;
   transform: rotate(-90deg);
   width: 100%;
-  height: 200%;
+  height: 100%;
   z-index: 1;
+  animation: pieGraphBullet 0.9s ease-in-out forwards;
+}
+
+.pie-graph-wrap .dim {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  border-radius: 0 0 100px 100px;
+  z-index: 1;
+  overflow: hidden;
+  overflow: hidden;
+}
+
+.pie-graph-wrap .dim::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 100px;
+  position: absolute;
+  right: 0;
+  top: -9px;
+  z-index: 2;
 }
 
 .pcnt-wrap .pcnt {
@@ -2817,20 +2838,19 @@ body {
   height: 28px;
   display: inline-block;
   width: 100%;
+  position: relative;
 }
-.result-bar-box .bar-graph span {
-  font-size: 16px;
-  color: #fff;
-  box-sizing: border-box;
-  padding-left: 11px;
-  padding-top: 5px;
+.result-bar-box .bar-graph span.pcnt {
   display: inline-block;
   height: 100%;
   background-color: #666;
   width: calc(var(--percentage, 0) * 1%);
   position: relative;
+  animation: pcntage 1.5s ease forwards;
+  white-space: nowrap;
+  z-index: 1;
 }
-.result-bar-box .bar-graph span::before {
+.result-bar-box .bar-graph span.pcnt::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -2840,8 +2860,22 @@ body {
   right: 0;
   top: 50%;
   transform: translate3d(50%, -50%, 0) rotate(45deg);
+  z-index: -1;
 }
-.result-bar-box .bar-graph span::after {
+.result-bar-box .bar-graph .pcnt-txt {
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 11px;
+  padding-top: 5px;
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.result-bar-box .bar-graph .pcnt-txt::after {
   content: "";
   display: inline-block;
   width: 19px;
@@ -2959,6 +2993,22 @@ body {
     width: calc(var(--percentage, 0) * 1%);
   }
 }
+@keyframes pieGraph {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes pieGraphBullet {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
 .result-percent-box {
   display: inline-block;
   vertical-align: middle;
@@ -3051,6 +3101,26 @@ body {
   padding-left: 15px;
   font-size: 16px;
   line-height: 120%;
+}
+.result-list-wrap .result-pop-btn::before {
+  content: "?";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+  right: 17px;
+  top: 13px;
+  position: absolute;
+  color: #666;
+  text-align: center;
+  font-size: 13px;
+  line-height: 16px;
+}
+.result-list-wrap .result-pop-btn .blind {
+  position: absolute;
+  display: inline-block;
+  text-indent: -99999px;
 }
 .result-list-wrap .right-percent .item-tit {
   width: 160px;
@@ -3310,13 +3380,13 @@ span.score1 {
   background: url("../images/page/ico_grade1.png") no-repeat center;
 }
 
-.result-bar-box .bar-graph.score1 span {
+.result-bar-box .bar-graph.score1 .pcnt {
   background-color: #37c375;
 }
-.result-bar-box .bar-graph.score1 span::before {
+.result-bar-box .bar-graph.score1 .pcnt::before {
   background-color: #37c375;
 }
-.result-bar-box .bar-graph.score1 span::after {
+.result-bar-box .bar-graph.score1 .pcnt-txt::after {
   background: url("../images/page/ico_grade1.png") no-repeat center;
 }
 
@@ -3368,13 +3438,13 @@ span.score2 {
   background: url("../images/page/ico_grade2.png") no-repeat center;
 }
 
-.result-bar-box .bar-graph.score2 span {
+.result-bar-box .bar-graph.score2 .pcnt {
   background-color: #f2ad18;
 }
-.result-bar-box .bar-graph.score2 span::before {
+.result-bar-box .bar-graph.score2 .pcnt::before {
   background-color: #f2ad18;
 }
-.result-bar-box .bar-graph.score2 span::after {
+.result-bar-box .bar-graph.score2 .pcnt-txt::after {
   background: url("../images/page/ico_grade2.png") no-repeat center;
 }
 
@@ -3426,13 +3496,13 @@ span.score3 {
   background: url("../images/page/ico_grade3.png") no-repeat center;
 }
 
-.result-bar-box .bar-graph.score3 span {
+.result-bar-box .bar-graph.score3 .pcnt {
   background-color: #d71921;
 }
-.result-bar-box .bar-graph.score3 span::before {
+.result-bar-box .bar-graph.score3 .pcnt::before {
   background-color: #d71921;
 }
-.result-bar-box .bar-graph.score3 span::after {
+.result-bar-box .bar-graph.score3 .pcnt-txt::after {
   background: url("../images/page/ico_grade3.png") no-repeat center;
 }
 
