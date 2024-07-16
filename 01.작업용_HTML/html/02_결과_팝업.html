@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>사이버진로교육센터소개 조회</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-ico" />
+        <link rel="icon" href="../images/favicon.ico" type="image/x-ico" />
+        <link href="../js/swiper-4.5.1/dist/css/swiper.min.css" rel="stylesheet" />
+        <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+        <link href="../css/fonts.css" rel="stylesheet" />
+        <link href="../css/common.css" rel="stylesheet" />
+        <link href="../css/layout.css" rel="stylesheet" />
+        <link href="../css/jquery-ui.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="../js/cyb/lib/jquery/jquery-1.10.2.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/framework/keis.import.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/makePCookie.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/cyb/keis.cyb.common.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/common/util/util.jqMore.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/jquery-3.5.1.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/swiper-4.5.1/dist/js/swiper.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/jquery.mCustomScrollbar.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/ui-common.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/cyb/lib/jquery/jquery-ui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/common/WebUtil.js" charset="utf-8"></script>
+        <link href="../css/content.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="blind">
+            <ul>
+                <li>
+                    <a href="#content">본문 내용 바로가기</a>
+                </li>
+                <li>
+                    <a href="#gnb">주 메뉴 바로가기</a>
+                </li>
+                <li>
+                    <a href="#footer">페이지 하단 바로가기</a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header_group">
+                <h1 class="logo">
+                    <img src="../images/common/logo_text1.svg" alt="한국고용정보원">
+                    <span class="blind">한국고용정보원</span>
+                    <a href="../main.do" title="홈으로 이동">
+                        <span class="logo_txt2">사이버진로교육센터</span>
+                    </a>
+                </h1>
+                <nav id="gnb" class="gnb">
+                    <h2 class="blind">주 메뉴</h2>
+                    <ul>
+                        <li>
+                            <a href="../cyb/education/schedule/offline/retrieveScheduleOfflineList.do" title="교육안내" class="depth_title">교육안내</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/education/schedule/offline/retrieveScheduleOfflineList.do" title="집합교육">집합교육</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/education/schedule/elearning/retrieveScheduleElearningList.do" title="온라인교육">온라인교육</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/education/schedule/buildup/retrieveScheduleBuildupList.do" title="빌드업교육">빌드업교육</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/wbzn/contents/main/retrieveContentsMainList.do" title="학습자료" class="depth_title">학습자료</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/wbzn/contents/main/retrieveContentsMainList.do" title="커리어Info">커리어Info</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="fCareer(); return false;" title="커리어엔진">커리어엔진</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/board/futurecareer/guide/retrieveFuturecareerGuideList.do" title="진로지도 자료">진로지도 자료</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/board/job/psychology/retrieveJobPsychologyList.do" title="직업심리검사 자료">직업심리검사 자료</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="fn_moelToken('https://www.work.go.kr/consltJobCarpa/videoInfo/videoInfoList.do?videoType=01&amp;catCd1=01&amp;catCd2=0101');" title="진로지도 동영상">진로지도 동영상</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/customer/board/notice/retrieveBoardNoticeList.do" title="공지사항" class="depth_title">공지사항</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/customer/board/notice/retrieveBoardNoticeList.do" title="공지사항">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/customer/board/faq/retrieveBoardFaqList.do" title="자주하는질문">자주하는질문</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/introduction/information/center/retrieveInformationCenterDetail.do" title="센터소개" class="depth_title">센터소개</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/introduction/information/center/retrieveInformationCenterDetail.do" title="센터 소개">센터 소개</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/mypage/sub/main/retrieveSubMainDetail.do" title="마이페이지" class="depth_title">마이페이지</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/mypage/course/atnlc/retrieveCourseAtnlcList.do" title="수강교육과정">수강교육과정</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/course/complete/retrieveCourseCompleteList.do" title="수료이력조회">수료이력조회</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/course/after/retrieveCourseAfterList.do" title="사후과정조회">사후과정조회</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/community/main/retrieveCommunityMainList.do" title="과정커뮤니티">과정커뮤니티</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/course/interest/retrieveCourseInterestList.do" title="관심과정">관심과정</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="util">
+                    <ul>
+                        <li class="util_login">
+                            <a href="../cyb/customer/information/login/retrieveInformationLoginView.do" title="로그인 메뉴 이동">로그인</a>
+                        </li>
+                        <li class="util_qna">
+                            <a href="http://www.work.go.kr:80../cyb/customer/board/faq/retrieveBoardFaqList.do" title="자주하는질문 메뉴 이동">자주하는질문</a>
+                        </li>
+                        <li class="util_sitemap">
+                            <a href="http://www.work.go.kr:80../cyb/sitemap/information/site/retrieveInformationSiteDetail.do" title="사이트맵 메뉴 이동">사이트맵</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- gnb depth2 구현시 반드시 아래의 태그 필요 : S -->
+            <!-- gnb full bg  -->
+            <div class="full_bg"></div>
+            <!-- gnb dim 레이어 -->
+            <div class="nav_dimmed"></div>
+            <!-- gnb depth2 구현시 반드시 위의 태그 필요 : S -->
+        </header>
+        <!-- content : S -->
+        <main class="wrap">
+            <section class="main container" id="content">
+                <article class="key_visual_area visual_result">
+                    <div class="txt_area">
+                        <h2>진로∙경력개발 준비도 진단</h2>
+                        <ul>
+							<li>본 진단은 OO개 문항으로 구성되어 있습니다.</li>
+							<li>각 문항에 대해 답변하고 다음 버튼을 눌러 진단을 완료합니다.</li>
+							<li>필요한 경우 임시저장하고 향후 임시저장 이후 항목에 대해서 진단을 계속 할 수 있습니다.</li>
+						</ul>
+                    </div>
+                    <figure class="img"></figure>
+                </article>
+                <article class="location_area">
+                    <h2 class="blind">location 메뉴</h2>
+                    <ul>
+                        <li>
+                            <a href="../main.do" title="홈으로 이동">
+                                <span class="ico_home">
+                                    <i class="blind">홈으로 이동</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="select_box">
+                                <a href="#none">교육안내</a>
+                                <ul>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select_box1">
+                                <a href="#none">준비도 진단</a>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.work.go.kr:80../cyb/introduction/information/center/retrieveInformationCenterDetail.do" title="센터 소개">센터 소개</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article class="content_area">
+                    <div class="content_inner">
+						<!-- 240705 신규 페이지 작업 (ej) -->
+						<h3 class="blind">온라인 교육 탭 메뉴 리스트</h3>
+						<ul class="tab_nav">
+							<li class="tab_nav_item" id="tab1">
+								<a href="#none" class="tab_nav_link">진단하기 <span class="chk"></span></a>
+							</li>
+							<li class="tab_nav_item active" id="tab2" title="선택됨">
+								<a href="#none" class="tab_nav_link">진단결과 보기 <span class="chk"></span></a>
+							</li>
+						</ul>
+
+						<h4 class="result-tit">진로·경력개발 하위 요인별 진단 결과</h4>
+						<!-- 종합결과 -->
+						<div class="result-box">
+							<span class="bubble">종합 <br>결과</span>
+							<div class="right">
+								<!-- 
+
+									* 양호 class: score1
+									* 보통 class: score2
+									* 미흡 class: score3
+
+                                    
+                                    [반원 그래프 - result-pie-box]
+                                    1. 점수 입력은 div.pie-graph-wrap 에 --percentage: 값;과 span.score 두 곳에 입력해주시면 됩니다.
+
+									2. div.pie-graph-wrap에 score1, score2, score3 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
+                            
+                                    --------------------------------------------------------
+
+                                    [막대 그래프 - result-bar-box]
+                                    1. 점수 입력은 div.bar-graph에 --percentage: 값;과 
+                                       div.result-bar-box > txt > span.score 두 곳에 입력해주시면 됩니다.
+
+                                    2. div.bar-graph에 score1, score2, score3 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
+								
+								-->
+                                    
+                                <!-- 반원그래프 -->
+								<div class="result-pie-box">
+									<div class="pie-graph-wrap score3" style="--percentage: 29;"><!-- 점수 입력 -->
+										<div class="pie-graph"></div>
+                                        <div class="pcnt-wrap">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- dim layer -->
+                                        <div class="dim"></div>
+                                        <div class="dim2"></div>
+                                        <!-- // dim layer -->
+									</div>
+									<div class="txt">
+										<span class="tit">나의 점수</span>
+										<span class="score">29</span> <!-- 점수 입력 -->
+										<span class="grade"></span>
+									</div>
+								</div>
+                                <!-- // 반원그래프 -->
+
+                                <!-- 막대그래프 -->
+								<div class="result-bar-box">
+									<div class="item">
+										<div class="txt">
+											<span class="tit">구직자 점수</span>
+											<span class="score">66</span> <!-- 점수 입력 -->
+											<span class="mg">점</span>
+										</div>
+										<div class="bar-graph score2" style="--percentage: 66;"> <!-- 점수 입력 --> 
+											<span class="pcnt"></span>
+                                            <span class="pcnt-txt">보통</span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="txt">
+											<span class="tit">취업자 점수</span>
+											<span class="score">76</span> <!-- 점수 입력 -->
+											<span class="mg">점</span>
+										</div>
+										<div class="bar-graph score1" style="--percentage: 76;"> <!-- 점수 입력 -->
+											<span class="pcnt"></span>
+                                            <span class="pcnt-txt">양호</span>
+										</div>
+									</div>
+								</div>
+                                <!-- // 막대그래프 -->
+							</div>
+						</div>
+						<!-- // 종합결과 -->
+                        <!-- 정렬 -->
+                        <div class="result-sort-wrap">
+                            <span class="mg">정렬 : </span>
+                            <div class="sort-box">
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateBad" class="checkbox score3" checked>
+                                        <label for="stateBad">미흡</label>
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateNormal" class="checkbox score2" checked>
+                                        <label for="stateNormal">보통</label>
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateGood" class="checkbox score1" checked>
+                                        <label for="stateGood">양호</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 정렬 -->
+                        <!-- 요인별 진단결과 -->
+                        <div class="result-list-wrap">
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis1.png" alt="">
+                                    <span>진로·경력탐색</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score1" style="--percentage: 86;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">자기이해</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">86</span><!-- 점수 입력 -->
+                                        <span class="grade">양호</span>
+                                        <!-- 팝업 버튼 -->
+                                        <button type="button" class="result-pop-btn" data-popup="resultModal" onclick="fnCybReaderApply(); return false;">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                        <!-- 팝업 버튼 -->
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 68;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">직업정보탐색</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">68</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis2.png" alt="">
+                                    <span>진로·경력설계</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score3" style="--percentage: 29;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">진로·경력 의사결정</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">29</span><!-- 점수 입력 -->
+                                        <span class="grade">미흡</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 67;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">진로·경력 계획수립</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">67</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis3.png" alt="">
+                                    <span>구직수행</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score1" style="--percentage: 94;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">구직의욕고취</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">94</span><!-- 점수 입력 -->
+                                        <span class="grade">양호</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item score3" style="--percentage: 22;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">구직정보탐색</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">22</span><!-- 점수 입력 -->
+                                        <span class="grade">미흡</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 57;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">구직기술활용</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">57</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis4.png" alt="">
+                                    <span>경력관리</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item score2" style="--percentage: 46;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">조직적응</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">46</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item score1" style="--percentage: 76;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">경력전환</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">76</span><!-- 점수 입력 -->
+                                        <span class="grade">양호</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item score2" style="--percentage: 54;"> <!-- 점수 입력 -->
+                                        <span class="item-tit">변화관리</span>
+                                        <!-- 깃발 그래프 -->
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- // 깃발 그래프 -->
+                                        <span class="score">54</span><!-- 점수 입력 -->
+                                        <span class="grade">보통</span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                        </div>
+                        <!-- // 요인별 진단결과 -->
+                        <!-- 진단결과 팝업 -->
+                        <!-- <div id="resultModal" class="modal-wrap type2">
+                            <div class="modal-head">
+                                <p class="modal-tit">나의 위치 상세 확인하기</p>
+                            </div>
+                            <div class="modal-cont-wrap">
+                                <div class="modal-cont">
+                                    
+                                </div>
+                            </div>
+                            <button type="button" class="modal-close" data-close="data-popup">닫기</button>
+                        </div> -->
+                        
+                        <!-- // 진단결과 팝업 -->
+                        <!-- 결과 이해 TIP -->
+                        <div class="bottom-tip-box">
+                            <h3 class="tit">결과 이해 TIP</h3>
+                            <div class="txt-wrap">
+                                <div class="left-txt">
+                                    <h4 class="left-txt-tit">나의 수준</h4>
+                                    <p class="basic">‘나의 수준’은 다른 청년 구직자와 비교한 나의 수준을 나타냅니다. 나의 수준은 다른 구직자 점수를 가장 낮은 순서대로 나열했을 때, 귀하의 점수가 전체 구직자 중 하위 몇%에 위치하는지에 따라 양호, 보통, 미흡으로 제시됩니다. </p>
+                                    <h4 class="left-txt-tit">나의 위치</h4>
+                                    <p class="basic">‘나의 위치’는 귀하의 각 하위 요인별 평균점수가 전체 구직자 중 하위 몇%에 위치하는지 나타냅니다. </p>
+                                </div>
+                                <div class="right-grade-graph">
+                                    <div class="grade-graph">
+                                        <div class="bg-left"></div>
+                                        <div class="item score1">
+                                            <span class="txt">70%↑</span>
+                                        </div>
+                                        <div class="item score2">
+                                            <span class="txt">30%~70%</span>
+                                        </div>
+                                        <div class="item score3">
+                                            <span class="txt">30%↓</span>
+                                        </div>
+                                        <div class="bg-right">
+                                            <div class="line">
+                                                <i class="line1"></i>
+                                                <i class="line2"></i>
+                                                <i class="line3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tip-txt-wrap">
+                                        <h4 class="tip-tit">&lt;수준 설정 기본 기준&gt;</h4>
+                                        <div class="txt-box">
+                                            <div class="item">
+                                                <span class="score-tit score1">양호</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 70% 점수 이상일  때</span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="score-tit score2">보통</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 30% ~ 하위 70% 점수 사이일 때</span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="score-tit score3">미흡</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 30% 점수 이하일 때</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bottom-tip">(단, 하위요인 별 구직자 점수 중 상위 30% 및 70%에 해당하는 값이 없을 때는 근사값으로 설정함)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 결과 이해 TIP -->
+                        <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+
+                            // 정렬 체크박스
+                            const checkbox = document.querySelectorAll(".sort-box .checkbox");
+                            const resultItem = document.querySelectorAll(".result-item");
+                
+                            function updateActiveClass() {
+                                resultItem.forEach(item => {
+                                    item.classList.remove("active");
+                                });
+                
+                                checkbox.forEach(checkbox => {
+                                    if (checkbox.checked) {
+                                        const scoreClass = checkbox.classList[1];
+                                        resultItem.forEach(item => {
+                                            if (item.classList.contains(scoreClass)) {
+                                                item.classList.add("active");
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                
+                            checkbox.forEach(checkbox => {
+                                checkbox.addEventListener("change", updateActiveClass);
+                            });
+                
+                            updateActiveClass();
+
+
+                            // 반원 그래프 처리
+                            document.querySelectorAll('.result-pie-box').forEach(function (elem) {
+                                let percentage = parseInt(getComputedStyle(elem.querySelector('.pie-graph-wrap')).getPropertyValue('--percentage'));
+
+                                elem.querySelector('.pie-graph-wrap').classList.remove('score1', 'score2', 'score3');
+
+                                if (percentage >= 70) {
+                                    elem.querySelector('.pie-graph-wrap').classList.add('score1');
+                                    elem.querySelector('.grade').textContent = '양호';
+                                } else if (percentage >= 30) {
+                                    elem.querySelector('.pie-graph-wrap').classList.add('score2');
+                                    elem.querySelector('.grade').textContent = '보통';
+                                } else {
+                                    elem.querySelector('.pie-graph-wrap').classList.add('score3');
+                                    elem.querySelector('.grade').textContent = '미흡';
+                                }
+                            });
+                            
+                            // 막대 그래프 처리
+                            document.querySelectorAll('.result-bar-box .bar-graph').forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue('--percentage'));
+                                let pcnt = elem.querySelector('.pcnt');
+                                let pcntTxt = elem.querySelector('.pcnt-txt');
+
+                                if (percentage >= 70) {
+                                    elem.classList.add('score1');
+                                    pcntTxt.textContent = '양호';
+                                } else if (percentage >= 30) {
+                                    elem.classList.add('score2');
+                                    pcntTxt.textContent = '보통';
+                                } else {
+                                    elem.classList.add('score3');
+                                    pcntTxt.textContent = '미흡';
+                                }
+                            });
+
+                            // 깃발 그래프 처리
+                            document.querySelectorAll('.result-list-wrap .result-item').forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue('--percentage'));
+                                let pcnt = elem.querySelector('.result-percent-box .pcnt');
+                                let grade = elem.querySelector('.grade');
+
+                                if (percentage >= 70) {
+                                    elem.classList.add('score1');
+                                    grade.textContent = '양호';
+                                } else if (percentage >= 30) {
+                                    elem.classList.add('score2');
+                                    grade.textContent = '보통';
+                                } else {
+                                    elem.classList.add('score3');
+                                    grade.textContent = '미흡';
+                                }
+                            });
+
+
+
+                            
+                            // 팝업 그래프 처리
+                            document.querySelectorAll('.graph-list .graph-item').forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue('--percentage'));
+                                console.log('percentage');
+                                let pcnt = elem.querySelector('.result-bar');
+                                let grade = elem.querySelector('.grade');
+
+                                if (percentage >= 70) {
+                                    elem.classList.add('score1');
+                                    grade.textContent = '양호';
+                                } else if (percentage >= 30) {
+                                    elem.classList.add('score2');
+                                    grade.textContent = '보통';
+                                } else {
+                                    elem.classList.add('score3');
+                                    grade.textContent = '미흡';
+                                }
+                            });
+                        });
+
+                        </script>
+						<!-- // 240705 신규 페이지 작업 (ej) -->
+                    </div>
+                </article>
+                <aside class="topbtn">위로</aside>
+                
+                <!-- 결과 팝업 -->
+                <div id="popupLayer">
+                    <div id="resultGraphrPopup" class="popupLayer ui-draggable result-popup" style="z-index: 1000003; position: relative;">
+
+                        <script language="javascript">
+                        function f_close(){
+                            fnLayerClose('innerLayer');
+                        }
+                        </script>
+                        <div class="layer" id="innerLayer">
+                            <div class="pop_bg"></div>
+                            <div class="pop-layer">
+                                <div class="pop_container">
+                                    <div class="pop_title_area">
+                                        <h3>생애경력개발정보 웹진 구독 신청/해지</h3>
+                                    </div>
+                                    <div class="scroll_area" style="overflow: hidden;">
+                                        <div class="scroll_inner">
+                                            <!-- content : S -->
+                                            <div class="graph-cont">
+                                                <div class="graph-tr">
+                                                    <div class="align">
+                                                        <span class="num">0</span>
+                                                        <span class="num">30</span>
+                                                        <span class="num">70</span>
+                                                        <span class="num">100</span>
+                                                    </div>
+                                                </div>
+                                                <div class="graph-list">
+                                                    <div class="graph-item" style="--percentage: 68;"> <!-- 점수 입력 시 score 자동 입력됨 -->
+                                                        <span class="tit">나의 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="grade"><!-- [보통] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="score">68</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="graph-item" style="--percentage: 86;"> <!-- 점수 입력 -->
+                                                        <span class="tit">구직자 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="grade"><!-- [양호] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="score">86</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="graph-item" style="--percentage: 29;"> <!-- 점수 입력 -->
+                                                        <span class="tit">과거 나의 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="grade"><!-- [미흡] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="score">29</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- content : E -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pop btn : S -->
+                                <a href="#nones" class="pop_btn cbtn" onclick="f_close();">닫기</a>
+                                <!-- pop btn : E -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_bg" style="z-index: 1000002;"></div>
+                </div>
+                <!-- // 결과 팝업 -->
+
+
+            </section>
+        </main>
+        <!-- content : E -->
+        <footer id="footer">
+            <section class="footer_area">
+                <div class="footer_l">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#none" onclick="fn_g24Link('https://www.work24.go.kr/cm/c/d/0130/retrieveUtzeStpt.do','','get','');" title="이용약관 새창이동">이용약관</a>
+                            </li>
+                            <li>
+                                <a href="#none" onclick="window.open('../cyb/customer/information/indvdinfo/prtecPolicy.do','prtecPolicyPop','width=1540,height=800,resizable=0,scrollbars=no,status=0,titlebar=0,toolbar=0,left=100,top=50')" title="개인정보처리방침 새창이동">개인정보처리방침</a>
+                            </li>
+                            <li>
+                                <a href="#none" onclick="fn_g24Link('https://www.work24.go.kr/cm/c/d/0130/retrieveEmailAdrPrssPlcy.do','','get','');" title="이메일주소무단수집거부 새창이동">이메일주소무단수집거부</a>
+                            </li>
+                            <li>
+                                <a href="#none" onclick="fn_g24Link('https://www.work24.go.kr/cm/c/d/0130/retrieveCpyrPoly.do','','get','');" title="저작권정책 및 제휴문의 새창이동">저작권정책 및 제휴문의</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <address>
+                        <span>27740 충청북도 음성군 맹동면 태정로6 한국고용정보원</span>
+                        <span>시스템관련문의 : cyberedu@keis.or.kr</span>Tel : 1577-7114
+                    </address>
+                    <p class="copy">Copyright 고용노동부 한국고용정보원 all rights reserved.</p>
+                </div>
+                <div class="footer_r logo">
+                    <span class="ico_footLogo1">
+                        <a href="#none" onclick="window.open('http://www.moel.go.kr'); return false;" target="_blank" title="고용노동부 새창이동"></a>
+                    </span>
+                    <span class="ico_footLogo2">
+                        <a href="#none" onclick="window.open('http://www.keis.or.kr'); return false;" target="_blank" title="한국고용정보원 새창이동"></a>
+                    </span>
+                </div>
+            </section>
+        </footer>
+        <form id="moelSTKNFrm" name="moelSTKNFrm" method="post" action=""></form>
+    </body>
+</html>
