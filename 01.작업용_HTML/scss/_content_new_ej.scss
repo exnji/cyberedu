@@ -37,15 +37,15 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 // [반원그래프]
 .result-pie-box {text-align: center; width: 212px;height: 212px; box-sizing: border-box; border-radius: 190px;background-color: #f5f5f5; padding: 6px; position: relative; vertical-align: middle; display: inline-block;
 
-    .txt { color: #333; position: absolute; z-index: 1; left: 0; top: 57px;width: 100%;}
+    .txt { color: #333; position: absolute; z-index: 2; left: 0; top: 57px;width: 100%;}
     .txt .tit { display: block; font-size: 20px; font-weight: 600; color: #333;}
-    .score { margin-top: 9px; display: block; font-size: 40px; font-family: 'jalnan';}
-    .grade { margin-top: 2px; font-size: 18px; color: #fff; padding: 6px 8px; min-width: 80px; text-align: center; display: inline-block; border-radius: 100px;}
+    .score { margin-top: 13px; display: block; font-size: 40px; font-family: 'jalnan';}
+    .grade { margin-top: 5px; font-size: 18px; color: #fff; padding: 6px 8px; min-width: 80px; text-align: center; display: inline-block; border-radius: 100px;}
 }
 .pie-graph-wrap {position: relative; width: 200px; height: 200px; 
     --percentage: 0; /* 초기에는 0으로 설정 */
 
-    &::before { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background-color: #666; border-radius: 100px; position: absolute; left: 0;  top: calc(50% - 10px); z-index: 2;}
+    &::before { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background-color: #666; border-radius: 100px 100px 0 0; position: absolute; left: 0;  top: calc(50% - 9px); z-index: 3; background: url("../images/page/pie_bullet_bg.png") no-repeat 0 5px;}
     // &::after { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background-color: #ccc; border-radius: 100px; position: absolute; right: 0;  top: calc(50% - 10px); z-index: 2;}
 
 }
@@ -56,11 +56,13 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 }
 
 // 그래프 끝 원 생성
-.pcnt-wrap { position: absolute; top: 0; left: 0; transform: rotate(-90deg); width: 100%; height: 100%; z-index: 1; animation: pieGraphBullet .9s ease-in-out forwards}
-.pie-graph-wrap .dim { content: '';display: inline-block; width:100%; height: 50%; position: absolute; bottom: 0; left: 0; background-color: #f5f5f5; border-radius: 0 0 100px 100px; z-index: 1; overflow: hidden; overflow: hidden;}
+.pcnt-wrap { position: absolute; top: 0; left: 0; transform: rotate(-90deg); width: 100%; height: 100%; z-index: 1; animation: pieGraphBullet .9s ease-in-out forwards;}
+.pie-graph-wrap .dim { content: '';display: inline-block; width:100%; height: calc(50%); position: absolute; bottom: 0; left: 0; background-color: #f5f5f5; border-radius: 0 0 100px 100px; z-index: 1; overflow: hidden;
+    &::before { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background-color: #ccc; border-radius: 100px; position: absolute; right: 0; top: -9px; z-index: 2;  } 
+    // &::before { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background: url("../images//page/pie_bullet_bg.png") no-repeat center; position: absolute; right: 0; top: -12px; z-index: 2;}
+}
 
-// 240712 작업 중
-.pie-graph-wrap .dim::before { content: ''; width: 18px; height: 18px; box-sizing: border-box; display: inline-block; background-color: #ccc; border-radius: 100px; position: absolute; right: 0; top: -9px; z-index: 2;}
+.pie-graph-wrap .dim2 { content: '';display: inline-block; width:100%; height: calc(50% - 9px); position: absolute; bottom: 0; left: 0; background-color: #f5f5f5; border-radius: 0 0 100px 100px; z-index:2; overflow: hidden; overflow: hidden;}
 
 .pcnt-wrap .pcnt { position: absolute; top: 0; left: 0; transform: translateX(-50%) rotate(calc(var(--percentage, 0) * 1.8deg)); transform-origin: center center; width: 100%; height: 200%; z-index: 100; bottom: 0; left: 50%; transform-origin: center; width: 18px; height: 100%; }
 
@@ -108,6 +110,15 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
         & + label::before { content: ''; width: 14px; height: 14px; margin-right: 10px;  box-sizing: border-box; display: inline-block; border: 1px solid #666; background-color: #fff; border-radius: 3px; position: relative; top: 1px; }
         &:checked + label::before { background: #fff url("../images/page/ico_check.png") no-repeat center;}
     }
+
+    // 라디오
+    input[type="radio"] {
+
+        & + label {}
+        & + label::before { content: ''; width: 14px; height: 14px; margin-right: 10px;  box-sizing: border-box; display: inline-block; border: 1px solid #666; background-color: #fff; border-radius: 50px; position: relative; top: 1px; }
+        &:checked + label::before { background: #fff;}
+        &:checked + label::after { content:''; background: #555; border-radius: 10px; box-sizing: border-box; position: absolute; left: 3px; top: 4px; width: 8px; height: 8px; }
+    }
     
 }
 .result-sort-wrap { text-align: right; margin-top: 40px;
@@ -136,8 +147,8 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 }
 
 @keyframes pieGraphBullet {
-    0% { transform: rotate(calc(-90deg - 180deg));}
-    100% { transform: rotate(-90deg);}
+    0% { transform: rotate(calc(-90deg - 180deg)); z-index: 1;}
+    100% { transform: rotate(-90deg); z-index: 2;}
 }
 
 
@@ -224,6 +235,38 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 }
 
 
+// modalpop
+.result-popup {
+    .layer .pop-layer { top: 50%; transform: translate3d(-50%, -50%, 0); margin-left: 0; margin-top: 0; border-radius: 14px; box-sizing: border-box; overflow: hidden;}
+    .pop_container { max-width: 580px; width: 100%; padding: 0;}
+    .pop_container .scroll_area .scroll_inner { padding: 20px; max-height: 600px;}
+	.pop_title_area { height:52px; box-sizing: border-box; padding:17px 63px 17px 17px; position: relative; background-color: #31a866; }
+    .pop_title_area h3 {font-size:18px; font-weight:700; color: #fff;} 
+    .pop_btn.cbtn {position:absolute;right:18px;top:13px;width:26px;height:26px;text-indent:-99999px;overflow:hidden;  transform: rotate(45deg); background-color: transparent;
+    
+        &::before, &::after { content: ''; position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0); background-color: #fff;}
+        &::before { width: 100%; height: 2px;}
+        &::after { height: 100%; width: 2px;}
+    }
+}
+
+.graph-cont { 
+    .graph-tr { display: flex; justify-content: end; box-sizing: border-box; 
+    
+        .align {width: 420px; display: flex; justify-content: space-between; padding-right: 45px; padding-left: 45px;}
+        .num { font-size: 14px; color: #666;}
+    }
+    .graph-list { margin-top: 20px;
+        .graph-item { margin-top: 30px; display: flex; align-items: center; }
+        .graph-item:first-child { margin-top: 0; }
+        .graph-item .tit { font-size: 18px; font-weight: 700; color: #333; min-width: 105px; display: inline-block; vertical-align: middle; margin-right: 14px;}
+        .graph-item .bar-box { font-size: 0; position: relative; width: 420px; display: inline-block; vertical-align: middle; padding:0 45px; box-sizing: border-box;}
+        .grade { display: inline-block; width: 45px;text-align: center; color: #fff;  background-color: #666; border-radius: 100px; font-size: 16px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 23px; line-height: 23px; z-index: 1;}
+        .score { color: #666; position: absolute; width: 45px; right: 0; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 600; text-align: right;}
+        .result-bar { height: 14px;width: calc(100% + 2px); margin-left: -2px; box-sizing: border-box; background-color: #ccc; display: inline-block; position: relative;}
+        .result-bar::before {content: '';display: inline-block;  width: calc(var(--percentage, 0) * 1%); position: absolute; left: 0; top: 0; height: 100%; background-color: #666;}
+    }
+}
 
 $score-colors: (
   1: #37c375, // 양호
@@ -267,4 +310,10 @@ $score-colors: (
 
     // 결과 이해 tip
     .right-grade-graph .grade-graph .item.score#{$i} { background-color: map-get($score-colors, $i);}
+
+
+    // modal-popup
+    .graph-cont .graph-list .graph-item.score#{$i} .grade {background-color: map-get($score-colors, $i);}
+    .graph-cont .graph-list .graph-item.score#{$i} .result-bar::before {background-color: map-get($score-colors, $i);}
 }
+

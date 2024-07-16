@@ -2633,7 +2633,7 @@ body {
 .result-pie-box .txt {
   color: #333;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 57px;
   width: 100%;
@@ -2645,13 +2645,13 @@ body {
   color: #333;
 }
 .result-pie-box .score {
-  margin-top: 9px;
+  margin-top: 13px;
   display: block;
   font-size: 40px;
   font-family: "jalnan";
 }
 .result-pie-box .grade {
-  margin-top: 2px;
+  margin-top: 5px;
   font-size: 18px;
   color: #fff;
   padding: 6px 8px;
@@ -2674,11 +2674,12 @@ body {
   box-sizing: border-box;
   display: inline-block;
   background-color: #666;
-  border-radius: 100px;
+  border-radius: 100px 100px 0 0;
   position: absolute;
   left: 0;
-  top: calc(50% - 10px);
-  z-index: 2;
+  top: calc(50% - 9px);
+  z-index: 3;
+  background: url("../images/page/pie_bullet_bg.png") no-repeat 0 5px;
 }
 
 .pie-graph {
@@ -2747,9 +2748,7 @@ body {
   border-radius: 0 0 100px 100px;
   z-index: 1;
   overflow: hidden;
-  overflow: hidden;
 }
-
 .pie-graph-wrap .dim::before {
   content: "";
   width: 18px;
@@ -2762,6 +2761,21 @@ body {
   right: 0;
   top: -9px;
   z-index: 2;
+}
+
+.pie-graph-wrap .dim2 {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: calc(50% - 9px);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  border-radius: 0 0 100px 100px;
+  z-index: 2;
+  overflow: hidden;
+  overflow: hidden;
 }
 
 .pcnt-wrap .pcnt {
@@ -2945,6 +2959,33 @@ body {
 .custom-chk input[type=checkbox]:checked + label::before, .custom-rdo input[type=checkbox]:checked + label::before {
   background: #fff url("../images/page/ico_check.png") no-repeat center;
 }
+.custom-chk input[type=radio] + label::before, .custom-rdo input[type=radio] + label::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid #666;
+  background-color: #fff;
+  border-radius: 50px;
+  position: relative;
+  top: 1px;
+}
+.custom-chk input[type=radio]:checked + label::before, .custom-rdo input[type=radio]:checked + label::before {
+  background: #fff;
+}
+.custom-chk input[type=radio]:checked + label::after, .custom-rdo input[type=radio]:checked + label::after {
+  content: "";
+  background: #555;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 3px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+}
 
 .result-sort-wrap {
   text-align: right;
@@ -3004,9 +3045,11 @@ body {
 @keyframes pieGraphBullet {
   0% {
     transform: rotate(-270deg);
+    z-index: 1;
   }
   100% {
     transform: rotate(-90deg);
+    z-index: 2;
   }
 }
 .result-percent-box {
@@ -3360,6 +3403,156 @@ body {
   text-align: center;
 }
 
+.result-popup .layer .pop-layer {
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  margin-left: 0;
+  margin-top: 0;
+  border-radius: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.result-popup .pop_container {
+  max-width: 580px;
+  width: 100%;
+  padding: 0;
+}
+.result-popup .pop_container .scroll_area .scroll_inner {
+  padding: 20px;
+  max-height: 600px;
+}
+.result-popup .pop_title_area {
+  height: 52px;
+  box-sizing: border-box;
+  padding: 17px 63px 17px 17px;
+  position: relative;
+  background-color: #31a866;
+}
+.result-popup .pop_title_area h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.result-popup .pop_btn.cbtn {
+  position: absolute;
+  right: 18px;
+  top: 13px;
+  width: 26px;
+  height: 26px;
+  text-indent: -99999px;
+  overflow: hidden;
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+.result-popup .pop_btn.cbtn::before, .result-popup .pop_btn.cbtn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  background-color: #fff;
+}
+.result-popup .pop_btn.cbtn::before {
+  width: 100%;
+  height: 2px;
+}
+.result-popup .pop_btn.cbtn::after {
+  height: 100%;
+  width: 2px;
+}
+
+.graph-cont .graph-tr {
+  display: flex;
+  justify-content: end;
+  box-sizing: border-box;
+}
+.graph-cont .graph-tr .align {
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 45px;
+  padding-left: 45px;
+}
+.graph-cont .graph-tr .num {
+  font-size: 14px;
+  color: #666;
+}
+.graph-cont .graph-list {
+  margin-top: 20px;
+}
+.graph-cont .graph-list .graph-item {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.graph-cont .graph-list .graph-item:first-child {
+  margin-top: 0;
+}
+.graph-cont .graph-list .graph-item .tit {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  min-width: 105px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 14px;
+}
+.graph-cont .graph-list .graph-item .bar-box {
+  font-size: 0;
+  position: relative;
+  width: 420px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 45px;
+  box-sizing: border-box;
+}
+.graph-cont .graph-list .grade {
+  display: inline-block;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  background-color: #666;
+  border-radius: 100px;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 23px;
+  line-height: 23px;
+  z-index: 1;
+}
+.graph-cont .graph-list .score {
+  color: #666;
+  position: absolute;
+  width: 45px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: right;
+}
+.graph-cont .graph-list .result-bar {
+  height: 14px;
+  width: calc(100% + 2px);
+  margin-left: -2px;
+  box-sizing: border-box;
+  background-color: #ccc;
+  display: inline-block;
+  position: relative;
+}
+.graph-cont .graph-list .result-bar::before {
+  content: "";
+  display: inline-block;
+  width: calc(var(--percentage, 0) * 1%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #666;
+}
+
 span.score1 {
   background-color: #37c375;
 }
@@ -3415,6 +3608,14 @@ input.score1:checked + label {
 }
 
 .right-grade-graph .grade-graph .item.score1 {
+  background-color: #37c375;
+}
+
+.graph-cont .graph-list .graph-item.score1 .grade {
+  background-color: #37c375;
+}
+
+.graph-cont .graph-list .graph-item.score1 .result-bar::before {
   background-color: #37c375;
 }
 
@@ -3476,6 +3677,14 @@ input.score2:checked + label {
   background-color: #f2ad18;
 }
 
+.graph-cont .graph-list .graph-item.score2 .grade {
+  background-color: #f2ad18;
+}
+
+.graph-cont .graph-list .graph-item.score2 .result-bar::before {
+  background-color: #f2ad18;
+}
+
 span.score3 {
   background-color: #d71921;
 }
@@ -3531,6 +3740,14 @@ input.score3:checked + label {
 }
 
 .right-grade-graph .grade-graph .item.score3 {
+  background-color: #d71921;
+}
+
+.graph-cont .graph-list .graph-item.score3 .grade {
+  background-color: #d71921;
+}
+
+.graph-cont .graph-list .graph-item.score3 .result-bar::before {
   background-color: #d71921;
 }
 

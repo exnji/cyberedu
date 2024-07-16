@@ -258,16 +258,19 @@
                                     
                                 <!-- 반원그래프 -->
 								<div class="result-pie-box">
-									<div class="pie-graph-wrap score3" style="--percentage: 100;"><!-- 점수 입력 -->
+									<div class="pie-graph-wrap score3" style="--percentage: 29;"><!-- 점수 입력 -->
 										<div class="pie-graph"></div>
                                         <div class="pcnt-wrap">
                                             <span class="pcnt"></span>
                                         </div>
+                                        <!-- dim layer -->
                                         <div class="dim"></div>
+                                        <div class="dim2"></div>
+                                        <!-- // dim layer -->
 									</div>
 									<div class="txt">
 										<span class="tit">나의 점수</span>
-										<span class="score">100</span> <!-- 점수 입력 -->
+										<span class="score">29</span> <!-- 점수 입력 -->
 										<span class="grade"></span>
 									</div>
 								</div>
@@ -345,7 +348,7 @@
                                         <!-- // 깃발 그래프 -->
                                         <span class="score">86</span><!-- 점수 입력 -->
                                         <span class="grade">양호</span>
-                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                        <button type="button" class="result-pop-btn" data-popup="resultModal" onclick="fnCybReaderApply(); return false;">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
                                     <div class="result-item score2" style="--percentage: 68;"> <!-- 점수 입력 -->
                                         <span class="item-tit">직업정보탐색</span>
@@ -589,15 +592,12 @@
 
                             if (percentage >= 70) {
                                 elem.classList.add('score1');
-                                // pcnt.textContent = percentage + '%';
                                 pcntTxt.textContent = '양호';
                             } else if (percentage >= 30) {
                                 elem.classList.add('score2');
-                                // pcnt.textContent = percentage + '%';
                                 pcntTxt.textContent = '보통';
                             } else {
                                 elem.classList.add('score3');
-                                // pcnt.textContent = percentage + '%';
                                 pcntTxt.textContent = '미흡';
                             }
                         });
@@ -610,22 +610,17 @@
 
                             if (percentage >= 70) {
                                 elem.classList.add('score1');
-                                // pcnt.textContent = percentage + '%';
                                 grade.textContent = '양호';
                             } else if (percentage >= 30) {
                                 elem.classList.add('score2');
-                                // pcnt.textContent = percentage + '%';
                                 grade.textContent = '보통';
                             } else {
                                 elem.classList.add('score3');
-                                // pcnt.textContent = percentage + '%';
                                 grade.textContent = '미흡';
                             }
                         });
 
                         </script>
-
-                        
 						<!-- // 240705 신규 페이지 작업 (ej) -->
                     </div>
                 </article>
