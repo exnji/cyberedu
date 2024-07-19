@@ -218,7 +218,7 @@
                 </article>
                 <article class="content_area">
                     <div class="content_inner">
-						<!-- 240705 신규 페이지 작업 (ej) -->
+						<!-- 240716 신규 페이지 작업 (ej) -->
 						<h3 class="blind">온라인 교육 탭 메뉴 리스트</h3>
 						<ul class="tab_nav">
 							<li class="tab_nav_item" id="tab1">
@@ -227,138 +227,491 @@
 							<li class="tab_nav_item active" id="tab2" title="선택됨">
 								<a href="#none" class="tab_nav_link">진단결과 보기 <span class="chk"></span></a>
 							</li>
+							<li class="tab_nav_item" id="tab3">
+								<a href="#none" class="tab_nav_link">추천교육과정 <span class="chk"></span></a>
+							</li>
 						</ul>
 
 						<h4 class="result-tit">진로·경력개발 하위 요인별 진단 결과</h4>
 						<!-- 종합결과 -->
 						<div class="result-box">
-							<span class="bubble">종합 결과</span>
+							<span class="bubble">종합 <br>결과</span>
 							<div class="right">
 								<!-- 
 
-									div.result-pie-box에 클래스 추가
 									* 양호 class: score1
 									* 보통 class: score2
 									* 미흡 class: score3
+
+                                    
+                                    [반원 그래프 - result-pie-box]
+                                    1. 점수 입력은 div.pie-graph-wrap 에 --percentage: 값;과 span.score 두 곳에 입력해주시면 됩니다.
+
+									2. 점수에 따라 div.pie-graph-wrap에 score1, score2, score3 클래스 추가 되며 그래프 색상 및 아이콘이 변경됩니다.
+                            
+                                    ------------------------------
+
+                                    [막대 그래프 - result-bar-box]
+                                    1. 점수 입력은 div.bar-graph에 --percentage: 값;과 
+                                       div.result-bar-box > txt > span.score 두 곳에 입력해주시면 됩니다.
+
+                                    2. 점수에 따라 div.bar-graph에 score1, score2, score3 클래스 추가 되며 그래프 색상 및 아이콘이 변경됩니다.
+								
+                                    ------------------------------
+
+                                    [깃발 그래프 - result-list-wrap > result-item]
+                                    1. 점수 입력은 div.result-item에 --percentage: 값;과 
+                                       div.result-item > span.score 두 곳에 입력해주시면 됩니다.
+
+                                    2. 점수에 따라 div.result-item에 score1, score2, score3 클래스 추가 되며 그래프 색상 및 아이콘이 변경됩니다.
 								
 								-->
-								<div class="result-pie-box score1">
-									<div class="pie-graph-wrap">
-										<div class="pie-graph" style="--percentage: 55%;">
-											<span>55%</span>
-										</div>
+                                    
+                                <!-- 반원그래프 -->
+								<div class="result-pie-box">
+									<div class="pie-graph-wrap score3" style="--percentage: 29;"><!-- 점수 입력 시 pie-graph-wrap에 score클래스 추가됨 -->
+										<div class="pie-graph"></div>
+                                        <div class="pcnt-wrap">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <!-- dim layer -->
+                                        <div class="dim"></div>
+                                        <div class="dim2"></div>
+                                        <!-- // dim layer -->
 									</div>
 									<div class="txt">
 										<span class="tit">나의 점수</span>
-										<span class="score">29</span>
-										<span class="grade">미흡</span>
+										<span class="score">29</span> <!-- 점수 입력 -->
+										<span class="grade"><!-- [미흡] --></span>
 									</div>
 								</div>
+                                <!-- // 반원그래프 -->
+
+                                <!-- 막대그래프 -->
 								<div class="result-bar-box">
 									<div class="item">
 										<div class="txt">
 											<span class="tit">구직자 점수</span>
-											<span class="score">66</span>
+											<span class="score">66</span> <!-- 점수 입력 -->
 											<span class="mg">점</span>
 										</div>
-										<div class="bar-graph">
-											<span></span>
+										<div class="bar-graph" style="--percentage: 66;"> <!--  점수 입력 시 bar-graph에 score클래스 추가됨 --> 
+											<span class="pcnt"></span>
+                                            <span class="pcnt-txt"><!-- [보통] --></span>
+										</div>
+									</div>
+									<div class="item">
+										<div class="txt">
+											<span class="tit">취업자 점수</span>
+											<span class="score">76</span> <!-- 점수 입력 -->
+											<span class="mg">점</span>
+										</div>
+										<div class="bar-graph" style="--percentage: 76;"> <!--  점수 입력 시 bar-graph에 score클래스 추가됨 --> 
+											<span class="pcnt"></span>
+                                            <span class="pcnt-txt"><!-- [양호] --></span>
 										</div>
 									</div>
 								</div>
+                                <!-- // 막대그래프 -->
 							</div>
 						</div>
 						<!-- // 종합결과 -->
+                        <!-- 정렬 -->
+                        <div class="result-sort-wrap">
+                            <span class="mg">정렬 : </span>
+                            <div class="sort-box">
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateBad" class="checkbox score3" checked>
+                                        <label for="stateBad">미흡</label>
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateNormal" class="checkbox score2" checked>
+                                        <label for="stateNormal">보통</label>
+                                    </span>
+                                </div>
+                                <div class="item">
+                                    <span class="custom-chk">
+                                        <input type="checkbox" id="stateGood" class="checkbox score1" checked>
+                                        <label for="stateGood">양호</label>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 정렬 -->
+                        <!-- 요인별 진단결과 -->
+                        <div class="result-list-wrap">
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis1.png" alt="">
+                                    <span>진로·경력탐색</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item" style="--percentage: 86;"> <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">자기이해</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">86</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [양호] --></span>
+                                        <!-- 팝업 버튼 -->
+                                        <button type="button" class="result-pop-btn" onclick="fnCybReaderApply(); return false;">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                        <!-- 팝업 버튼 -->
+                                    </div>
+                                    <div class="result-item " style="--percentage: 68;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">직업정보탐색</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">68</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [보통] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis2.png" alt="">
+                                    <span>진로·경력설계</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item" style="--percentage: 29;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">진로·경력 의사결정</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">29</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [미흡] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item" style="--percentage: 67;"> <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">진로·경력 계획수립</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">67</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [보통] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis3.png" alt="">
+                                    <span>구직수행</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item" style="--percentage: 94;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">구직의욕고취</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">94</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [양호] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item" style="--percentage: 22;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">구직정보탐색</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">22</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- 미흡 --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item" style="--percentage: 57;"> <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">구직기술활용</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">57</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [보통] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                            <!-- item -->
+                            <div class="item">
+                                <div class="left-tit">
+                                    <img src="../images/page/img_diagnosis4.png" alt="">
+                                    <span>경력관리</span>
+                                </div>
+                                <div class="right-percent">
+                                    <div class="result-item" style="--percentage: 46;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">조직적응</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">46</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [보통] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item" style="--percentage: 76;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">경력전환</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">76</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [양호] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                    <div class="result-item" style="--percentage: 54;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
+                                        <span class="item-tit">변화관리</span>
+                                        <div class="result-percent-box">
+                                            <span class="pcnt"></span>
+                                        </div>
+                                        <span class="score">54</span><!-- 점수 입력 -->
+                                        <span class="grade"><!-- [보통] --></span>
+                                        <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // item -->
+                        </div>
+                        <!-- // 요인별 진단결과 -->
+                        <!-- 결과 이해 TIP -->
+                        <div class="bottom-tip-box">
+                            <h3 class="tit">결과 이해 TIP</h3>
+                            <div class="txt-wrap">
+                                <div class="left-txt">
+                                    <h4 class="left-txt-tit">나의 수준</h4>
+                                    <p class="basic">‘나의 수준’은 다른 청년 구직자와 비교한 나의 수준을 나타냅니다. 나의 수준은 다른 구직자 점수를 가장 낮은 순서대로 나열했을 때, 귀하의 점수가 전체 구직자 중 하위 몇%에 위치하는지에 따라 양호, 보통, 미흡으로 제시됩니다. </p>
+                                    <h4 class="left-txt-tit">나의 위치</h4>
+                                    <p class="basic">‘나의 위치’는 귀하의 각 하위 요인별 평균점수가 전체 구직자 중 하위 몇%에 위치하는지 나타냅니다. </p>
+                                </div>
+                                <div class="right-grade-graph">
+                                    <div class="grade-graph">
+                                        <div class="bg-left"></div>
+                                        <div class="item score1">
+                                            <span class="txt">70%↑</span>
+                                        </div>
+                                        <div class="item score2">
+                                            <span class="txt">30%~70%</span>
+                                        </div>
+                                        <div class="item score3">
+                                            <span class="txt">30%↓</span>
+                                        </div>
+                                        <div class="bg-right">
+                                            <div class="line">
+                                                <i class="line1"></i>
+                                                <i class="line2"></i>
+                                                <i class="line3"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tip-txt-wrap">
+                                        <h4 class="tip-tit">&lt;수준 설정 기본 기준&gt;</h4>
+                                        <div class="txt-box">
+                                            <div class="item">
+                                                <span class="score-tit score1">양호</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 70% 점수 이상일  때</span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="score-tit score2">보통</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 30% ~ 하위 70% 점수 사이일 때</span>
+                                            </div>
+                                            <div class="item">
+                                                <span class="score-tit score3">미흡</span>
+                                                <span class="score-txt">나의 점수가 구직자 하위 30% 점수 이하일 때</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="bottom-tip">(단, 하위요인 별 구직자 점수 중 상위 30% 및 70%에 해당하는 값이 없을 때는 근사값으로 설정함)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 결과 이해 TIP -->
+                        <script>
+                        document.addEventListener("DOMContentLoaded", function() {
 
-                        <div class="card_col1 introduce">
-                            <div class="card round12 default">
-                                <div class="txt_group">
-                                    <h3 class="title">센터소개</h3>
-                                    <p class="txt"> 사이버진로교육센터는 생애 전반에 걸친 진로개발을 위해 <br /> 다양한 계층(청소년, 취업지원담당자,상담원 등)의 맞춤형 고용서비스를 <br /> 지원하는 플랫폼입니다. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_col1 obj">
-                            <div class="card round12 default">
-                                <div class="txt_group">
-                                    <h3 class="title">주요내용</h3>
-                                    <p class="txt_s"> 진로탐색과 선택, 취업 및 입직, 경력형성과 유지, 경력전환 및 퇴직 등 다양한 생애 전반에 걸친 진로 및 취업 관련 지원을 위해, <br /> 다양한 집합 및 온라인교육과 더불어, 직업심리검사, 직업진로 탐색자료,취업지원프로그램, 직업 및 취업 관련 동영상 등을 개발하여 보급 </p>
-                                </div>
-                                <div class="obj_list">
-                                    <div class="obj_group obj1">
-                                        <dl>
-                                            <dt>집합교육</dt>
-                                            <dd> 고용센터 및 민간위탁기관 대상 <br /> 고용서비스 종사자 대상 고용서비스 <br /> 역량강화를 위한 진로지도 전문 <br /> 연수를 실시함으로써 국가 진로지도 <br /> 및 고용서비스 질 제고를 선도 </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="obj_group obj2">
-                                        <dl>
-                                            <dt>온라인교육</dt>
-                                            <dd> 청소년, 대학생, 청년, 중장년, <br /> 기타(상담사 등) 등 대상별 맞춤형 <br /> 직업진로지도 관련 온라인 <br /> 진로콘텐츠 개발 및 보급 </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="obj_group obj3">
-                                        <dl>
-                                            <dt>자료마당</dt>
-                                            <dd> 구직자 및 고용서비스 종사자 대상 <br /> 다양한 직업진로지도 자료, <br /> 직업심리검사 자료, 진로지도 <br /> 동영상 등을 개발하여 보급 </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="obj_group obj4">
-                                        <dl>
-                                            <dt>커리어인포</dt>
-                                            <dd> 전 생애에 걸친 경력개발과 관리의 <br /> 중요성을 안내하고 이를 위해 도움이 <br /> 되는 직업심리검사, 교육 및 취업지원 <br /> 프로그램, 훈련정보, 직업 및 창업정보, <br /> 고용정책, 관련 주요 현황 및 이슈 등에 <br /> 대한 정보를 제공하는 <br /> 정보지 개발·보급 </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card_col1 etc">
-                            <div class="col1 round12 default">
-                                <div class="txt_group">
-                                    <h3 class="title">운영효과</h3>
-                                    <div class="etc_list1">
-                                        <dl>
-                                            <dt>효과1</dt>
-                                            <dd> (방문자 및 수강생 급증) 2020년 기준, <br /> 사이버진로교육센터 1일 방문자 수 2019년 대비 <span class="color_active bold">1,083% 급증</span>
-                                                <br /> 및 온라인교육 1일 평균 수강생 <span class="color_active bold">581% 증가</span>
-                                            </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>효과2</dt>
-                                            <dd> (활용 대상 확대) 청년 구직자 중심에서 청소년, 대학 재학생 및 <br /> 고용복지+센터 및 민간위탁기관 상담사 등으로의 대상 확대 및 <br /> 관련 온라인 콘텐츠 </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col1 round12 default last">
-                                <div class="txt_group">
-                                    <h3 class="title">주요연혁</h3>
-                                    <div class="etc_list2">
-                                        <dl>
-                                            <dt>2020</dt>
-                                            <dd> 사이버진로교육센터 온라인교육의 안정적인 서비스 <br /> 제공을 위한 CDN서비스 도입 </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>2011</dt>
-                                            <dd> 직업심리검사, 취업지원프로그램, 취업지원동영상 등 <br /> 컨텐츠 개발 운영 </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>2010</dt>
-                                            <dd> 대학생과 취업‧진로지도담당자들을 위한 온라인교육과정 <br /> 운영 </dd>
-                                        </dl>
-                                        <dl>
-                                            <dt>2009</dt>
-                                            <dd>사이버진로교육센터 오픈</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-						<!-- // 240705 신규 페이지 작업 (ej) -->
+                            // 반원 그래프 처리
+                            document.querySelectorAll(".result-pie-box").forEach(function (elem) {
+                                let percentage = parseInt(getComputedStyle(elem.querySelector(".pie-graph-wrap")).getPropertyValue("--percentage"));
+
+                                elem.querySelector(".pie-graph-wrap").classList.remove("score1", "score2", "score3");
+
+                                if (percentage >= 70) {
+                                    elem.querySelector(".pie-graph-wrap").classList.add("score1");
+                                    elem.querySelector(".grade").textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.querySelector(".pie-graph-wrap").classList.add("score2");
+                                    elem.querySelector(".grade").textContent = "보통";
+                                } else {
+                                    elem.querySelector(".pie-graph-wrap").classList.add("score3");
+                                    elem.querySelector(".grade").textContent = "미흡";
+                                }
+                            });
+                            
+                            // 막대 그래프 처리
+                            document.querySelectorAll(".result-bar-box .bar-graph").forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue("--percentage"));
+                                let pcnt = elem.querySelector(".pcnt");
+                                let pcntTxt = elem.querySelector(".pcnt-txt");
+
+                                if (percentage >= 70) {
+                                    elem.classList.add("score1");
+                                    pcntTxt.textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.classList.add("score2");
+                                    pcntTxt.textContent = "보통";
+                                } else {
+                                    elem.classList.add("score3");
+                                    pcntTxt.textContent = "미흡";
+                                }
+                            });
+
+                            // 깃발 그래프 처리
+                            document.querySelectorAll(".result-list-wrap .result-item").forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue("--percentage"));
+                                let pcnt = elem.querySelector(".result-percent-box .pcnt");
+                                let grade = elem.querySelector(".grade");
+
+                                if (percentage >= 70) {
+                                    elem.classList.add("score1");
+                                    grade.textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.classList.add("score2");
+                                    grade.textContent = "보통";
+                                } else {
+                                    elem.classList.add("score3");
+                                    grade.textContent = "미흡";
+                                }
+                            });
+                            
+                            // 팝업 그래프 처리
+                            document.querySelectorAll(".graph-list .graph-item").forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue("--percentage"));
+                                let pcnt = elem.querySelector(".result-bar");
+                                let grade = elem.querySelector(".item-grade");
+
+                                if (percentage >= 70) {
+                                    elem.classList.add("score1");
+                                    grade.textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.classList.add("score2");
+                                    grade.textContent = "보통";
+                                } else {
+                                    elem.classList.add("score3");
+                                    grade.textContent = "미흡";
+                                }
+                            });
+
+
+                            
+                            // 정렬 체크박스
+                            const checkbox = document.querySelectorAll(".sort-box .checkbox");
+                            const resultItem = document.querySelectorAll(".result-item");
+                
+                            function updateActiveClass() {
+                                resultItem.forEach(item => {
+                                    item.classList.remove("active");
+                                });
+                
+                                checkbox.forEach(checkbox => {
+                                    if (checkbox.checked) {
+                                        const scoreClass = checkbox.classList[1];
+                                        resultItem.forEach(item => {
+                                            if (item.classList.contains(scoreClass)) {
+                                                item.classList.add("active");
+                                            }
+                                        });
+                                    }
+                                });
+                            }
+                
+                            checkbox.forEach(checkbox => {
+                                checkbox.addEventListener("change", updateActiveClass);
+                            });
+                
+                            updateActiveClass();
+
+                        });
+
+                        </script>
+						<!-- // 240716 신규 페이지 작업 (ej) -->
                     </div>
                 </article>
                 <aside class="topbtn">위로</aside>
-                <div id="popupLayer"></div>
+                
+                <!-- 결과 팝업 : 학습자료 > 커리어info > 구독신청, 구독해지 팝업 참고했습니다. -->
+                <div id="popupLayer" style="display: none;">
+                    <div id="resultGraphrPopup" class="popupLayer ui-draggable result-popup" style="z-index: 1000003; position: relative;">
+
+                        <script language="javascript">
+                        function f_close(){
+                            fnLayerClose('innerLayer');
+                        }
+                        </script>
+                        <div class="layer" id="innerLayer">
+                            <div class="pop_bg"></div>
+                            <div class="pop-layer">
+                                <div class="pop_container">
+                                    <div class="pop_title_area">
+                                        <h3>생애경력개발정보 웹진 구독 신청/해지</h3>
+                                    </div>
+                                    <div class="scroll_area" style="overflow: hidden;">
+                                        <div class="scroll_inner">
+                                            <!-- content : S -->
+                                            <div class="graph-cont">
+                                                <div class="graph-tr">
+                                                    <div class="align">
+                                                        <span class="num">0</span>
+                                                        <span class="num">30</span>
+                                                        <span class="num">70</span>
+                                                        <span class="num">100</span>
+                                                    </div>
+                                                </div>
+                                                <div class="graph-list">
+                                                    <div class="graph-item" style="--percentage: 68;"> <!-- 점수 입력 시 score 자동 입력됨 -->
+                                                        <span class="tit">나의 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="item-grade"><!-- [보통] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="item-score">68</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="graph-item" style="--percentage: 86;"> <!-- 점수 입력 -->
+                                                        <span class="tit">구직자 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="item-grade"><!-- [양호] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="item-score">86</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="graph-item" style="--percentage: 29;"> <!-- 점수 입력 -->
+                                                        <span class="tit">과거 나의 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="item-grade"><!-- [미흡] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="item-score">29</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- content : E -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pop btn : S -->
+                                <a href="#nones" class="pop_btn cbtn" onclick="f_close();">닫기</a>
+                                <!-- pop btn : E -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_bg" style="z-index: 1000002;"></div>
+                </div>
+                <!-- // 결과 팝업 -->
+
+
             </section>
         </main>
         <!-- content : E -->
