@@ -218,7 +218,7 @@
                 </article>
                 <article class="content_area">
                     <div class="content_inner">
-						<!-- 240705 신규 페이지 작업 (ej) -->
+						<!-- 240716 신규 페이지 작업 (ej) -->
 						<h3 class="blind">온라인 교육 탭 메뉴 리스트</h3>
 						<ul class="tab_nav">
 							<li class="tab_nav_item" id="tab1">
@@ -226,6 +226,9 @@
 							</li>
 							<li class="tab_nav_item active" id="tab2" title="선택됨">
 								<a href="#none" class="tab_nav_link">진단결과 보기 <span class="chk"></span></a>
+							</li>
+							<li class="tab_nav_item" id="tab3">
+								<a href="#none" class="tab_nav_link">추천교육과정 <span class="chk"></span></a>
 							</li>
 						</ul>
 
@@ -244,21 +247,29 @@
                                     [반원 그래프 - result-pie-box]
                                     1. 점수 입력은 div.pie-graph-wrap 에 --percentage: 값;과 span.score 두 곳에 입력해주시면 됩니다.
 
-									2. div.pie-graph-wrap에 score1, score2, score3 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
+									2. 점수에 따라 div.pie-graph-wrap에 score1, score2, score3 클래스 추가 되며 그래프 색상 및 아이콘이 변경됩니다.
                             
-                                    --------------------------------------------------------
+                                    ------------------------------
 
                                     [막대 그래프 - result-bar-box]
                                     1. 점수 입력은 div.bar-graph에 --percentage: 값;과 
                                        div.result-bar-box > txt > span.score 두 곳에 입력해주시면 됩니다.
 
-                                    2. div.bar-graph에 score1, score2, score3 클래스 추가함에 따라 그래프 색상 및 아이콘이 변경됩니다.
+                                    2. 점수에 따라 div.bar-graph에 score1, score2, score3 클래스 추가 되며 그래프 색상 및 아이콘이 변경됩니다.
+								
+                                    ------------------------------
+
+                                    [깃발 그래프 - result-list-wrap > result-item]
+                                    1. 점수 입력은 div.result-item에 --percentage: 값;과 
+                                       div.result-item > span.score 두 곳에 입력해주시면 됩니다.
+
+                                    2. 점수에 따라 div.result-item에 score1, score2, score3 클래스 추가 되며 그래프 색상 및 아이콘이 변경됩니다.
 								
 								-->
                                     
                                 <!-- 반원그래프 -->
 								<div class="result-pie-box">
-									<div class="pie-graph-wrap score3" style="--percentage: 29;"><!-- 점수 입력 -->
+									<div class="pie-graph-wrap score3" style="--percentage: 29;"><!-- 점수 입력 시 pie-graph-wrap에 score클래스 추가됨 -->
 										<div class="pie-graph"></div>
                                         <div class="pcnt-wrap">
                                             <span class="pcnt"></span>
@@ -271,7 +282,7 @@
 									<div class="txt">
 										<span class="tit">나의 점수</span>
 										<span class="score">29</span> <!-- 점수 입력 -->
-										<span class="grade"></span>
+										<span class="grade"><!-- [미흡] --></span>
 									</div>
 								</div>
                                 <!-- // 반원그래프 -->
@@ -284,9 +295,9 @@
 											<span class="score">66</span> <!-- 점수 입력 -->
 											<span class="mg">점</span>
 										</div>
-										<div class="bar-graph score2" style="--percentage: 66;"> <!-- 점수 입력 --> 
+										<div class="bar-graph" style="--percentage: 66;"> <!--  점수 입력 시 bar-graph에 score클래스 추가됨 --> 
 											<span class="pcnt"></span>
-                                            <span class="pcnt-txt">보통</span>
+                                            <span class="pcnt-txt"><!-- [보통] --></span>
 										</div>
 									</div>
 									<div class="item">
@@ -295,9 +306,9 @@
 											<span class="score">76</span> <!-- 점수 입력 -->
 											<span class="mg">점</span>
 										</div>
-										<div class="bar-graph score1" style="--percentage: 76;"> <!-- 점수 입력 -->
+										<div class="bar-graph" style="--percentage: 76;"> <!--  점수 입력 시 bar-graph에 score클래스 추가됨 --> 
 											<span class="pcnt"></span>
-                                            <span class="pcnt-txt">양호</span>
+                                            <span class="pcnt-txt"><!-- [양호] --></span>
 										</div>
 									</div>
 								</div>
@@ -339,26 +350,24 @@
                                     <span>진로·경력탐색</span>
                                 </div>
                                 <div class="right-percent">
-                                    <div class="result-item score1" style="--percentage: 86;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 86;"> <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">자기이해</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">86</span><!-- 점수 입력 -->
-                                        <span class="grade">양호</span>
-                                        <button type="button" class="result-pop-btn" data-popup="resultModal" onclick="fnCybReaderApply(); return false;">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                        <span class="grade"><!-- [양호] --></span>
+                                        <!-- 팝업 버튼 -->
+                                        <button type="button" class="result-pop-btn" onclick="fnCybReaderApply(); return false;">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
+                                        <!-- 팝업 버튼 -->
                                     </div>
-                                    <div class="result-item score2" style="--percentage: 68;"> <!-- 점수 입력 -->
+                                    <div class="result-item " style="--percentage: 68;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">직업정보탐색</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">68</span><!-- 점수 입력 -->
-                                        <span class="grade">보통</span>
+                                        <span class="grade"><!-- [보통] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
                                 </div>
@@ -371,26 +380,22 @@
                                     <span>진로·경력설계</span>
                                 </div>
                                 <div class="right-percent">
-                                    <div class="result-item score3" style="--percentage: 29;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 29;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">진로·경력 의사결정</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">29</span><!-- 점수 입력 -->
-                                        <span class="grade">미흡</span>
+                                        <span class="grade"><!-- [미흡] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
-                                    <div class="result-item score2" style="--percentage: 67;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 67;"> <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">진로·경력 계획수립</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">67</span><!-- 점수 입력 -->
-                                        <span class="grade">보통</span>
+                                        <span class="grade"><!-- [보통] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
                                 </div>
@@ -403,37 +408,31 @@
                                     <span>구직수행</span>
                                 </div>
                                 <div class="right-percent">
-                                    <div class="result-item score1" style="--percentage: 94;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 94;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">구직의욕고취</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">94</span><!-- 점수 입력 -->
-                                        <span class="grade">양호</span>
+                                        <span class="grade"><!-- [양호] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
-                                    <div class="result-item score3" style="--percentage: 22;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 22;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">구직정보탐색</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">22</span><!-- 점수 입력 -->
-                                        <span class="grade">미흡</span>
+                                        <span class="grade"><!-- 미흡 --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
-                                    <div class="result-item score2" style="--percentage: 57;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 57;"> <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">구직기술활용</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">57</span><!-- 점수 입력 -->
-                                        <span class="grade">보통</span>
+                                        <span class="grade"><!-- [보통] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
                                 </div>
@@ -446,37 +445,31 @@
                                     <span>경력관리</span>
                                 </div>
                                 <div class="right-percent">
-                                    <div class="result-item score2" style="--percentage: 46;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 46;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">조직적응</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">46</span><!-- 점수 입력 -->
-                                        <span class="grade">보통</span>
+                                        <span class="grade"><!-- [보통] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
-                                    <div class="result-item score1" style="--percentage: 76;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 76;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">경력전환</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">76</span><!-- 점수 입력 -->
-                                        <span class="grade">양호</span>
+                                        <span class="grade"><!-- [양호] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
-                                    <div class="result-item score2" style="--percentage: 54;"> <!-- 점수 입력 -->
+                                    <div class="result-item" style="--percentage: 54;">  <!--  점수 입력 시 result-item에 score클래스 추가됨 --> 
                                         <span class="item-tit">변화관리</span>
-                                        <!-- 깃발 그래프 -->
                                         <div class="result-percent-box">
                                             <span class="pcnt"></span>
                                         </div>
-                                        <!-- // 깃발 그래프 -->
                                         <span class="score">54</span><!-- 점수 입력 -->
-                                        <span class="grade">보통</span>
+                                        <span class="grade"><!-- [보통] --></span>
                                         <button type="button" class="result-pop-btn">나의 위치 <br>상세 확인하기<span class="blind">팝업 열기</span></button>
                                     </div>
                                 </div>
@@ -537,8 +530,83 @@
                         </div>
                         <!-- // 결과 이해 TIP -->
                         <script>
-                        // 정렬 체크박스
                         document.addEventListener("DOMContentLoaded", function() {
+
+                            // 반원 그래프 처리
+                            document.querySelectorAll(".result-pie-box").forEach(function (elem) {
+                                let percentage = parseInt(getComputedStyle(elem.querySelector(".pie-graph-wrap")).getPropertyValue("--percentage"));
+
+                                elem.querySelector(".pie-graph-wrap").classList.remove("score1", "score2", "score3");
+
+                                if (percentage >= 70) {
+                                    elem.querySelector(".pie-graph-wrap").classList.add("score1");
+                                    elem.querySelector(".grade").textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.querySelector(".pie-graph-wrap").classList.add("score2");
+                                    elem.querySelector(".grade").textContent = "보통";
+                                } else {
+                                    elem.querySelector(".pie-graph-wrap").classList.add("score3");
+                                    elem.querySelector(".grade").textContent = "미흡";
+                                }
+                            });
+                            
+                            // 막대 그래프 처리
+                            document.querySelectorAll(".result-bar-box .bar-graph").forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue("--percentage"));
+                                let pcnt = elem.querySelector(".pcnt");
+                                let pcntTxt = elem.querySelector(".pcnt-txt");
+
+                                if (percentage >= 70) {
+                                    elem.classList.add("score1");
+                                    pcntTxt.textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.classList.add("score2");
+                                    pcntTxt.textContent = "보통";
+                                } else {
+                                    elem.classList.add("score3");
+                                    pcntTxt.textContent = "미흡";
+                                }
+                            });
+
+                            // 깃발 그래프 처리
+                            document.querySelectorAll(".result-list-wrap .result-item").forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue("--percentage"));
+                                let pcnt = elem.querySelector(".result-percent-box .pcnt");
+                                let grade = elem.querySelector(".grade");
+
+                                if (percentage >= 70) {
+                                    elem.classList.add("score1");
+                                    grade.textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.classList.add("score2");
+                                    grade.textContent = "보통";
+                                } else {
+                                    elem.classList.add("score3");
+                                    grade.textContent = "미흡";
+                                }
+                            });
+                            
+                            // 팝업 그래프 처리
+                            document.querySelectorAll(".graph-list .graph-item").forEach(function (elem) {
+                                let percentage = parseInt(elem.style.getPropertyValue("--percentage"));
+                                let pcnt = elem.querySelector(".result-bar");
+                                let grade = elem.querySelector(".item-grade");
+
+                                if (percentage >= 70) {
+                                    elem.classList.add("score1");
+                                    grade.textContent = "양호";
+                                } else if (percentage >= 30) {
+                                    elem.classList.add("score2");
+                                    grade.textContent = "보통";
+                                } else {
+                                    elem.classList.add("score3");
+                                    grade.textContent = "미흡";
+                                }
+                            });
+
+
+                            
+                            // 정렬 체크박스
                             const checkbox = document.querySelectorAll(".sort-box .checkbox");
                             const resultItem = document.querySelectorAll(".result-item");
                 
@@ -564,68 +632,86 @@
                             });
                 
                             updateActiveClass();
-                        });
 
-                        // 반원 그래프 처리
-                        document.querySelectorAll('.result-pie-box').forEach(function (elem) {
-                            let percentage = parseInt(getComputedStyle(elem.querySelector('.pie-graph-wrap')).getPropertyValue('--percentage'));
-
-                            elem.querySelector('.pie-graph-wrap').classList.remove('score1', 'score2', 'score3');
-
-                            if (percentage >= 70) {
-                                elem.querySelector('.pie-graph-wrap').classList.add('score1');
-                                elem.querySelector('.grade').textContent = '양호';
-                            } else if (percentage >= 30) {
-                                elem.querySelector('.pie-graph-wrap').classList.add('score2');
-                                elem.querySelector('.grade').textContent = '보통';
-                            } else {
-                                elem.querySelector('.pie-graph-wrap').classList.add('score3');
-                                elem.querySelector('.grade').textContent = '미흡';
-                            }
-                        });
-                        
-                        // 막대 그래프 처리
-                        document.querySelectorAll('.result-bar-box .bar-graph').forEach(function (elem) {
-                            let percentage = parseInt(elem.style.getPropertyValue('--percentage'));
-                            let pcnt = elem.querySelector('.pcnt');
-                            let pcntTxt = elem.querySelector('.pcnt-txt');
-
-                            if (percentage >= 70) {
-                                elem.classList.add('score1');
-                                pcntTxt.textContent = '양호';
-                            } else if (percentage >= 30) {
-                                elem.classList.add('score2');
-                                pcntTxt.textContent = '보통';
-                            } else {
-                                elem.classList.add('score3');
-                                pcntTxt.textContent = '미흡';
-                            }
-                        });
-
-                        // 깃발 그래프 처리
-                        document.querySelectorAll('.result-list-wrap .result-item').forEach(function (elem) {
-                            let percentage = parseInt(elem.style.getPropertyValue('--percentage'));
-                            let pcnt = elem.querySelector('.result-percent-box .pcnt');
-                            let grade = elem.querySelector('.grade');
-
-                            if (percentage >= 70) {
-                                elem.classList.add('score1');
-                                grade.textContent = '양호';
-                            } else if (percentage >= 30) {
-                                elem.classList.add('score2');
-                                grade.textContent = '보통';
-                            } else {
-                                elem.classList.add('score3');
-                                grade.textContent = '미흡';
-                            }
                         });
 
                         </script>
-						<!-- // 240705 신규 페이지 작업 (ej) -->
+						<!-- // 240716 신규 페이지 작업 (ej) -->
                     </div>
                 </article>
                 <aside class="topbtn">위로</aside>
-                <div id="popupLayer"></div>
+                
+                <!-- 결과 팝업 : 학습자료 > 커리어info > 구독신청, 구독해지 팝업 참고했습니다. -->
+                <div id="popupLayer" style="display: none;">
+                    <div id="resultGraphrPopup" class="popupLayer ui-draggable result-popup" style="z-index: 1000003; position: relative;">
+
+                        <script language="javascript">
+                        function f_close(){
+                            fnLayerClose('innerLayer');
+                        }
+                        </script>
+                        <div class="layer" id="innerLayer">
+                            <div class="pop_bg"></div>
+                            <div class="pop-layer">
+                                <div class="pop_container">
+                                    <div class="pop_title_area">
+                                        <h3>생애경력개발정보 웹진 구독 신청/해지</h3>
+                                    </div>
+                                    <div class="scroll_area" style="overflow: hidden;">
+                                        <div class="scroll_inner">
+                                            <!-- content : S -->
+                                            <div class="graph-cont">
+                                                <div class="graph-tr">
+                                                    <div class="align">
+                                                        <span class="num">0</span>
+                                                        <span class="num">30</span>
+                                                        <span class="num">70</span>
+                                                        <span class="num">100</span>
+                                                    </div>
+                                                </div>
+                                                <div class="graph-list">
+                                                    <div class="graph-item" style="--percentage: 68;"> <!-- 점수 입력 시 score 자동 입력됨 -->
+                                                        <span class="tit">나의 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="item-grade"><!-- [보통] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="item-score">68</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="graph-item" style="--percentage: 86;"> <!-- 점수 입력 -->
+                                                        <span class="tit">구직자 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="item-grade"><!-- [양호] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="item-score">86</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="graph-item" style="--percentage: 29;"> <!-- 점수 입력 -->
+                                                        <span class="tit">과거 나의 점수</span>
+                                                        <div class="bar-box">
+                                                            <span class="item-grade"><!-- [미흡] --></span>
+                                                            <span class="result-bar"></span>
+                                                            <span class="item-score">29</span> <!-- 점수 입력 -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- content : E -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- pop btn : S -->
+                                <a href="#nones" class="pop_btn cbtn" onclick="f_close();">닫기</a>
+                                <!-- pop btn : E -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pop_bg" style="z-index: 1000002;"></div>
+                </div>
+                <!-- // 결과 팝업 -->
+
+
             </section>
         </main>
         <!-- content : E -->

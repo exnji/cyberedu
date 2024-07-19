@@ -23,9 +23,11 @@
 
 .edu_step_container{margin: 40px auto 0; height: 450px; 
     .edu_step{display: flex; height: 420px;}
+    .swiper-pagination { width: 100%;}
 }
 .edu_step{position: relative; height: 420px; background-color: #fff; border: 1px solid #DEE1E5; border-radius: 10px;
-    .slide_contents{display: flex; gap: 31px; margin: 0 auto;
+    .slide_contents{display: flex; gap: 31px; margin: 0 auto; position: relative;
+        &::after { content: ''; display: inline-block; width: 190px; height: 216px; background: url("../images/page/img_info_slide_person.png") no-repeat center; position: absolute; left: 46%; transform: translateX(-50%); bottom: 0;}
         img{}
         .slide_txt{ margin-top: 124px; width: 337px; font-family: 'PRETSB'; font-size: 14px; line-height: 1.286; color: #333; word-break: keep-all;
             p{margin-bottom: 41px; font-size: 24px;}
@@ -45,14 +47,15 @@
 
 .edu_step .middle_box{width: 572px; text-align: center; position: relative; font-size: 0;
 
-    &::before{position: absolute; left: 50%; top: 50%;  transform: translate(-50%, -50%); padding: 25px; width: 107px; height: 108px; background: url(../images/page/img_ellipse.png)no-repeat center; content: '';}
+    h3{position: absolute; left: 50%; top: 50%;  transform: translate(-50%, -50%); padding: 25px; width: 107px; height: 108px; background: url(../images/page/img_ellipse.png)no-repeat center; content: '';}
     &::after{position: absolute; right: -15px; top: 45%; width: 37px; height: 29px; background: url(../images/page/img_Triangle.png)no-repeat center; transform: rotate(-90deg);  content: '';}
 }
 
 .step-wrap {position: relative; width: 960px; margin: 0 auto; display: flex; justify-content: center; gap: 20px;
-    h3{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: block; font-family: 'PRETSB'; font-size: 16px; color: #333333; line-height: 1.2; text-align: center; z-index: 1;}
+    h3{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: block; font-family: 'PRETSB'; font-size: 16px; color: #333333; line-height: 1.2; text-align: center; z-index: 1; background: linear-gradient(127deg, rgba(236,237,234,1) 0%, rgba(248,248,246,1) 50%, rgba(220,219,216,1) 100%); width: 100px; height: 100px; border-radius: 100px; border:1px solid #dfdfdf; box-sizing: border-box; box-shadow: -1px 1px 4px 0 rgba(0,0,0,.15);display: inline-flex; align-items: center; justify-content: center;}
 }
 
+.edu_step .middle_box_wrap{ display: flex; flex-wrap: wrap; position: relative;}
 .edu_step .middle_box{ display: flex; flex-wrap: wrap; }
 
 .edu_step .middle_box div{position: relative; width: 50%; height: 50%; font-size:16px; 

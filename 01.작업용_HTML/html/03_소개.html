@@ -227,6 +227,9 @@
 							<li class="tab_nav_item active" id="tab2" title="선택됨">
 								<a href="#none" class="tab_nav_link">진단결과 보기 <span class="chk"></span></a>
 							</li>
+							<li class="tab_nav_item" id="tab3">
+								<a href="#none" class="tab_nav_link">추천교육과정 <span class="chk"></span></a>
+							</li>
 						</ul>
                         <!-- 240705 신규 페이지 작업 (yj) -->
 						<div class="info_inner">
@@ -257,7 +260,6 @@
                                     </div>
                                     <div class="edu_step swiper-slide">
                                         <div class="step-wrap">
-                                            <h3>맞춤형<br>교육과정<br>추천</h3>
                                             <div class="left_box">
                                                 <div>
                                                     <img src="../images/page/img_edu_step1.png" alt="">
@@ -270,40 +272,43 @@
                                                     <p>진로·경력개발<br>준비도 진단</p>
                                                 </div>
                                             </div>
-                                            <div class="middle_box">
-                                                <div>
-                                                    <img src="../images/page/img_diagnosis4.png" alt="경력관리 변화관리 경력전환 조직적응">
-                                                    <ul class="desc_box">
-                                                        <li class="ul_tit">경력관리</li>
-                                                        <li>변화관리</li>
-                                                        <li>경력전환</li>
-                                                        <li>조직적응</li>
-                                                    </ul>
-                                                </div>
-                                                <div>
-                                                    <img src="../images/page/img_diagnosis1.png" alt="진로·경력탐색 자기이해 직업정보탐색">
-                                                    <ul class="desc_box">
-                                                        <li class="ul_tit">진로·경력탐색</li>
-                                                        <li>자기이해</li>
-                                                        <li>직업정보탐색<li>
-                                                    </ul>
-                                                </div>
-                                                <div>
-                                                    <img src="../images/page/img_diagnosis3.png" alt="구직수행 구직기술활용 구직정보탐색 구직의욕고취">
-                                                    <ul class="desc_box">
-                                                        <li class="ul_tit">구직수행</li>
-                                                        <li>구직기술활용 </li>
-                                                        <li>구직정보탐색</li>
-                                                        <li>구직의욕고취</li>
-                                                    </ul>
-                                                </div>
-                                                <div>
-                                                    <img src="../images/page/img_diagnosis2.png" alt="진로·경력설계 진로·경력 계획수립 진로·경력 의사결정">
-                                                    <ul class="desc_box">
-                                                        <li class="ul_tit">진로·경력설계</li>
-                                                        <li>진로·경력 계획수립</li>
-                                                        <li>진로·경력 의사결정</li>
-                                                    </ul>
+                                            <div class="middle_box_wrap">
+                                                <h3>맞춤형<br>교육과정<br>추천</h3>
+                                                <div class="middle_box">
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis4.png" alt="경력관리 변화관리 경력전환 조직적응">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">경력관리</li>
+                                                            <li>변화관리</li>
+                                                            <li>경력전환</li>
+                                                            <li>조직적응</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis1.png" alt="진로·경력탐색 자기이해 직업정보탐색">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">진로·경력탐색</li>
+                                                            <li>자기이해</li>
+                                                            <li>직업정보탐색<li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis3.png" alt="구직수행 구직기술활용 구직정보탐색 구직의욕고취">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">구직수행</li>
+                                                            <li>구직기술활용 </li>
+                                                            <li>구직정보탐색</li>
+                                                            <li>구직의욕고취</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis2.png" alt="진로·경력설계 진로·경력 계획수립 진로·경력 의사결정">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">진로·경력설계</li>
+                                                            <li>진로·경력 계획수립</li>
+                                                            <li>진로·경력 의사결정</li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="right_box">
@@ -315,9 +320,11 @@
                                         </div>
                                     </div>
                                 </div>    
-                                <button class="btn_slide_prev">이전</button>
-                                <button class="btn_slide_next">다음</button>
-                                <div class="swiper-pagination"></div>
+                                <div class="paging">
+                                    <button class="btn_slide_prev">이전</button>
+                                    <div class="swiper-pagination"></div>
+                                    <button class="btn_slide_next">다음</button>
+                                </div>
                             </div>
 
                             <!--swiper-->

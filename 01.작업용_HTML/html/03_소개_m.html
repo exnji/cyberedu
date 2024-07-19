@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ko" class="oacxHtml">
+<head>
+	<title>사이버진로교육센터소개 조회</title>
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-ico" />
+	<link rel="icon" href="../images/favicon.ico" type="image/x-ico" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+	<link href="../js/swiper-4.5.1/dist/css/swiper.min.css" rel="stylesheet" />
+	<link href="../css/fonts.css" rel="stylesheet" />
+	<link href="../css/m_common.css" rel="stylesheet" />
+	<link href="../css/m_layout.css" rel="stylesheet" />
+	<link href="../css/m_content.css" rel="stylesheet" />
+	<link href="../css/jquery-ui.min.css" rel="stylesheet" />
+	<script type="text/javascript">
+	//<![CDATA[
+	var sContext = '/cyberedu';
+	//]]>
+	</script>
+	<script type="text/javascript" src="../js/cyb/lib/jquery/jquery-1.10.2.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/framework/keis.import.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/makePCookie.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/cyb/keis.cyb.common.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/common/util/util.jqMore.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/jquery-3.5.1.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/swiper-4.5.1/dist/js/swiper.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/m_ui-common.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/cyb/lib/jquery/jquery-ui.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/common/WebUtil.js" charset="utf-8"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
+		
+
+		
+
+		regtCheckUrl = '../cyb/mypage/lectroom/main/checkLectroomMain.do';				
+		lectureRoomUrl = '../cyb/mypage/lectroom/main/retrieveLectroomMainDetail.do';	
+	});
+
+	function f_responseIntgCustJoinAjax(resultObj){
+		if(resultObj.resultCd == "0000"){	// IMS HEALTH CHECK 결과가 정상인 경우만 팝업
+			if(resultObj.intgType == "JOIN")
+				window.open(resultObj.imsWebDomain + "/linkApi.do?" + resultObj.linkUrl, 'intgIMSWEB');
+			else
+				window.open(resultObj.imsWebDomain + "/linkApi.do?" + resultObj.linkUrl, 'intgIMSWEB', 'width=530,height=800,resizable=0,scrollbars=no,status=0,titlebar=0,toolbar=0,left=300,top=100');
+		} else {
+			if(resultObj.intgType == "JOIN")
+				location.href = "../cyb/customer/information/join/retrieveInformationJoinAgree.do?memType=" + resultObj.ageType;
+		}
+	}
+
+	var _LAYER = {
+			rootId : "popupLayer",
+			layerClass : "popupLayer",
+			bgClass : "pop_bg",
+			dragClass : "popup_header"
+		};
+
+	// 필요에 따라 공통 스크립트 정의
+	var _CONTEXT_ROOT = '';
+	</script>
+</head>
+<body>
+
+	<!-- skip nav : S -->
+	<nav class="blind">
+		<ul>
+			<li><a href="#content">본문 내용 바로가기</a></li>
+			<li><a href="#footer">페이지 하단 바로가기</a></li>
+		</ul>
+	</nav>
+	 <!-- skip nav : E -->
+
+	<!-- content : S -->
+	<main class="page-wrap">
+		
+
+
+
+
+
+
+
+<style type="text/css">
+@media only screen and (max-width: 350px){
+	.page_title_area .title_area h2 {
+		width: 180px;
+	}
+	.center01 .center_cnt1 .itam1 dl {
+		width: 15.7rem;
+	}
+	.center01 .center_cnt1 .itam2 dl {
+		width: 15.1rem;
+	}
+	.center01 .center_cnt1 .itam3 dl {
+		width: 15.6rem;
+	}
+	.center01 .center_cnt1 .itam4 dl {
+		width: 18.3rem;
+	}
+}
+@media only screen and (min-width: 351px){
+	.center01 .center_cnt1 .itam1 dl,
+	.center01 .center_cnt1 .itam3 dl {
+		margin-left: 9rem;
+	}
+	.center01 .center_cnt1 .itam2 dl,
+	.center01 .center_cnt1 .itam4 dl {
+		margin-right: 8rem;
+	}
+}
+</style>
+			<article class="common_prev_area">
+				<div class="pd20">
+					<button type="button" class="btn common_prev">뒤로</button>
+				</div>
+			</article>
+			<article class="page_title_area">
+				<div class="pd20">
+					<div class="title_area">
+						<h2>진로·경력개발 하위 요인별 진단</h2>
+						<a href="#none" title="이용안내 내용 열기" class="use_info">이용안내<span class="ico_use"></span></a>
+						<div class="use_area">
+							<p>
+								생애진로개발센터는 진로탐색과 취업에서 은퇴까지,
+								생애 전 단계 진로개발을 지원합니다.
+							</p>
+						</div>
+					</div>
+				</div>
+			</article>
+			<article class="content_area">
+				<div class="content_inner">
+					<div class="view_data_area center01">
+                        <div class="pb12 pt25">
+							<div class="scroll_row">
+								<h3 class="blind">공지사항 탭 메뉴 리스트</h3>
+								<div class="pd20">
+									<ul class="tab_nav">
+										<li class="tab_nav_item active" title="선택됨">
+											<a href="#none" class="tab_nav_link">진단하기</a>
+										</li>
+										<li class="tab_nav_item">
+											<a href="#none" class="tab_nav_link">진단결과보기</a>
+										</li>
+										<li class="tab_nav_item">
+											<a href="#none" class="tab_nav_link">추천교육과정</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+                        <form id="searchCrsOffForm" name="searchCrsOffForm" method="post" action="">
+							<input type="hidden" name="searchCrsOpenYr" id="searchCrsOpenYr">
+							<input type="hidden" name="crsClfcCdParam" id="crsClfcCdParam">
+							<input type="hidden" id="searchListYn" value="Y">
+							<input type="hidden" name="crsId" id="crsId" value="">
+							<input type="hidden" name="crsSeqId" id="crsSeqId" value="">
+						</form>
+                        <div class="cnt_line"></div>
+                        
+                        <!-- 240705 신규 페이지 작업 (yj) -->
+						<div class="info_inner">
+                            <div class="tit_box">
+                                <p>러닝(Learning)코치와 함께하는, 진로·경력개발 준비도 진단</p>
+                                <span>- 진로·경력개발 준비도 진단을 통한 맞춤형 교육과정 추천 -</span>
+                            </div>
+                            <div class="edu_step_container swiper-container">
+                                <div class="swiper-wrapper">                 
+                                    <div class="edu_step swiper-slide">
+                                        <div class="slide_contents">
+                                            <img src="../images/page/img_info_slide2.png" alt="">
+                                            <div class="slide_txt">
+                                                <p>진로·경력개발 준비도 진단 이해하기</p>
+                                                <span>진로·경력개발 준비도 진단은 청년 구직자를 대상으로 온라인교육 수강 전 진로·경력개발 준비도 진단을 통해 개별 맞춤형 교육과정을 추천해주는 진단 서비스입니다.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="edu_step swiper-slide">
+                                        <div class="slide_contents">
+                                            <img src="../images/page/img_info_slide3.png" alt="">
+                                            <div class="slide_txt">
+                                                <p>진로·경력개발 준비도 진단 이해하기</p>
+                                                <span>개개인의 진로·경력개발 준비도 진단 결과를 토대로 개별 맞춤형 온라인 교육 관련 서비스를 추천받아, 진로·경력개발 역량을 강화하고, 진로·취업준비에 적극 활용해보세요!</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="edu_step swiper-slide">
+                                        <div class="step-wrap">
+                                            <div class="left_box">
+                                                <div>
+                                                    <img src="../images/page/img_edu_step1.png" alt="">
+                                                    <p>진로·경력개발 희망 대상 <br>
+                                                        <span>(청년 구직자)</span>
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <img src="../images/page/img_edu_step2.png" alt="">
+                                                    <p>진로·경력개발<br>준비도 진단</p>
+                                                </div>
+                                            </div>
+                                            <div class="middle_box_wrap">
+                                                <h3>맞춤형<br>교육과정<br>추천</h3>
+                                                <div class="middle_box">
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis4.png" alt="경력관리 변화관리 경력전환 조직적응">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">경력관리</li>
+                                                            <li>변화관리</li>
+                                                            <li>경력전환</li>
+                                                            <li>조직적응</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis1.png" alt="진로·경력탐색 자기이해 직업정보탐색">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">진로·경력탐색</li>
+                                                            <li>자기이해</li>
+                                                            <li>직업정보탐색<li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis3.png" alt="구직수행 구직기술활용 구직정보탐색 구직의욕고취">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">구직수행</li>
+                                                            <li>구직기술활용 </li>
+                                                            <li>구직정보탐색</li>
+                                                            <li>구직의욕고취</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <img src="../images/page/img_diagnosis2.png" alt="진로·경력설계 진로·경력 계획수립 진로·경력 의사결정">
+                                                        <ul class="desc_box">
+                                                            <li class="ul_tit">진로·경력설계</li>
+                                                            <li>진로·경력 계획수립</li>
+                                                            <li>진로·경력 의사결정</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right_box">
+                                                <div>
+                                                    <img src="../images/page/img_edu_step3.png" alt="">
+                                                    <p>진로·경력개발<br>역량 강화</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                                <div class="paging">
+                                    <button class="btn_slide_prev">이전</button>
+                                    <div class="swiper-pagination"></div>
+                                    <button class="btn_slide_next">다음</button>
+                                </div>
+                            </div>
+
+                            <!--swiper-->
+                            <script>
+                                var swiper = new Swiper(".edu_step_container", {
+                                    spaceBetween: 30,
+                                    effect: "fade",
+                                    navigation: {
+                                        nextEl: ".btn_slide_next",
+                                        prevEl: ".btn_slide_prev",
+                                    },
+                                    pagination: {
+                                        el: ".swiper-pagination",
+                                        clickable: true,
+                                        renderBullet: function (index, className) {
+                                            return '<button class="' + className + '"></button>';
+                                        },
+                                    },
+                                    loop: true,
+                                    a11y: {
+                                        enabled: false
+                                    }
+                                });
+                            </script>
+                            
+                            <div class="diagnosis">
+                                <div class="diagnosis_list">
+                                    <img src="../images/page/img_diagnosis1.png" alt="">
+                                    <p>진로·경력탐색</p>
+                                    <span>자신이 원하는 진로 및 직업을 선택하기 위해 자신의 특성을 이해하고 직업정보를 탐색하는 정도</span>
+                                    <div>
+                                        <p>자기이해</p>
+                                        <div class="desc_box">
+                                            <span>진로 및 직업 선택을 위해 자신의 흥미, 적성, 가치관 등의 특성과 보유 능력 등을 이해하는 정도 </span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>직업정보탐색</p>
+                                        <div class="desc_box">
+                                            <span>원하는 직업의 산업, 기업, 직무, 채용, 교육, 취업지원기관 관련 정보를 수집하고 활용하는 정도 </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagnosis_list second">
+                                    <img src="../images/page/img_diagnosis2.png" alt="">
+                                    <p>진로·경력설계 </p>
+                                    <span>자신이 원하는 진로 및 직업을 선택하기 위해 자신의 특성을 이해하고 직업정보를 탐색하는 정도</span>
+                                    <div>
+                                        <p>진로·경력 의사결정</p>
+                                        <div class="desc_box">
+                                            <span>진로·경력목표를 설정하고 목표 달성에 적합한 대안을 탐색하고 분석하는 정도 </span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>진로·경력 계획수립</p>
+                                        <div class="desc_box">
+                                            <span>진로·경력목표를 달성하기 위한 구체적인 실행계획을 수립 및 실천하고, 실천 과정에서의 어려움에 대응하는 정도</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagnosis_list third">
+                                    <img src="../images/page/img_diagnosis3.png" alt="">
+                                    <p>구직수행</p>
+                                    <span>자신이 원하는 진로 및 직업을 선택하기 위해 자신의 특성을 이해하고 직업정보를 탐색하는 정도</span>
+                                    <div>
+                                        <p>구직의욕고취 </p>
+                                        <div class="desc_box">
+                                            <span>일과 구직에 대해 적극적이고 긍정적인 태도를 갖기 위해 노력하는 정도</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>구직정보탐색</p>
+                                        <div class="desc_box">
+                                            <span>구직에 필요한 산업/ 기업/ 직무정보, 채용정보, 지원 정책(기관) 정보, 교육훈련 및 자격 정보 등을 탐색하고 활용하는 정도</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>구직기술활용</p>
+                                        <div class="desc_box">
+                                            <span>구직에 필요한 서류를 작성하고 면접 요령을 이해·적용하는 정도</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="diagnosis_list fourth">
+                                    <img src="../images/page/img_diagnosis4.png" alt="">
+                                    <p>경력관리</p>
+                                    <span>자신이 원하는 진로 및 직업을 선택하기 위해 자신의 특성을 이해하고 직업정보를 탐색하는 정도</span>
+                                    <div>
+                                        <p>조직적응</p>
+                                        <div class="desc_box">
+                                            <span>조직과 업무에 적응하여 원활한 직장생활을 유지하는 정도</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>경력전환</p>
+                                        <div class="desc_box">
+                                            <span>경력전환(이직, 전직, 창업 등) 가능 분야를 탐색하고, 경력 전환 목표와 전략을 수립·실천하는 정도 </span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>변화관리</p>
+                                        <div class="desc_box">
+                                            <span>기업·조직 및 노동시장 변화 등 내·외부 환경변화에 대응하는 것에 필요성을 이해하며, 대응 전략 및</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!-- // 240705 신규 페이지 작업 (yj) -->
+
+
+
+					</div>
+				</div> 
+			</article>
+		
+
+
+
+
+
+
+<script type="text/javascript">
+// function f_login() {
+
+// 	//아이디 체크
+// 	if(isEmpty($("#userId").val())){
+// 		alert('아이디를 입력해 주세요.');
+// 		$("#userId").focus();
+// 		return false;
+// 	}
+
+// 	//비밀번호 체크
+// 	if(isEmpty($("#userPwd").val())){
+// 		alert('비밀번호를 입력해 주세요.');
+// 		$("#userPwd").focus();
+// 		return false;
+// 	}
+
+// 	var frm = document.loginfrm;
+
+// 	frm.action="https://www.work.go.kr:443../cyb/customer/information/login/retrieveInformationLoginProcess.do";
+// 	frm.target="_self";
+// 	frm.submit();
+// }
+
+function fn_findEdu(searchWord) {
+	var _url = "";
+	if($("#findEduGubun").find("button[class*=active]").text() == "온라인교육") {
+		_url = "../cyb/education/schedule/elearning/retrieveScheduleElearningList.do";
+	} else if($("#findEduGubun").find("button[class*=active]").text() == "집합교육") {
+		_url = "../cyb/education/schedule/offline/retrieveScheduleOfflineList.do?tabGubun=AllList";
+	}
+	if(searchWord != undefined) {
+		$("#searchCrsForm").find("input[name=searchWord]").val(searchWord);
+	} else {
+		if($("#searchCrsForm").find("input[name=searchWord]").val() == '') {
+			alert("검색 과정명을 입력해주세요.");
+			$("#searchCrsForm").find("input[name=searchWord]").focus();
+			return false;
+		}
+	}
+	
+	var frm = document.searchCrsForm;
+	frm.action = _url;
+	frm.target = "_self";
+	frm.submit();
+}
+
+function fCareer() {
+	fnOpenPopup({
+		url : '../cyb/career/contents/main/registerContentsMainView.do',
+		name : 'crsSeqWin',
+		width : '1150',
+		height : '920'
+	});
+}
+
+</script>
+<style type="text/css">
+@media only screen and (max-height: 515px) and (min-width: 555px){
+	.catSch_key_visual,
+	.bottom_nav .nav_area {
+		display: none;
+	}
+}
+@media only screen and (max-height: 560px) and (max-width: 555px){
+	.catSch_key_visual,
+	.bottom_nav .nav_area {
+		display: none;
+	}
+}
+@media only screen and (max-width: 349px){
+	.default_btn_area .btn {
+		padding: 0 .6rem;
+	}
+}
+</style>
+		<!-- popup S -->
+		<div id="popupLayer">
+		</div>
+		<!-- popup E -->
+		<!-- footer : S -->
+		<footer>
+			<aside class="topbtn">위로</aside>
+			<section class="footer_area">
+				<div class="pd20">
+					<nav>
+						<ul>
+							<li><a href="#none" onclick="location.href='https://www.work24.go.kr/cm/c/d/0130/retrieveUtzeStpt.do?moelSTKN='" title="이용약관 새창이동">이용약관</a></li>
+							<li><a href="#none" onclick="window.open('../cyb/customer/information/indvdinfo/prtecPolicy.do','prtecPolicyPop','resizable=0,scrollbars=no,status=0,titlebar=0,toolbar=0')" title="개인정보처리방침 새창이동">개인정보처리방침</a></li>
+							<li><a href="#none" onclick="location.href='https://www.work24.go.kr/cm/c/d/0130/retrieveEmailAdrPrssPlcy.do?moelSTKN='" title="이메일주소무단수집거부 새창이동">이메일주소무단수집거부</a></li>
+							<li><a href="#none" onclick="location.href='https://www.work24.go.kr/cm/c/d/0130/retrieveCpyrPoly.do?moelSTKN='" title="저작권정책 및 제휴문의 새창이동">저작권정책 및 제휴문의</a></li>
+						</ul>
+					</nav>
+					<address>
+						<p>27740 충청북도 음성군 맹동면 태정로6 한국고용정보원</p>
+						<a href="mailto:cyberedu@keis.or.kr" title="시스템관련문의 : cyberedu@keis.or.kr 메일 쓰기">시스템관련문의 : cyberedu@keis.or.kr</a> 
+						<a href="tel:1577-7114" title="시스템관련문의 1577-7114 전화걸기" class="tel_link">Tel : 1577-7114</a>
+					</address>
+					<p class="copy">Copyright  고용노동부  한국고용정보원 all rights reserved.</p>
+					<div class="footer_area_logo">
+						<a href="#none" onclick="window.open('http://www.keis.or.kr'); return false;" target="_blank" title="고용노동부 새창이동">
+							<span class="ico_footLogo1">
+							</span>
+						</a>
+						<a href="#none" onclick="window.open('http://www.keis.or.kr'); return false;" target="_blank" title="한국고용정보원 새창이동">
+							<span class="ico_footLogo2">
+							</span>
+						</a>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<!-- footer : E -->
+		<!-- bottom_nav : S -->
+		<section class="bottom_nav">
+			<nav class="nav_area">
+				<nav class="btn_menu">
+					<button class="btn_home" onclick="location.href='../main.do'">
+						<span class="ico_home"></span>
+						<span>홈</span>
+					</button>
+					<button class="k-nav btn_cate" data-target="btnCate">
+						<span class="ico_cate"></span>
+						<span>카테고리</span>
+					</button>
+					<button class="k-nav btn_sch" data-target="btnSch">
+						<span class="ico_sch"></span>
+						<span>검색</span>
+					</button>
+					<button class="btn_my" data-target="btnMy" onclick="location.href='../cyb/customer/information/login/retrieveInformationLoginView.do'">
+						<span class="ico_my"></span>
+						<span>MY</span>
+					</button>
+				</nav>
+			</nav>
+			<div class="nav_cnt_area">
+				<div class="nav_cnt" id="btnCate">
+					<div class="nav_close_area">
+						<a href="#none" class="nav_close">닫기</a>
+					</div>
+					<div class="mo_scroll">
+						<div class="pd30" style="padding-bottom: 4rem;">
+							<nav class="cate_nav">
+								
+									<dl>
+										
+											
+												<dt class="cate_link">
+													<a href="#none" title="교육안내" >교육안내</a>
+												</dt>
+												
+													<dd>
+														<ul>
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/education/schedule/offline/retrieveScheduleOfflineList.do" title="집합교육">집합교육</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/education/schedule/elearning/retrieveScheduleElearningList.do" title="온라인교육">온라인교육</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/education/schedule/buildup/retrieveScheduleBuildupList.do" title="빌드업교육">빌드업교육</a></li>
+																	
+																
+															
+														</ul>
+													</dd>
+												
+											
+										
+											
+												<dt class="cate_link">
+													<a href="#none" title="학습자료" >학습자료</a>
+												</dt>
+												
+													<dd>
+														<ul>
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/wbzn/contents/main/retrieveContentsMainList.do" title="커리어Info">커리어Info</a></li>
+																	
+																
+															
+																
+																	
+																		<li><a href="#" onclick="fCareer(); return false;" title="커리어엔진">커리어엔진</a></li>
+																	
+																	
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/board/futurecareer/guide/retrieveFuturecareerGuideList.do" title="진로지도 자료">진로지도 자료</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/board/job/psychology/retrieveJobPsychologyList.do" title="직업심리검사 자료">직업심리검사 자료</a></li>
+																	
+																
+															
+																
+																	
+																	
+																		<li><a href="#" onclick="fn_moelToken('https://www.work.go.kr/consltJobCarpa/videoInfo/videoInfoList.do?videoType=01&amp;catCd1=01&amp;catCd2=0101');" title="진로지도 동영상">진로지도 동영상</a></li>
+																	
+																	
+																
+															
+														</ul>
+													</dd>
+												
+											
+										
+											
+												<dt class="cate_link">
+													<a href="#none" title="공지사항" >공지사항</a>
+												</dt>
+												
+													<dd>
+														<ul>
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/customer/board/notice/retrieveBoardNoticeList.do" title="공지사항">공지사항</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/customer/board/faq/retrieveBoardFaqList.do" title="자주하는질문">자주하는질문</a></li>
+																	
+																
+															
+														</ul>
+													</dd>
+												
+											
+										
+											
+												<dt class="cate_link">
+													<a href="#none" title="센터소개" >센터소개</a>
+												</dt>
+												
+													<dd>
+														<ul>
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/introduction/information/center/retrieveInformationCenterDetail.do" title="센터 소개">센터 소개</a></li>
+																	
+																
+															
+														</ul>
+													</dd>
+												
+											
+										
+											
+												<dt class="cate_link">
+													<a href="#none" title="마이페이지" >마이페이지</a>
+												</dt>
+												
+													<dd>
+														<ul>
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/mypage/course/atnlc/retrieveCourseAtnlcList.do" title="수강교육과정">수강교육과정</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/mypage/course/complete/retrieveCourseCompleteList.do" title="수료이력조회">수료이력조회</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/mypage/course/after/retrieveCourseAfterList.do" title="사후과정조회">사후과정조회</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/mypage/community/main/retrieveCommunityMainList.do" title="과정커뮤니티">과정커뮤니티</a></li>
+																	
+																
+															
+																
+																	
+																	
+																	
+																		<li><a href="../cyb/mypage/course/interest/retrieveCourseInterestList.do" title="관심과정">관심과정</a></li>
+																	
+																
+															
+														</ul>
+													</dd>
+												
+											
+										
+									</dl>
+								
+							</nav>
+							
+								<div class="login_info">
+									<span class="color_accent">지금 바로 로그인해보세요!</span>
+									<a href="#none" onclick="f_moveLogin();" class="btn line green" title="로그인 이동">로그인</a>
+								</div>
+							
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="nav_cnt" id="btnSch">
+					<div class="nav_close_area">
+						<a href="#none" class="nav_close">닫기</a>
+					</div>
+					<div class="pd30">
+						<div class="cate_sch">
+							<h3>어떤 교육을<br/>찾고 계신가요?</h3>
+							<div class="default_btn_area" id="findEduGubun">
+								<button type="button" class="btn active">온라인교육</button>
+								<button type="button" class="btn">집합교육</button>
+								<button type="button" class="btn">빌드업교육</button>
+							</div>
+							<form name="searchCrsForm" id="searchCrsForm" method="post" onsubmit="return false;" action="">
+								<input type="hidden" id="lrnCrsId" name="lrnCrsId"/>
+								<input type="hidden" id="lrnCrsSeqId" name="lrnCrsSeqId"/>
+								<input type="hidden" id="lrnRegtNo" name="lrnRegtNo" />
+								<input type="hidden" id="crsId" name="crsId" />
+								<input type="hidden" id="crsSeqId" name="crsSeqId" />
+								<fieldset>
+									<legend>검색키워드</legend>
+									<div class="sch_area row_col1">
+										<input type="text" class="input txt sch_event" id="searchWord" name="searchWord" value="" onkeypress="if (event.keyCode == 13) {fn_findEdu(); return false;}" title="원하는 교육과정을 검색해보세요" placeholder="원하는 교육과정을 검색해보세요" />
+										<button type="button" class="btn sch_btn" onclick="fn_findEdu();return false;"><span class="blind">검색</span>검색버튼</button>
+									</div>
+								</fieldset>
+							</form>
+							<ul class="hash_tag_area">
+								<li><a href="#none" class="btn line gray white" onclick="fn_searchEdu('빌드업');return false;">#빌드업</a></li>
+								<li><a href="#none" class="btn line gray white" onclick="fn_searchEdu('서류전형');return false;">#서류전형 </a></li>
+								<li><a href="#none" class="btn line gray white" onclick="fn_searchEdu('일경험');return false;">#일경험</a></li>
+								<li><a href="#none" class="btn line gray white" onclick="fn_searchEdu('면접전형');return false;">#면접전형 </a></li>
+								<li><a href="#none" class="btn line gray white" onclick="fn_searchEdu('노동법');return false;">#노동법</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="catSch_key_visual">
+						<p>내 진로 탐색과 직업 선택을<br/> 위한 모든 것!</p>
+						<h3>사이버진로교육센터</h3>
+						<figure title="사이버진로교육센터 이미지"></figure>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+<script type="text/javascript">
+//<![CDATA[
+//moelSTKN form 전송 공통
+function fn_moelToken(url){
+	
+	
+	moelSTKNFrm.action = url;
+	moelSTKNFrm.target = '_blank';
+	moelSTKNFrm.submit();
+}
+
+function fn_g24Link(g25Url,g24Target,g24Method,g24TokenYn){
+	var _url = g25Url;
+	var _g24Url = "https://www.work24.go.kr/cm/z/b/0210/ssoLogin.do"
+	var _target = "_blank";
+	var _method = "post";
+
+	if(g24Target != ''){
+		_target = g24Target;
+	}
+	
+	if(g24Method != '') {
+		_method = g24Method;
+	}
+	
+	
+	var moelSTKNFrm = document.getElementById('moelSTKNFrm');
+	if(g24TokenYn == "Y") {
+		
+		
+		_url += "?moelSTKN=";
+		
+	}
+
+	moelSTKNFrm.method = _method;
+	moelSTKNFrm.action = _url;
+	moelSTKNFrm.target = _target;
+	moelSTKNFrm.submit();
+}
+//]]>
+</script>
+<form id="moelSTKNFrm" name="moelSTKNFrm" method="post" action="" >
+	
+	
+</form>
+
+	</main>
+	<!-- content : E -->
+
+</body>
+</html>

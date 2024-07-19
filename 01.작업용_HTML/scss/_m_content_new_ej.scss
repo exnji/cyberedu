@@ -16,7 +16,7 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 .key_visual_area.visual_result { position: relative;}
 .key_visual_area.visual_result .img { display: inline-block; width: 340px; height: 166px; background: transparent url("../images/page/visual_result.png") no-repeat 0 0; position: absolute; right: 90px; bottom: 0;}
 
-.result-tit { font-size: 28px; font-weight: 600; margin-top: 36px;}
+.result-tit { text-align: center;font-weight: 600; margin-top: 36px; font-size: 26px; }
 .result-box { font-size: 0; display: inline-block; width: 100%; box-sizing: border-box; padding: 0 50px; margin-top: 42px; position: relative; z-index: 0;
 
     > * { font-size: 16px;}
@@ -73,7 +73,7 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 
     .item { margin-top:15px; display: flex;
     
-        .txt { margin-right: 27px; white-space: nowrap; min-width: 150px;}
+        .txt { margin-right: 27px; white-space: nowrap; min-width: auto;}
         .txt .tit { font-weight: 600; font-size: 18px; margin-right: 10px;}
         .txt .score { font-size: 24px; font-weight: 600; font-family: 'jalnan';  min-width: 43px; text-align: right; display: inline-block;} 
         .txt .mg { font-weight: 600; font-size: 18px;}
@@ -158,7 +158,7 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
     &::before { content: ''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: url("../images/page/bg_result_per.png") repeat-x;}
     .pcnt { width: calc(var(--percentage, 0) * 1%); height: 100%; background-color: #ccc; display: inline-block; transition: .3s ease; }
 }
-.result-list-wrap { margin-top: 20px;
+.result-list-wrap { margin-top: 20px; box-sizing: border-box; padding: 0 20px;
 
     .item { margin-top: 80px; font-size: 0;}
     .item > * { font-size: 16px;}
@@ -167,23 +167,19 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
     .left-tit img { display: block; margin:0 auto;}
     .left-tit span { display: block; margin-top: 14px; font-weight: 600;}
     .right-percent { display: inline-block; width: calc(100% - 200px); vertical-align: middle;}
-    .right-percent .result-item { border: 1px dashed #ddd; box-sizing: border-box; border-radius: 15px; display: inline-flex; align-items: center; width: 100%; height: 64px; margin-top: 20px; position: relative; overflow: hidden;}
+    .right-percent .result-item { border: 1px dashed #ddd; box-sizing: border-box; border-radius: 10px; display: inline-flex; align-items: center; width: 100%; margin-top: 20px; position: relative; overflow: hidden; display: block; padding: 16px; padding-bottom: 40px; text-align: right}
     .right-percent .result-item:first-child { margin-top: 0;}
+    .right-percent .result-item .titbox { position: relative; display: inline-block; width: 100%; padding-right: 120px;}
+    .right-percent .result-item .titbox .right { position: absolute; right: 0; top: -5px;}
 
-    .result-pop-btn { position: absolute; right: 0; top: 0; width: 120px; box-sizing: border-box; height: 100%; background-color: #8a8a8a; display: inline-block; color: #fff; text-align: left; padding-left: 15px; font-size: 16px; line-height: 120%;
-    
-        &::before { content: '?'; display: inline-block; width: 16px; height: 16px; border-radius: 16px; background-color: #fff; right: 17px; top: 13px; position: absolute; color: #666; text-align: center; font-size: 13px;line-height: 16px;}
+    .result-pop-btn { position: absolute; bottom: 0; left: 0; width: 100%; box-sizing: border-box; background-color: #8a8a8a; display: inline-block; color: #fff; text-align: left; padding-left: 15px; text-align: center; font-size: 16px; height: 28px; line-height: 28px;
+        br {display: none;}
+        &::after { content: ''; background: transparent url("../images/page/ico_open.png") no-repeat 0 0; display: inline-block; width: 10px; height: 5px;  text-align: center; margin-left: 10px; background-size: 10px; vertical-align: middle;}
     }
+    .result-pop-btn.active::after { transform: rotate(180deg) }
     .result-pop-btn .blind { position: absolute; display: inline-block; text-indent: -99999px;}
-    .right-percent .item-tit { width: 160px; text-align: center; box-sizing: border-box; font-size: 18px; font-weight: 600; margin-right: 36px; box-sizing: border-box; position: relative;
-    
-        &::before { content: ''; display: inline-block; width: 1px; height: 44px; position: absolute; top: 50%; right: 0; transform: translateY(-50%); background-color: #ddd;}
-    }
-    .right-percent .result-item .score { padding-left: 34px; position: relative; font-size: 24px; color: #666; font-weight: 600; min-width: 90px; margin-right: 20px; text-align: right;
-        
-        &::before { content: ''; display: inline-block; width: 28px; height: 2px; background-color: #aaa; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
-        &::after { content: ''; display: inline-block; width: 6px; height: 6px; background-color: #aaa; position: absolute; left: 28px; border-radius: 10px; top: 50%; transform: translateY(-50%);}
-    }
+    .right-percent .item-tit { float: left; text-align: left; box-sizing: border-box; font-size: 18px; font-weight: 600; margin-right: 0; box-sizing: border-box; position: relative; color: #333;}
+    .right-percent .result-item .score { padding-left: 34px; position: relative; font-size: 24px; color: #666; font-weight: 600; min-width: 90px; margin-right: 10px; text-align: right;}
 }
 .result-list-wrap .result-item .grade { background-color: #999; width: 65px; height: 28px; box-sizing: border-box; color: #fff; display: inline-block; text-align: center; padding: 6px 5px; border-radius: 100px;
     
@@ -192,12 +188,12 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
 
 
 // 결과 이해 TIP
-.bottom-tip-box { border-radius: 10px; margin-top: 84px; padding: 40px; box-sizing: border-box; background-color: #f4f4f5;
+.bottom-tip-box { border-radius: 10px; margin: 60px 20px 0; padding: 40px 20px; box-sizing: border-box; background-color: #f4f4f5; width: calc(100% - 40px); overflow: hidden; text-align: center;
 
     .tit { font-size: 26px; font-weight: 600; color: #333;}
     .txt-wrap { margin-top: 10px;
 
-        .left-txt { display: inline-block; max-width: 35%; word-break: keep-all; vertical-align: middle; box-sizing: border-box; padding-right: 45px; position: relative; z-index: 1;}
+        .left-txt { display: inline-block; max-width: 30%; word-break: keep-all; vertical-align: middle; box-sizing: border-box; padding-right: 45px; position: relative; z-index: 1; text-align: left;}
         .left-txt-tit { margin-top: 32px; font-size: 22px; font-weight: 600;}
         .basic { font-size: 16px; margin-top: 10px; line-height: 120%;}
     }
@@ -220,11 +216,11 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
             .line i::after { content: ''; display: inline-block; position: absolute;right: 0; bottom: 1px; width: 6px; height: 6px; border-radius: 10px;  background-color: #aaa; }
         }
 
-        .tip-txt-wrap { display: inline-block; vertical-align: bottom; position: relative; margin-left: 60px; margin-bottom: 17px;
+        .tip-txt-wrap { display: inline-block; vertical-align: bottom; margin-left: 60px; margin-bottom: 17px; text-align: left;
         
             .tip-tit { font-size: 18px; font-weight: 600; box-sizing: border-box; padding-left: 60px;}
 
-            .txt-box { margin-top: 22px;}
+            .txt-box { margin-top: 22px; position: relative;}
             .item { margin-top: 15px;}
             .item:first-child { margin-top: 0;}
             .score-tit { display: inline-block; padding: 6px 10px; color: #fff; border-radius:20px; font-size: 16px; margin-right: 10px;}
@@ -256,16 +252,16 @@ body {font-feature-settings: "tnum";font-variant-numeric: tabular-nums;}
         .align {width: 420px; display: flex; justify-content: space-between; padding-right: 45px; padding-left: 45px;}
         .num { font-size: 14px; color: #666;}
     }
-    .graph-list { margin-top: 20px;
-        .graph-item { margin-top: 30px; display: flex; align-items: center; }
-        .graph-item:first-child { margin-top: 0; }
-        .graph-item .tit { font-size: 18px; font-weight: 700; color: #333; min-width: 105px; display: inline-block; vertical-align: middle; margin-right: 14px;}
-        .graph-item .bar-box { font-size: 0; position: relative; width: 420px; display: inline-block; vertical-align: middle; padding:0 45px; box-sizing: border-box;}
-        .item-grade { display: inline-block; width: 45px;text-align: center; color: #fff;  background-color: #666; border-radius: 100px; font-size: 16px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 23px; line-height: 23px; z-index: 1;}
-        .item-score { color: #666; position: absolute; width: 45px; right: 0; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 600; text-align: right;}
-        .result-bar { height: 14px;width: calc(100% + 2px); margin-left: -2px; box-sizing: border-box; background-color: #ccc; display: inline-block; position: relative;}
-        .result-bar::before {content: '';display: inline-block;  width: calc(var(--percentage, 0) * 1%); position: absolute; left: 0; top: 0; height: 100%; background-color: #666;}
-    }
+}
+.graph-list { margin-top: 20px; display: none; padding: 10px 0;
+    .graph-item { margin-top: 15px; display: flex; align-items: center;  text-align: left;}
+    .graph-item:first-child { margin-top: 0; }
+    .graph-item .tit { font-size: 15px; font-weight: 700; color: #666; min-width: 105px; display: inline-block; vertical-align: middle; margin-right: 14px;}
+    .graph-item .bar-box { font-size: 0; position: relative; width: 420px; display: inline-block; vertical-align: middle; padding:0 45px; box-sizing: border-box; width: 100%;}
+    .item-grade { display: inline-block; width: 45px;text-align: center; color: #fff;  background-color: #666; border-radius: 100px; font-size: 16px; position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 23px; line-height: 23px; z-index: 1;}
+    .item-score { color: #666; position: absolute; width: 45px; right: 0; top: 50%; transform: translateY(-50%); font-size: 20px; font-weight: 600; text-align: right;}
+    .result-bar { height: 14px;width: calc(100% + 2px); margin-left: -2px; box-sizing: border-box; background-color: #ccc; display: inline-block; position: relative;}
+    .result-bar::before {content: '';display: inline-block;  width: calc(var(--percentage, 0) * 1%); position: absolute; left: 0; top: 0; height: 100%; background-color: #666;}
 }
 
 $score-colors: (
@@ -313,7 +309,66 @@ $score-colors: (
 
 
     // modal-popup
-    .graph-cont .graph-list .graph-item.score#{$i} .item-grade {background-color: map-get($score-colors, $i);}
-    .graph-cont .graph-list .graph-item.score#{$i} .result-bar::before {background-color: map-get($score-colors, $i);}
+    .graph-list .graph-item.score#{$i} .item-grade {background-color: map-get($score-colors, $i);}
+    .graph-list .graph-item.score#{$i} .result-bar::before {background-color: map-get($score-colors, $i);}
 }
 
+
+
+@media screen and (max-width:1280px) {
+    .result-list-wrap .right-percent .result-item { margin-top: 20px;}
+    .result-list-wrap { padding: 0 20px;}
+    .result-list-wrap .left-tit { display: block; margin: 0 auto;}
+    .result-list-wrap .right-percent { width: 100%; margin-top: 30px;} 
+    .result-list-wrap .right-percent .item-tit { min-width: auto; text-align: left; 
+    
+        &::before { display: none}
+    }
+}
+
+
+@media screen and (max-width:1100px) {
+        
+    .bottom-tip-box { 
+        .txt-wrap { margin-top: 10px;
+
+            .left-txt { max-width: 100%; padding-right: 0; }
+            .left-txt-tit { margin-top: 20px; font-size: 18px; font-weight: 600;}
+            .basic { font-size: 16px; margin-top: 10px; line-height: 120%;}
+        } 
+    }
+    .bottom-tip-box .right-grade-graph { text-align: center;position: relative; margin-top: 40px; padding-top: 40px;}
+    .bottom-tip-box .right-grade-graph .grade-graph .line { display: none;}
+    .bottom-tip-box .right-grade-graph .tip-txt-wrap { margin: 30px 0 0; text-align: left;}.bottom-tip-box .right-grade-graph .tip-txt-wrap .tip-tit { position: absolute; left: 0; top: 0; width: 100%; padding: 0; text-align: center;}
+    .bottom-tip-box .right-grade-graph .tip-txt-wrap .txt-box { margin-top: 0;}
+    .bottom-tip-box .right-grade-graph .tip-txt-wrap .item { position: relative; padding-left: 60px; margin-top: 26px;}
+    .bottom-tip-box .right-grade-graph .tip-txt-wrap .score-tit { position: absolute; left: 0 ; top: -5px;}
+}
+
+
+
+@media screen and (max-width:768px) {
+    .result-box .bubble { vertical-align: top; position: absolute; left: 50px; bottom: 120px; }
+    .result-box .right {flex-direction: column; vertical-align: top; align-items: end; width: 100%;}
+    .result-bar-box {padding-left: 20px; margin-left: 0; margin-top: -40px; z-index: 1;}
+    .result-pie-box { margin-right: 50px; z-index: 0;}
+    .result-sort-wrap { text-align: center;}
+    .result-sort-wrap .mg { display: none;}
+    .custom-chk, .custom-rdo { margin: 0 4px;}
+    .result-pie-box .txt .tit { font-size: 16px;}
+    .result-pie-box .score { font-size: 30px; margin-top: 5px;}
+    .result-pie-box .grade { margin-top: 3px;}
+    
+    .bottom-tip-box .tit { font-size: 20px;}
+}
+
+@media screen and (max-width:500px) {
+    .result-box { padding: 0 20px;}
+    .result-box .bubble { left: 20px; font-size: 20px;}
+    .result-bar-box .item .txt { margin-right: 10px;}
+    .result-bar-box .item .txt .tit { font-size: 14px; margin-right: 0;}
+    .result-bar-box .item .txt .score { font-size: 20px;}
+    .result-box .bubble { width: 60px; height: 60px; font-size: 16px;}
+    // .result-pie-box { margin-right: 0;}
+
+}
