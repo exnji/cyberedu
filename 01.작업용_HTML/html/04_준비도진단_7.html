@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>사이버진로교육센터소개 진단하기</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-ico" />
+        <link rel="icon" href="../images/favicon.ico" type="image/x-ico" />
+        <link href="../js/swiper-4.5.1/dist/css/swiper.min.css" rel="stylesheet" />
+        <link href="../css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+        <link href="../css/fonts.css" rel="stylesheet" />
+        <link href="../css/common.css" rel="stylesheet" />
+        <link href="../css/layout.css" rel="stylesheet" />
+        <link href="../css/jquery-ui.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="../js/cyb/lib/jquery/jquery-1.10.2.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/framework/keis.import.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/makePCookie.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/cyb/keis.cyb.common.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/common/util/util.jqMore.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/jquery-3.5.1.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/swiper-4.5.1/dist/js/swiper.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/jquery.mCustomScrollbar.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/ui-common.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/cyb/lib/jquery/jquery-ui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/common/WebUtil.js" charset="utf-8"></script>
+        <link href="../css/content.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="blind">
+            <ul>
+                <li>
+                    <a href="#content">본문 내용 바로가기</a>
+                </li>
+                <li>
+                    <a href="#gnb">주 메뉴 바로가기</a>
+                </li>
+                <li>
+                    <a href="#footer">페이지 하단 바로가기</a>
+                </li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header_group">
+                <h1 class="logo">
+                    <img src="../images/common/logo_text1.svg" alt="한국고용정보원">
+                    <span class="blind">한국고용정보원</span>
+                    <a href="../main.do" title="홈으로 이동">
+                        <span class="logo_txt2">사이버진로교육센터</span>
+                    </a>
+                </h1>
+                <nav id="gnb" class="gnb">
+                    <h2 class="blind">주 메뉴</h2>
+                    <ul>
+                        <li>
+                            <a href="../cyb/education/schedule/offline/retrieveScheduleOfflineList.do" title="교육안내" class="depth_title">교육안내</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/education/schedule/offline/retrieveScheduleOfflineList.do" title="집합교육">집합교육</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/education/schedule/elearning/retrieveScheduleElearningList.do" title="온라인교육">온라인교육</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/education/schedule/buildup/retrieveScheduleBuildupList.do" title="빌드업교육">빌드업교육</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/wbzn/contents/main/retrieveContentsMainList.do" title="학습자료" class="depth_title">학습자료</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/wbzn/contents/main/retrieveContentsMainList.do" title="커리어Info">커리어Info</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="fCareer(); return false;" title="커리어엔진">커리어엔진</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/board/futurecareer/guide/retrieveFuturecareerGuideList.do" title="진로지도 자료">진로지도 자료</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/board/job/psychology/retrieveJobPsychologyList.do" title="직업심리검사 자료">직업심리검사 자료</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" onclick="fn_moelToken('https://www.work.go.kr/consltJobCarpa/videoInfo/videoInfoList.do?videoType=01&amp;catCd1=01&amp;catCd2=0101');" title="진로지도 동영상">진로지도 동영상</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/customer/board/notice/retrieveBoardNoticeList.do" title="공지사항" class="depth_title">공지사항</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/customer/board/notice/retrieveBoardNoticeList.do" title="공지사항">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/customer/board/faq/retrieveBoardFaqList.do" title="자주하는질문">자주하는질문</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/introduction/information/center/retrieveInformationCenterDetail.do" title="센터소개" class="depth_title">센터소개</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/introduction/information/center/retrieveInformationCenterDetail.do" title="센터 소개">센터 소개</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../cyb/mypage/sub/main/retrieveSubMainDetail.do" title="마이페이지" class="depth_title">마이페이지</a>
+                            <div class="depth2">
+                                <ul>
+                                    <li>
+                                        <a href="../cyb/mypage/course/atnlc/retrieveCourseAtnlcList.do" title="수강교육과정">수강교육과정</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/course/complete/retrieveCourseCompleteList.do" title="수료이력조회">수료이력조회</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/course/after/retrieveCourseAfterList.do" title="사후과정조회">사후과정조회</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/community/main/retrieveCommunityMainList.do" title="과정커뮤니티">과정커뮤니티</a>
+                                    </li>
+                                    <li>
+                                        <a href="../cyb/mypage/course/interest/retrieveCourseInterestList.do" title="관심과정">관심과정</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="util">
+                    <ul>
+                        <li class="util_login">
+                            <a href="../cyb/customer/information/login/retrieveInformationLoginView.do" title="로그인 메뉴 이동">로그인</a>
+                        </li>
+                        <li class="util_qna">
+                            <a href="http://www.work.go.kr:80../cyb/customer/board/faq/retrieveBoardFaqList.do" title="자주하는질문 메뉴 이동">자주하는질문</a>
+                        </li>
+                        <li class="util_sitemap">
+                            <a href="http://www.work.go.kr:80../cyb/sitemap/information/site/retrieveInformationSiteDetail.do" title="사이트맵 메뉴 이동">사이트맵</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- gnb depth2 구현시 반드시 아래의 태그 필요 : S -->
+            <!-- gnb full bg  -->
+            <div class="full_bg"></div>
+            <!-- gnb dim 레이어 -->
+            <div class="nav_dimmed"></div>
+            <!-- gnb depth2 구현시 반드시 위의 태그 필요 : S -->
+        </header>
+        <!-- content : S -->
+        <main class="wrap">
+            <section class="main container" id="content">
+                <article class="key_visual_area visual_result">
+                    <div class="txt_area">
+                        <h2>진로∙경력개발 준비도 진단</h2>
+                        <ul>
+							<li>본 진단은 OO개 문항으로 구성되어 있습니다.</li>
+							<li>각 문항에 대해 답변하고 다음 버튼을 눌러 진단을 완료합니다.</li>
+							<li>필요한 경우 임시저장하고 향후 임시저장 이후 항목에 대해서 진단을 계속 할 수 있습니다.</li>
+						</ul>
+                    </div>
+                    <figure class="img"></figure>
+                </article>
+                <article class="location_area">
+                    <h2 class="blind">location 메뉴</h2>
+                    <ul>
+                        <li>
+                            <a href="../main.do" title="홈으로 이동">
+                                <span class="ico_home">
+                                    <i class="blind">홈으로 이동</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="select_box">
+                                <a href="#none">교육안내</a>
+                                <ul>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none" title="내용">내용</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="select_box1">
+                                <a href="#none">준비도 진단</a>
+                                <ul>
+                                    <li>
+                                        <a href="http://www.work.go.kr:80../cyb/introduction/information/center/retrieveInformationCenterDetail.do" title="센터 소개">센터 소개</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+                <article class="content_area">
+                    <div class="content_inner">
+						<h3 class="blind">온라인 교육 탭 메뉴 리스트</h3>
+						<ul class="tab_nav">
+							<li class="tab_nav_item active" id="tab1"  title="선택됨">
+								<a href="#none" class="tab_nav_link">진단하기 <span class="chk"></span></a>
+							</li>
+							<li class="tab_nav_item" id="tab2">
+								<a href="#none" class="tab_nav_link">진단결과 보기 <span class="chk"></span></a>
+							</li>
+							<li class="tab_nav_item" id="tab3">
+								<a href="#none" class="tab_nav_link">추천교육과정 <span class="chk"></span></a>
+							</li>
+						</ul>
+                        <!-- 240729 신규 페이지 작업 (yj) -->
+                        <div class="step-5">
+                            <div class="tit_wrap">
+                                <h4>진로ㆍ경력개발 준비도 진단</h4>
+                                <div class="txt_box">
+                                    <p class="tit_green">구직 수행</p>
+                                    <div class="bottom">
+                                        <h5>구직의욕고취</h5>
+                                        <span>일과 구직에 대해 적극적이고 긍정적인 태도에 대한 정도를 알아보는 영역입니다 .</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <ul class="question_wrap">
+                                <li class="question">
+                                    <span class="question_n">Question 16</span>
+                                    <p>나는 내가 목표로 하는 직업 및 직장을 얻기 위해 구직활동을 적극적으로 수행할 수 있다.</p>
+                                    <div class="point_area">
+                                        <form action="">
+                                            <ul class="point_radios">
+                                                <hr>
+                                                <li>
+                                                    <input type="radio" name="question_1" id="q5_point_1" class="main-rdo">
+                                                    <label for="q5_point_1">
+                                                        <span class="point">1</span>
+                                                        <span class="answer">전혀 그렇지 않다</span>
+                                                    </label>
+                                                </li>
+            
+                                                <li>
+                                                    <input type="radio" name="question_1" id="q5_point_2" class="main-rdo">
+                                                    <label for="q5_point_2">
+                                                        <span class="point">2</span>
+                                                        <span class="answer">그렇지 않다</span>
+                                                    </label>
+                                                </li>
+                    
+                                                <li>
+                                                    <input type="radio" name="question_1" id="q5_point_3" class="main-rdo">
+                                                    <label for="q5_point_3">
+                                                        <span class="point">3</span>
+                                                        <span class="answer">보통이다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_1" id="q5_point_4" class="main-rdo">
+                                                    <label for="q5_point_4">
+                                                        <span class="point">4</span>
+                                                        <span class="answer">그렇다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_1" id="q5_point_5" class="main-rdo">
+                                                    <label for="q5_point_5">
+                                                        <span class="point">5</span>
+                                                        <span class="answer">매우 그렇다</span>
+                                                    </label>
+                                                </li> 
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </li>
+
+                                <li class="question">
+                                    <span class="question_n">Question 17</span>
+                                    <p>나는 구직에 실패하더라도 포기하지 않고 다시 구직활동을 시작할 수 있다.</p>
+                                    <div class="point_area">
+                                        <form action="">
+                                            <ul class="point_radios">
+                                                <hr>
+                                                <li>
+                                                    <input type="radio" name="question_2" id="q2_point_1" class="main-rdo">
+                                                    <label for="q2_point_1">
+                                                        <span class="point">1</span>
+                                                        <span class="answer">전혀 그렇지 않다</span>
+                                                    </label>
+                                                </li>
+            
+                                                <li>
+                                                    <input type="radio" name="question_2" id="q2_point_2" class="main-rdo">
+                                                    <label for="q2_point_2">
+                                                        <span class="point">2</span>
+                                                        <span class="answer">그렇지 않다</span>
+                                                    </label>
+                                                </li>
+                    
+                                                <li>
+                                                    <input type="radio" name="question_2" id="q2_point_3" class="main-rdo">
+                                                    <label for="q2_point_3">
+                                                        <span class="point">3</span>
+                                                        <span class="answer">보통이다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_2" id="q2_point_4" class="main-rdo">
+                                                    <label for="q2_point_4">
+                                                        <span class="point">4</span>
+                                                        <span class="answer">그렇다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_2" id="q2_point_5" class="main-rdo">
+                                                    <label for="q2_point_5">
+                                                        <span class="point">5</span>
+                                                        <span class="answer">매우 그렇다</span>
+                                                    </label>
+                                                </li> 
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </li>
+
+                                <li class="question">
+                                    <span class="question_n">Question 18</span>
+                                    <p>나는 구직에 실패했을 때 실패 원인을 분석하여 개선점을 찾을 수 있다.</p>
+                                    <div class="point_area">
+                                        <form action="">
+                                            <ul class="point_radios">
+                                                <hr>
+                                                <li>
+                                                    <input type="radio" name="question_3" id="q3_point_1" class="main-rdo">
+                                                    <label for="q3_point_1">
+                                                        <span class="point">1</span>
+                                                        <span class="answer">전혀 그렇지 않다</span>
+                                                    </label>
+                                                </li>
+            
+                                                <li>
+                                                    <input type="radio" name="question_3" id="q3_point_2" class="main-rdo">
+                                                    <label for="q3_point_2">
+                                                        <span class="point">2</span>
+                                                        <span class="answer">그렇지 않다</span>
+                                                    </label>
+                                                </li>
+                    
+                                                <li>
+                                                    <input type="radio" name="question_3" id="q3_point_3" class="main-rdo">
+                                                    <label for="q3_point_3">
+                                                        <span class="point">3</span>
+                                                        <span class="answer">보통이다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_3" id="q3_point_4" class="main-rdo">
+                                                    <label for="q3_point_4">
+                                                        <span class="point">4</span>
+                                                        <span class="answer">그렇다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_3" id="q3_point_5" class="main-rdo">
+                                                    <label for="q3_point_5">
+                                                        <span class="point">5</span>
+                                                        <span class="answer">매우 그렇다</span>
+                                                    </label>
+                                                </li> 
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </li>
+
+                                <li class="question">
+                                    <span class="question_n">Question 19</span>
+                                    <p>나는 나에게 있어 일이 지닌 긍정적인 의미 및 가치를 설명할 수 있다.</p>
+                                    <div class="point_area">
+                                        <form action="">
+                                            <ul class="point_radios">
+                                                <hr>
+                                                <li>
+                                                    <input type="radio" name="question_4" id="q4_point_1" class="main-rdo">
+                                                    <label for="q4_point_1">
+                                                        <span class="point">1</span>
+                                                        <span class="answer">전혀 그렇지 않다</span>
+                                                    </label>
+                                                </li>
+            
+                                                <li>
+                                                    <input type="radio" name="question_4" id="q4_point_2" class="main-rdo">
+                                                    <label for="q4_point_2">
+                                                        <span class="point">2</span>
+                                                        <span class="answer">그렇지 않다</span>
+                                                    </label>
+                                                </li>
+                    
+                                                <li>
+                                                    <input type="radio" name="question_4" id="q4_point_3" class="main-rdo">
+                                                    <label for="q4_point_3">
+                                                        <span class="point">3</span>
+                                                        <span class="answer">보통이다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_4" id="q4_point_4" class="main-rdo">
+                                                    <label for="q4_point_4">
+                                                        <span class="point">4</span>
+                                                        <span class="answer">그렇다</span>
+                                                    </label>
+                                                </li>
+                                                
+                                                <li>
+                                                    <input type="radio" name="question_4" id="q4_point_5" class="main-rdo">
+                                                    <label for="q4_point_5">
+                                                        <span class="point">5</span>
+                                                        <span class="answer">매우 그렇다</span>
+                                                    </label>
+                                                </li> 
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div class="btn_wrap">
+                                <div class="link_area">
+                                    <a href="#none" class="a_link">이전으로</a>
+                                    <a href="#none" class="a_link active">다음 문항으로</a>
+                                </div>
+                                <button class="btn_draft">임시저장</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <aside class="topbtn">위로</aside>
+
+            </section>
+        </main>
+        <!-- content : E -->
+        <footer id="footer">
+            <section class="footer_area">
+                <div class="footer_l">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#none" onclick="fn_g24Link('https://www.work24.go.kr/cm/c/d/0130/retrieveUtzeStpt.do','','get','');" title="이용약관 새창이동">이용약관</a>
+                            </li>
+                            <li>
+                                <a href="#none" onclick="window.open('../cyb/customer/information/indvdinfo/prtecPolicy.do','prtecPolicyPop','width=1540,height=800,resizable=0,scrollbars=no,status=0,titlebar=0,toolbar=0,left=100,top=50')" title="개인정보처리방침 새창이동">개인정보처리방침</a>
+                            </li>
+                            <li>
+                                <a href="#none" onclick="fn_g24Link('https://www.work24.go.kr/cm/c/d/0130/retrieveEmailAdrPrssPlcy.do','','get','');" title="이메일주소무단수집거부 새창이동">이메일주소무단수집거부</a>
+                            </li>
+                            <li>
+                                <a href="#none" onclick="fn_g24Link('https://www.work24.go.kr/cm/c/d/0130/retrieveCpyrPoly.do','','get','');" title="저작권정책 및 제휴문의 새창이동">저작권정책 및 제휴문의</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <address>
+                        <span>27740 충청북도 음성군 맹동면 태정로6 한국고용정보원</span>
+                        <span>시스템관련문의 : cyberedu@keis.or.kr</span>Tel : 1577-7114
+                    </address>
+                    <p class="copy">Copyright 고용노동부 한국고용정보원 all rights reserved.</p>
+                </div>
+                <div class="footer_r logo">
+                    <span class="ico_footLogo1">
+                        <a href="#none" onclick="window.open('http://www.moel.go.kr'); return false;" target="_blank" title="고용노동부 새창이동"></a>
+                    </span>
+                    <span class="ico_footLogo2">
+                        <a href="#none" onclick="window.open('http://www.keis.or.kr'); return false;" target="_blank" title="한국고용정보원 새창이동"></a>
+                    </span>
+                </div>
+            </section>
+        </footer>
+        <form id="moelSTKNFrm" name="moelSTKNFrm" method="post" action=""></form>
+    </body>
+</html>
