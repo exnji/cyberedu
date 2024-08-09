@@ -321,7 +321,7 @@
 							<fieldset>
 							<legend>게시물 정렬방식, 게시물 갯수,게시물 갯수 선택</legend>
                                 <div class="list_sort">
-                                    <input type="checkbox" id="sortBtn">
+                                    <input type="checkbox" id="sortBtn" checked>
                                     <label for="sortBtn">
                                         <span class="type text">리스트형</span>
                                         <span class="type img">이미지형</span> <!-- checked : 이미지형 표출-->
@@ -342,32 +342,265 @@
 						</div>
                         <!-- // 게시물 정렬 선택 -->
                         <!-- 게시물 목록 -->
-                        <div class="board-list-wrap">
-                            <div class="item">
-                                <a href="#none">
-                                    <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
-                                </a>
+
+                        <!-- 
+                            * board-list-wrap에 text 추가하면 리스트형 목록으로 변경됨
+                        -->
+                        <div class="board-list-wrap text">
+                            <div class="list-header-box">
+                                <div class="list-header">
+                                    <div class="th th-type">학습영역</div>
+                                    <div class="th th-tit">교육과정명</div>
+                                    <div class="th th-view">교육하러가기</div>
+                                </div>
                             </div>
-                            <div class="item">
-                                <a href="#none">
-                                    <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="#none">
-                                    <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="#none">
-                                    <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
-                                </a>
+                            <div class="list-item-box">
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">진로·경력 계획수립</span></div>
+                                            <div class="td td-tit"><span class="tit">진로계획 수립에 필요한 정보 (교육 및 훈련, 취업지원 기관 등) 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">구직의욕고취립</span></div>
+                                            <div class="td td-tit"><span class="tit">구직 관련 산업, 기업, 직무분석 및 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">구직의욕고취립</span></div>
+                                            <div class="td td-tit"><span class="tit">구직 관련 산업, 기업, 직무분석 및 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">구직의욕고취립</span></div>
+                                            <div class="td td-tit"><span class="tit">구직 관련 산업, 기업, 직무분석 및 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">구직의욕고취립</span></div>
+                                            <div class="td td-tit"><span class="tit">구직 관련 산업, 기업, 직무분석 및 활용</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">자기이해</span></div>
+                                            <div class="td td-tit"><span class="tit">나를 말하다(긍정적사고전환, 자기개념 이해 및 자기개념도 확장 등)</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">자기이해</span></div>
+                                            <div class="td td-tit"><span class="tit">나를 말하다(긍정적사고전환, 자기개념 이해 및 자기개념도 확장 등)</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">자기이해</span></div>
+                                            <div class="td td-tit"><span class="tit">나를 말하다(긍정적사고전환, 자기개념 이해 및 자기개념도 확장 등)</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">자기이해</span></div>
+                                            <div class="td td-tit"><span class="tit">나를 말하다(긍정적사고전환, 자기개념 이해 및 자기개념도 확장 등)</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">자기이해</span></div>
+                                            <div class="td td-tit"><span class="tit">나를 말하다(긍정적사고전환, 자기개념 이해 및 자기개념도 확장 등)</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">변화관리</span></div>
+                                            <div class="td td-tit"><span class="tit">잡(Job)으로 가는 첫 걸음, 나의 역량 탐색</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">변화관리</span></div>
+                                            <div class="td td-tit"><span class="tit">잡(Job)으로 가는 첫 걸음, 나의 역량 탐색</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">변화관리</span></div>
+                                            <div class="td td-tit"><span class="tit">잡(Job)으로 가는 첫 걸음, 나의 역량 탐색</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">변화관리</span></div>
+                                            <div class="td td-tit"><span class="tit">잡(Job)으로 가는 첫 걸음, 나의 역량 탐색</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="#none">
+                                        <div class="imgbox"><img src="../images/page/board_sample1.jpg" alt="진로계획 수립에 필요한 정보"></div>
+                                        <div class="txtbox">
+                                            <div class="td td-type"><span class="type">변화관리</span></div>
+                                            <div class="td td-tit"><span class="tit">잡(Job)으로 가는 첫 걸음, 나의 역량 탐색</span></div>
+                                            <div class="td td-view"><span class="view-more-btn">바로가기</span></div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <!-- // 게시물 목록 -->
 
 						<!-- // 240716 신규 페이지 작업 (ej) -->
                     </div>
+                    
+                    <div class="list_pageing">
+                        <a href="https://www.work.go.kr:443/cyberedu/cyb/customer/board/notice/retrieveBoardNoticeList.do?pageIndex=1&amp;srchKey=&amp;srchWord=&amp;pageUnit=10&amp;brdItmCdVal=" class="btn_first" title="처음 목록으로 이동"></a>
+                        <a href="https://www.work.go.kr:443/cyberedu/cyb/customer/board/notice/retrieveBoardNoticeList.do?pageIndex=3&amp;srchKey=&amp;srchWord= &amp;pageUnit=10&amp;brdItmCdVal=" class="btn_prev" title="이전 목록으로 이동"></a>
+						<strong title="현제 목록">1</strong>
+                        <a href="https://www.work.go.kr:443/cyberedu/cyb/customer/board/notice/retrieveBoardNoticeList.do?pageIndex=2&amp;srchKey=&amp;srchWord=&amp;pageUnit=10&amp;brdItmCdVal=" class="page_num">2</a>
+                        <a href="https://www.work.go.kr:443/cyberedu/cyb/customer/board/notice/retrieveBoardNoticeList.do?pageIndex=3&amp;srchKey=&amp;srchWord=&amp;pageUnit=10&amp;brdItmCdVal=" class="page_num">3</a>
+                        <a href="https://www.work.go.kr:443/cyberedu/cyb/customer/board/notice/retrieveBoardNoticeList.do?pageIndex=1&amp;srchKey=&amp;srchWord=&amp;pageUnit=10&amp;brdItmCdVal=" class="btn_next" title="다음 목록으로 이동"></a>
+                        <a href="https://www.work.go.kr:443/cyberedu/cyb/customer/board/notice/retrieveBoardNoticeList.do?pageIndex=3&amp;srchKey=&amp;srchWord=&amp;pageUnit=10&amp;brdItmCdVal=" class="btn_last" title="마지막 목록으로 이동"></a>
+					</div>
                 </article>
                 <aside class="topbtn">위로</aside>
                 
