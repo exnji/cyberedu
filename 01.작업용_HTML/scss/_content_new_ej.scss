@@ -462,10 +462,50 @@ $score-colors: (
     input:checked + label .type.img { right: 0; left: auto; display: block; }
 
 }
-.board-list-wrap { margin-top: 27px; font-size: 0; margin: 0 -10px;
+.board-list-wrap { margin-top: 27px;
 
-    > * { font-size: 16px;}
-    .item { margin: 0 10px 32px; width: calc(25% - 20px); display: inline-block;}
+    //이미지형 
+    .list-header-box { display: none;}
+    .list-item-box {margin: 0 -10px;  font-size: 0; 
+        > * { font-size: 16px;}
+        .item { vertical-align: top; margin: 0 10px 32px; width: calc(25% - 20px); display: inline-block; position: relative;}
+        .item::before { content: ''; display: inline-block; width: 1px; height: 80%; background-color: #F1F1F1; position: absolute; left: -10px; top: 50%; transform: translateY(-50%);}
+        .item:nth-child(4n + 1)::before { opacity: 0;}
 
+        a { display: block;}
+        .imgbox { margin-bottom: 12px; overflow: hidden; border-radius: 10px;}
+        img { height: 100%;}
+    }
 
-} 
+    .td-type { font-size: 14px; color: #2DB86B; text-decoration: underline; display: block;} 
+    .td-tit { display: inline-block; margin-top: 4px; font-size: 16px; line-height: 20px;} 
+    .view-more-btn { position: absolute; right: 12px; top: 106px; background:rgba(0,0,0,.36) url("../images/page/ico_arrow_w.png") no-repeat right 12px top 50%; color: #fff; border-radius: 12px; font-size: 14px; display: inline-block; padding: 9px 23px 9px 12px; backdrop-filter: blur(11px);} 
+
+    // 게시글형
+    &.text { 
+        .list-header-box {}
+        .list-item-box { display: table-row-group;
+            .item { width: 100%; transition: .3s ease; margin: 0; border-bottom: 1px solid #EEF1F3; height: 55px;}
+            .item:hover { background-color: #fafafa;}
+            a { height: 100%;}
+            .item::before { display: none;}
+            .imgbox { display: none;}
+            .txtbox { display: flex; align-items: center;  height: 100%;}
+            .td { text-align: center;}
+            .view-more-btn {top: auto; right: auto;  position: relative; color: #4A4A4A; background: transparent url("../images/page/ico_arrow_b.png") no-repeat right 12px top 1px; padding: 0 25px 0 0;}
+            .td-tit { margin-top: 0; text-align: left; padding: 0 10px; box-sizing: border-box;}
+        }
+
+            
+        // list header
+        .list-header-box { border-top: 1px solid #37C375; color: #8E8E9D; width: 100%; display: table; 
+        
+            .list-header { display: table-row-group;}
+            .th { height: 53px; vertical-align: middle; display: table-cell; text-align: center; border-bottom: 1px solid #E4E8EC;}
+        }
+
+        .th-type, .td-type { width: 15%;} //학습영역
+        .th-tit, .td-tit { width: 70%;} //교육과정명
+        .th-view, .td-view { width: 15%;} //교육하러가기
+    }
+}
