@@ -4768,8 +4768,9 @@ h4 {
   color: #25282B;
 }
 
-p {
+p.txt_500 {
   font-size: 18px;
+  font-weight: 500;
   color: #5A6265;
 }
 
@@ -4798,9 +4799,12 @@ p {
 }
 .input_area tr th {
   position: relative;
-  padding: 0 28px;
+  padding: 24px 28px;
   box-sizing: border-box;
+  font-weight: 600;
+  line-height: 1.4;
   text-align: left;
+  vertical-align: top;
 }
 .input_area tr th::before {
   position: absolute;
@@ -5016,11 +5020,14 @@ p {
 .description_wrap p {
   margin-bottom: 36px;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.4;
+  color: #5A6265;
 }
 
 .point_wrap {
   background-color: #fff;
+  border-radius: 4px;
 }
 
 .point_area {
@@ -5053,10 +5060,11 @@ ul.point_radios {
   justify-content: space-between;
   width: 900px;
 }
-ul.point_radios hr {
+ul.point_radios::before {
+  content: "";
   position: absolute;
   left: 50%;
-  top: 13%;
+  top: 14px;
   transform: translateX(-49%);
   width: 88%;
   height: 4px;
@@ -5089,26 +5097,34 @@ ul.point_radios .main-rdo[type=radio] + label span.point {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  margin: 4px 0;
+  width: 24px;
+  height: 24px;
   background-color: #F4F4F4;
   border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
   color: #888;
-  font-weight: 500;
   box-sizing: border-box;
+  transition: 0.3s ease;
   cursor: pointer;
 }
 ul.point_radios .main-rdo[type=radio]:checked + label span.point {
+  margin: 0;
+  width: 32px;
+  height: 32px;
   background-color: #37C375;
-  border: 5px solid #C3EDD6;
+  border: 4px solid #C3EDD6;
   color: #fff;
 }
 ul.point_radios label {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
   width: 118px;
+  height: 100%;
 }
 ul.point_radios label span.answer {
   font-size: 18px;
@@ -5313,6 +5329,7 @@ ul.point_radios label span.answer {
   padding: 40px 71px 32px;
   width: 660px;
   border-radius: 12px;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .pop_layer .pop_container {
   padding-top: 0;
